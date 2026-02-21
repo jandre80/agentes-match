@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <title>Agentes Match | Gestão e IA para Engenharia Civil</title>
+  <meta name="description"
+    content="9 Agentes de IA exclusivos para Engenharia Civil. Automatize orçamentos, laudos, normas e licitações com tecnologia Google Gemini. Teste o EngMatchFree agora." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            goldLight: '#F4E4A0',
+            goldDark: '#A68B2A',
+            carbon: '#050505',
+            carbonLight: '#111111',
+            carbonMid: '#1a1a1a',
+            carbonHover: '#222222',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #050505;
+      color: #e5e5e5;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: #D4AF37;
+      color: #050505;
+    }
+
+    /* Premium Glassmorphism */
+    .glass-card {
+      background: rgba(26, 26, 26, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+      transition: all 0.4s ease;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      background: rgba(30, 30, 30, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.1);
+    }
+
+    .form-input {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-premium {
+      background: linear-gradient(135deg, #A68B2A 0%, #D4AF37 50%, #F4E4A0 100%);
+      background-size: 200% auto;
+      color: #050505;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn-premium:hover {
+      background-position: right center;
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-premium:active {
+      transform: translateY(1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #D4AF37;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: #D4AF37;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #e8c872 0%, #D4AF37 50%, #b38b1d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gold-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Custom scrollbar for page */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2A2A2A;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    details>summary {
+      list-style: none;
+    }
+
+    details>summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Loader inside button */
+    .loader {
+      border: 2px solid rgba(5, 5, 5, 0.2);
+      border-top-color: #050505;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.5rem;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-gold selection:text-carbon font-sans">
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+    <div
+      class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-gold/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob">
+    </div>
+    <div
+      class="absolute top-[20%] right-[-5%] w-[30rem] h-[30rem] bg-gold/5 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute bottom-[-20%] left-[20%] w-[40rem] h-[40rem] bg-white/5 rounded-full mix-blend-screen filter blur-[150px] animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 w-full z-50 bg-carbon/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300"
+    id="header">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="#" class="font-display font-bold text-2xl tracking-tight text-white">
+          Agentes<span class="text-gold">Match</span>
+        </a>
+        <div class="hidden md:flex items-center gap-2 border-l border-white/10 pl-3 ml-2">
+          <span class="text-xs font-mono text-gray-500 uppercase tracking-widest">by</span>
+          <a href="https://obramatch.com.br" target="_blank"
+            class="text-xs font-mono text-gold/70 hover:text-gold transition-colors">obramatch.com.br</a>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
+        <a href="#agentes" class="text-gray-400 hover:text-white transition-colors">Os Agentes</a>
+        <a href="#planos" class="text-gray-400 hover:text-white transition-colors">Planos Premium</a>
+        <a href="#faq" class="text-gray-400 hover:text-white transition-colors">Dúvidas</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="#leads" class="btn-premium px-6 py-2.5 rounded text-xs hidden sm:block">Acesso VIP Grátis</a>
+        <button class="lg:hidden text-white" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO SECTION WITH LEAD CAPTURE -->
+    <section class="relative min-h-[90vh] flex items-center gold-grid-bg" id="leads">
+      <div class="max-w-7xl mx-auto px-6 py-12 lg:py-24 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Column: Copy -->
+        <div class="lg:col-span-7 reveal">
+          <div
+            class="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+            </span>
+            <span class="font-mono text-[11px] text-gray-300 font-medium uppercase tracking-widest">A Revolução da
+              Engenharia</span>
+          </div>
+
+          <h1 class="font-display text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">
+            Não perca mais <br />
+            <span class="text-gradient-gold">6 horas por dia</span><br />
+            em tarefas burocráticas.
+          </h1>
+
+          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light relative z-10">
+            Tenha acesso a <strong class="text-white font-medium">9 Agentes de IA Exclusivos</strong> no Google Gemini.
+            Orçamentos SINAPI, Laudos precisos, Normas e Licitações em <span class="text-gold">minutos</span>.
+          </p>
+
+          <img src="Gemini_Generated_Image_teanxbteanxbtean.png" alt="Plataforma Agentes Match"
+            class="w-full max-w-xl rounded-2xl shadow-[0_0_40px_rgba(212,175,55,0.15)] border border-white/10 mb-10 object-cover object-center relative z-10" />
+
+          <div class="flex items-center gap-6 mb-10 pb-10 border-b border-white/10 max-w-lg relative z-10">
+            <div class="flex -space-x-4">
+              <img class="w-12 h-12 rounded-full border-2 border-carbon" src="https://i.pravatar.cc/100?img=1"
+                alt="Usuário">
+              <img class="w-12 h-12 rounded-full border-2 border-carbon" src="https://i.pravatar.cc/100?img=2"
+                alt="Usuário">
+              <img class="w-12 h-12 rounded-full border-2 border-carbon" src="https://i.pravatar.cc/100?img=3"
+                alt="Usuário">
+              <div
+                class="w-12 h-12 rounded-full border-2 border-carbon bg-carbonMid flex items-center justify-center text-xs font-bold text-gold">
+                1k+</div>
+            </div>
+            <div class="text-sm">
+              <div class="flex items-center gap-1 text-gold mb-1">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-gray-400"><span class="text-white font-medium">1.247+ engenheiros</span> confiam nos
+                Agentes Match.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Lead Capture Form -->
+        <div class="lg:col-span-5 reveal relative">
+          <!-- Decorative glow behind form -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold/30 to-goldDark/30 rounded-2xl blur-lg opacity-50">
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 lg:p-10 relative z-10">
+            <div class="text-center mb-8">
+              <span
+                class="inline-block px-3 py-1 bg-gold/10 text-gold text-xs font-mono font-bold uppercase tracking-wider rounded-full mb-4">Acesso
+                Gratuito</span>
+              <h3 class="text-2xl font-display font-bold text-white mb-2">Libere o EngMatchFree</h3>
+              <p class="text-sm text-gray-400">Preencha os dados abaixo e receba acesso imediato ao nosso principal
+                Agente de Engenharia, 100% grátis.</p>
+            </div>
+
+            <!-- Lead Form -->
+            <form id="leadForm" class="space-y-4">
+              <div>
+                <label for="lead_name"
+                  class="block text-xs font-medium text-gray-400 mb-1 ml-1 uppercase tracking-wide">Seu Nome
+                  Completo</label>
+                <input type="text" id="lead_name" name="name" required
+                  class="form-input w-full px-4 py-3.5 rounded-lg text-sm" placeholder="Ex: João Silva">
+              </div>
+              <div>
+                <label for="lead_email"
+                  class="block text-xs font-medium text-gray-400 mb-1 ml-1 uppercase tracking-wide">Seu Melhor
+                  E-mail</label>
+                <input type="email" id="lead_email" name="email" required
+                  class="form-input w-full px-4 py-3.5 rounded-lg text-sm" placeholder="engenheiro@email.com">
+              </div>
+              <div>
+                <label for="lead_whatsapp"
+                  class="block text-xs font-medium text-gray-400 mb-1 ml-1 uppercase tracking-wide">WhatsApp (com
+                  DDD)</label>
+                <input type="tel" id="lead_whatsapp" name="whatsapp" required
+                  class="form-input w-full px-4 py-3.5 rounded-lg text-sm" placeholder="(11) 99999-9999">
+              </div>
+
+              <button type="submit" id="submitBtn"
+                class="btn-premium w-full py-4 rounded-lg mt-6 shadow-xl shadow-gold/20 flex justify-center items-center">
+                <span>Quero Meu Acesso Grátis Agora</span>
+              </button>
+
+              <p class="text-[10px] text-center text-gray-500 mt-4 leading-relaxed font-mono">
+                Seus dados estão seguros conosco.<br>Acesso via Google Gemini (requer conta Google normal).
+              </p>
+            </form>
+
+            <!-- Success State (Hidden by default) -->
+            <div id="successState" class="hidden text-center py-6">
+              <div
+                class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/50">
+                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display font-bold text-white mb-2">Acesso Liberado!</h3>
+              <p class="text-sm text-gray-400 mb-6">Seu agente gratuito já está pronto no Gemini. Aproveite para
+                perguntar sobre normas ou cálculos básicos.</p>
+              <a href="https://gemini.google.com/gem/1NmdBrs0O0mI8xAuB5AlRFuq-C_6CQSTz?usp=sharing" target="_blank"
+                class="btn-premium px-8 py-3 rounded inline-block">Abrir Agente no Gemini ↗</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- METRICS BAR -->
+    <section class="border-y border-white/5 bg-carbon/50 backdrop-blur-md relative z-20 -mt-10 lg:mt-0">
+      <div
+        class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-white/5 text-center reveal">
+        <div class="px-4">
+          <p class="text-4xl font-display font-black text-white mb-1"><span class="text-gold">9</span></p>
+          <p class="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Agentes de IA</p>
+        </div>
+        <div class="px-4">
+          <p class="text-4xl font-display font-black text-white mb-1"><span class="text-gold">6h</span></p>
+          <p class="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Poupadas / Dia</p>
+        </div>
+        <div class="px-4">
+          <p class="text-4xl font-display font-black text-white mb-1"><span class="text-gold">1.2k</span>+</p>
+          <p class="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Profissionais</p>
+        </div>
+        <div class="px-4">
+          <p class="text-4xl font-display font-black text-white mb-1"><span class="text-gold">4.9</span>/5</p>
+          <p class="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Avaliações Reais</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM & SOLUTION COMPARISON -->
+    <section class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4 text-white">A Era do Trabalho Braçal Acabou.</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Veja a diferença entre um engenheiro tradicional e um
+            engenheiro de alta performance usando IA.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 reveal">
+          <!-- O Passado -->
+          <div class="glass-card rounded-2xl p-8 border-red-500/20 hover:border-red-500/40 opacity-70">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl text-gray-300 font-bold">Sem Agentes</h3>
+            </div>
+            <ul class="space-y-6">
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 opacity-50">⏰</span>
+                <div>
+                  <h4 class="font-bold text-gray-300">Dias para um Orçamento</h4>
+                  <p class="text-sm text-gray-500 mt-1">Busca manual no SINAPI, horas montando composições e calculando
+                    BDI no Excel.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 opacity-50">📚</span>
+                <div>
+                  <h4 class="font-bold text-gray-300">Dúvidas Normativas</h4>
+                  <p class="text-sm text-gray-500 mt-1">Perder tempo folheando PDFs densos de normas ABNT para achar um
+                    único critério.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 opacity-50">😰</span>
+                <div>
+                  <h4 class="font-bold text-gray-300">Risco em Licitações</h4>
+                  <p class="text-sm text-gray-500 mt-1">Ler editais gigantes de madrugada e acabar perdendo prazos ou
+                    errando impugnações.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- O Futuro -->
+          <div class="glass-card rounded-2xl p-8 relative overflow-hidden group">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+
+            <div class="flex items-center gap-3 mb-8 relative z-10">
+              <div
+                class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold border border-gold/30">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 class="font-display text-2xl text-white font-bold">Com Agentes<span class="text-gold">Match</span>
+              </h3>
+            </div>
+            <ul class="space-y-6 relative z-10">
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 drop-shadow-lg">⚡</span>
+                <div>
+                  <h4 class="font-bold text-white">Orçamentos em Minutos</h4>
+                  <p class="text-sm text-gray-400 mt-1">Envie o escopo e o Agente cruza com tabelas oficiais
+                    instantaneamente.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 drop-shadow-lg">🧠</span>
+                <div>
+                  <h4 class="font-bold text-white">Domínio ABNT Instantâneo</h4>
+                  <p class="text-sm text-gray-400 mt-1">Faça qualquer pergunta técnica. Respostas embasadas nas normas
+                    mais atualizadas.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="text-xl mt-1 drop-shadow-lg">🏆</span>
+                <div>
+                  <h4 class="font-bold text-white">Domine Licitações</h4>
+                  <p class="text-sm text-gray-400 mt-1">IA lê editais completos e elabora defesas/recursos impecáveis
+                    com base na Nova Lei.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-8 relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+              <img src="Gemini_Generated_Image_vxoylgvxoylgvxoy.png" alt="Futuro da Engenharia com IA"
+                class="w-full rounded-xl border border-gold/20 shadow-lg shadow-gold/5 object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENTS GALLERY -->
+    <section class="py-24 bg-carbonLight/50 relative border-y border-white/5" id="agentes">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+          <div>
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">O Ecossistema Completo</span>
+            <h2 class="font-display text-3xl lg:text-5xl font-bold mt-2 text-white">Conheça seus novos <br /><span
+                class="text-gradient-gold">assistentes sêniores.</span></h2>
+          </div>
+          <div class="flex gap-3 mt-6 md:mt-0 hidden sm:flex">
+            <button onclick="scrollCarousel(-360)"
+              class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/5 transition-colors">←</button>
+            <button onclick="scrollCarousel(360)"
+              class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-gold hover:border-gold hover:text-carbon transition-all">→</button>
+          </div>
+        </div>
+
+        <div id="agentsGrid" class="carousel flex gap-6 overflow-x-auto pb-10 snap-x snap-mandatory">
+
+          <!-- Agent: MatchOrça -->
+          <div class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 relative group overflow-hidden">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-gold/20 rounded-bl-full translate-x-12 -translate-y-12 transition-transform group-hover:scale-150 duration-500">
+            </div>
+            <div class="w-12 h-12 mb-6 text-gold opacity-80"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                </path>
+              </svg></div>
+            <h3 class="font-display text-xl font-bold text-white mb-2 relative z-10">MatchOrça PRO</h3>
+            <p class="text-sm text-gray-400 mb-6 min-h-[60px] relative z-10">Orçamentos paramétricos, SINAPI/SICRO.
+              Calcula BDI, cronograma físico-financeiro e composições.</p>
+            <a href="#planos"
+              class="inline-flex items-center text-xs font-mono text-gold hover:text-white transition-colors">INCLUÍDO
+              NO PACK →</a>
+          </div>
+
+          <!-- Agent: NormaMatch -->
+          <div class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 relative group overflow-hidden">
+            <div class="w-12 h-12 mb-6 text-gold opacity-80"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg></div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">NormaMatch PRO</h3>
+            <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Seu consultor técnico de NBRs (6118, 15575, 9050, etc).
+              Esclarece dúvidas normativas em segundos.</p>
+            <a href="#planos"
+              class="inline-flex items-center text-xs font-mono text-gold hover:text-white transition-colors">INCLUÍDO
+              NO PACK →</a>
+          </div>
+
+          <!-- Agent: LegalMatch -->
+          <div class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 relative group overflow-hidden">
+            <div class="w-12 h-12 mb-6 text-gold opacity-80"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                </path>
+              </svg></div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">LegalMatch PRO</h3>
+            <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Licitações e Lei 14.133. Analisa editais, levanta riscos
+              mercadológicos e elabora minutas de recursos.</p>
+            <a href="#planos"
+              class="inline-flex items-center text-xs font-mono text-gold hover:text-white transition-colors">INCLUÍDO
+              NO PACK →</a>
+          </div>
+
+          <!-- Agent: LaudoMatch -->
+          <div class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 relative group overflow-hidden">
+            <div class="w-12 h-12 mb-6 text-gold opacity-80"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4">
+                </path>
+              </svg></div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">LaudoMatch PRO</h3>
+            <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Estruturação de laudos de vistoria cautelar e patologias
+              prediais com linguagem técnica rigorosa.</p>
+            <a href="#planos"
+              class="inline-flex items-center text-xs font-mono text-gold hover:text-white transition-colors">INCLUÍDO
+              NO PACK →</a>
+          </div>
+
+          <!-- Agent: MatchObra -->
+          <div class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 relative group overflow-hidden">
+            <div class="w-12 h-12 mb-6 text-gold opacity-80"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg></div>
+            <h3 class="font-display text-xl font-bold text-white mb-2">MatchObra PRO</h3>
+            <p class="text-sm text-gray-400 mb-6 min-h-[60px]">Apoio na gestão diária. Gera RDOs, checklists de
+              qualidade, e propostas de contingenciamento.</p>
+            <a href="#planos"
+              class="inline-flex items-center text-xs font-mono text-gold hover:text-white transition-colors">INCLUÍDO
+              NO PACK →</a>
+          </div>
+
+          <!-- MORE AGENTS... -->
+          <div
+            class="snap-start w-[320px] flex-shrink-0 glass-card rounded-xl p-6 flex flex-col justify-center items-center text-center border-dashed border-gray-600">
+            <h3 class="font-display text-lg font-bold text-gray-300 mb-2">+ EstruturaMatch</h3>
+            <h3 class="font-display text-lg font-bold text-gray-300 mb-2">+ AvaliaMatch</h3>
+            <h3 class="font-display text-lg font-bold text-gray-300 mb-2">+ ArquiMatch</h3>
+            <h3 class="font-display text-lg font-bold text-gray-300 mb-4">+ PubliMatch</h3>
+            <a href="#planos" class="btn-outline px-6 py-2 rounded-full text-xs">Ver Todos no Pack</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="py-24 relative overflow-hidden" id="planos">
+      <!-- Glow background -->
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[100px] rounded-full pointer-events-none">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+          <span
+            class="inline-block px-3 py-1 bg-gold/10 border border-gold/20 text-gold text-xs font-mono font-bold uppercase tracking-widest rounded mb-4">Acesso
+            Liberado</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4 text-white">Domine sua Engenharia</h2>
+          <p class="text-gray-400 text-lg">Acesso válido por 1 ano + manuais e dezenas de prompts de uso.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 items-center reveal">
+
+          <!-- Starter -->
+          <div class="glass-card rounded-2xl p-8 lg:p-10 border-white/10 hover:border-gold/30">
+            <h4 class="font-mono text-xs text-gray-500 uppercase tracking-widest mb-2">Básico</h4>
+            <h3 class="font-display text-2xl text-white font-bold mb-4">Combo Starter</h3>
+            <div class="mb-6">
+              <span class="text-sm text-gray-500 line-through mr-1">R$ 141</span>
+              <div class="text-4xl font-display font-bold text-white">R$ 97</div>
+            </div>
+            <p class="text-sm text-gray-400 mb-8 h-10">Os essenciais para projetos documentais e certames.</p>
+            <ul class="space-y-4 mb-8 text-sm text-gray-300">
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span><b>03 Agentes</b> PRO</span></li>
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span>Normas + Licitações + Laudos</span></li>
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span>Acesso Anual</span></li>
+            </ul>
+            <a href="https://pay.cakto.com.br/kr4hnsj" target="_blank"
+              class="block w-full text-center py-4 rounded btn-outline">Adquirir Starter</a>
+          </div>
+
+          <!-- Elite (Featured) -->
+          <div
+            class="rounded-2xl p-[2px] bg-gradient-to-b from-gold via-gold/50 to-carbon transform lg:-translate-y-4 shadow-2xl shadow-gold/20 relative">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-carbon font-mono text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-lg">
+              Opção Mais Inteligente</div>
+            <div class="bg-carbonLight h-full rounded-[14px] p-8 lg:p-10 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-2xl rounded-full"></div>
+
+              <h4 class="font-mono text-xs text-gold uppercase tracking-widest mb-2">Premium</h4>
+              <h3 class="font-display text-3xl text-white font-bold mb-4">Super Pack Elite</h3>
+              <div class="mb-6 flex items-end gap-3">
+                <div class="text-5xl font-display font-bold text-gradient-gold">R$ 197</div>
+                <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded font-mono font-bold mb-2">-53% OFF</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-8 h-10">O arsenal completo. O equivalente a assinar 9 softwares
+                diferentes.</p>
+
+              <ul class="space-y-4 mb-10 text-sm text-gray-200">
+                <li class="flex gap-3 items-start">
+                  <div class="text-gold mt-0.5"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg></div> <span><b>TODOS os 9 Agentes</b> Especialistas</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <div class="text-gold mt-0.5"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg></div> <span>Orçamento, Cálculo, Gestão e Marketing</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <div class="text-gold mt-0.5"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg></div> <span>Economia instantânea de R$ 226</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <div class="text-gold mt-0.5"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                    </svg></div> <span>Tutoriais práticos + Acervo de Prompts</span>
+                </li>
+              </ul>
+              <a href="https://pay.cakto.com.br/3dzpj4v" target="_blank"
+                class="block w-full text-center py-4 rounded-lg btn-premium">Acessar Tudo Agora</a>
+            </div>
+          </div>
+
+          <!-- Profissional -->
+          <div class="glass-card rounded-2xl p-8 lg:p-10 border-white/10 hover:border-gold/30">
+            <h4 class="font-mono text-xs text-gray-500 uppercase tracking-widest mb-2">Intermediário</h4>
+            <h3 class="font-display text-2xl text-white font-bold mb-4">Combo Profissional</h3>
+            <div class="mb-6">
+              <span class="text-sm text-gray-500 line-through mr-1">R$ 235</span>
+              <div class="text-4xl font-display font-bold text-white">R$ 147</div>
+            </div>
+            <p class="text-sm text-gray-400 mb-8 h-10">Para o engenheiro multifome que domina mais de uma área técnica.
+            </p>
+            <ul class="space-y-4 mb-8 text-sm text-gray-300">
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span><b>05 Agentes</b> PRO</span></li>
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span>Cálculos + Avaliações + Arqui + Licit. +
+                  Laudos</span></li>
+              <li class="flex gap-3"><span class="text-gold">✓</span> <span>Acesso Anual</span></li>
+            </ul>
+            <a href="https://pay.cakto.com.br/gqp3t2u" target="_blank"
+              class="block w-full text-center py-4 rounded btn-outline">Adquirir Profissional</a>
+          </div>
+
+        </div>
+
+        <!-- Guarantee -->
+        <div class="mt-16 max-w-2xl mx-auto glass-card rounded-2xl p-6 lg:p-8 flex items-center gap-6 reveal">
+          <div class="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 text-3xl">🛡️
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-white text-lg">Investimento Blindado: 7 Dias de Garantia</h4>
+            <p class="text-sm text-gray-400 mt-1">Nós confiamos no nosso produto. Use intensamente. Se achar que não
+              valeu a pena, você pede o reembolso na plataforma e devolvemos 100%.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-carbonLight border-t border-white/5 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div class="lg:col-span-2">
+            <a href="#" class="font-display font-bold text-2xl tracking-tight text-white mb-4 inline-block">
+              Agentes<span class="text-gold">Match</span>
+            </a>
+            <p class="text-gray-400 text-sm max-w-sm mb-6 leading-relaxed">Suite exclusiva de inteligência artificial
+              desenhada para engenheiros civis, construtoras e escritórios de arquitetura.</p>
+            <a href="https://obramatch.com.br" target="_blank"
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-400 hover:text-white hover:border-white/20 transition-all">
+              Membro Oficial de <span class="text-gold">ObraMatch</span>
+            </a>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4">Navegação</h4>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li><a href="#agentes" class="hover:text-gold transition-colors">Os Agentes</a></li>
+              <li><a href="#planos" class="hover:text-gold transition-colors">Planos e Preços</a></li>
+              <li><a href="afiliados.html" class="hover:text-gold transition-colors">Programa de Afiliados</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4">Suporte & Contato</h4>
+            <p class="text-sm text-gray-400 mb-3">Dúvidas? Fale conosco:</p>
+            <a href="mailto:eng.jandreoliveira@gmail.com"
+              class="text-sm text-gold hover:text-white transition-colors">eng.jandreoliveira@gmail.com</a>
+            <div class="mt-6 flex items-center gap-2">
+              <span class="relative flex h-2 w-2"><span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>
+              <span class="text-xs font-mono text-gray-500">Sistemas Operacionais: ON</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+          <p>&copy; 2025 Agentes Match. Todos os direitos reservados.</p>
+          <p class="text-center md:text-right max-w-lg">Avisos legais: A IA é uma ferramenta assistiva corporativa e não
+            substitui de forma alguma o recolhimento de ART e a assinatura do engenheiro responsável.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Reveal Animations on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Carousel Scroll Logic
+    function scrollCarousel(amount) {
+      document.getElementById('agentsGrid').scrollBy({ left: amount, behavior: 'smooth' });
+    }
+
+    // Lead Capture Logic
+    const form = document.getElementById('leadForm');
+    const btn = document.getElementById('submitBtn');
+    const successState = document.getElementById('successState');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Update btn state
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Processando... <div class="loader"></div>';
+      btn.disabled = true;
+
+      // Extract form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      // TO-DO: Replace this URL with the actual N8N webhook URL when the user provides it.
+      const urlWebhook = "https://URL_DO_WEBHOOK_N8N_AQUI";
+
+      try {
+        // We comment the actual fetch until there is a real webhook URL to avoid CORS/404 errors in demo
+        /*
+        await fetch(urlWebhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        */
+
+        // Simulating network delay for effect
+        setTimeout(() => {
+          // Hide form, show success state smoothly
+          form.style.opacity = '0';
+          setTimeout(() => {
+            form.classList.add('hidden');
+            successState.classList.remove('hidden');
+            successState.classList.add('animate-float'); // Small pop
+          }, 300);
+
+          // Optional: Open the Gemini link immediately in a new tab
+          window.open("https://gemini.google.com/gem/1NmdBrs0O0mI8xAuB5AlRFuq-C_6CQSTz?usp=sharing", "_blank");
+
+        }, 1200);
+
+      } catch (error) {
+        console.error("Erro ao enviar dados", error);
+        alert("Ocorreu um erro temporário, mas não se preocupe, estamos te redirecionando!");
+        window.open("https://gemini.google.com/gem/1NmdBrs0O0mI8xAuB5AlRFuq-C_6CQSTz?usp=sharing", "_blank");
+      }
+    });
+
+    // Make header backdrop blur dynamic
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 20) {
+        header.classList.add('bg-carbon/90', 'shadow-lg');
+        header.classList.remove('bg-carbon/80');
+      } else {
+        header.classList.add('bg-carbon/80');
+        header.classList.remove('bg-carbon/90', 'shadow-lg');
+      }
+    });
+  </script>
+</body>
+
+</html>
