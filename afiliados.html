@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Programa de Afiliados Exclusivo | Agentes Match</title>
+    <meta name="description"
+        content="Ganhe até R$ 137,90 por venda. Promova os 9 Agentes Exclusivos de Inteligência Artificial para Engenharia Civil com 70% de comissão." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        goldLight: '#F4E4A0',
+                        goldDark: '#A68B2A',
+                        carbon: '#050505',
+                        carbonLight: '#111111',
+                        carbonMid: '#1a1a1a',
+                        carbonHover: '#222222',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #D4AF37;
+            color: #050505;
+        }
+
+        /* Premium Glassmorphism */
+        .glass-card {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(30, 30, 30, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.1);
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, #A68B2A 0%, #D4AF37 50%, #F4E4A0 100%);
+            background-size: 200% auto;
+            color: #050505;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-premium:hover {
+            background-position: right center;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-premium:active {
+            transform: translateY(1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #D4AF37;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #D4AF37;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #e8c872 0%, #D4AF37 50%, #b38b1d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-grid-bg {
+            background-image:
+                linear-gradient(to right, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom scrollbar for page */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .copy-btn {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-gold selection:text-carbon font-sans">
+
+    <!-- BACKGROUND GLOWS -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div
+            class="absolute top-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-gold/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob">
+        </div>
+        <div
+            class="absolute bottom-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-gold/5 rounded-full mix-blend-screen filter blur-[150px] animate-blob animation-delay-2000">
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header
+        class="fixed top-0 w-full z-50 bg-carbon/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300"
+        id="header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-gold/10 border border-gold/30 rounded-lg flex items-center justify-center text-gold font-bold font-mono text-sm">
+                    OM</div>
+                <a href="agentesmatch.html"
+                    class="font-display font-bold text-2xl tracking-tight text-white hover:text-gold transition-colors">
+                    Agentes<span class="text-gold">Match</span>
+                </a>
+                <div class="hidden md:flex items-center gap-2 border-l border-white/10 pl-3 ml-2">
+                    <span
+                        class="text-xs font-mono text-gold/80 uppercase tracking-widest font-semibold bg-gold/10 px-2 py-0.5 rounded">Programa
+                        VIP</span>
+                </div>
+            </div>
+            <a href="#como-afiliar" class="btn-premium px-6 py-2.5 rounded text-xs">Torne-se um Parceiro</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- VIP HERO -->
+        <section class="relative lg:min-h-[85vh] flex items-center pt-24 pb-16 lg:py-24 gold-grid-bg">
+            <div class="max-w-6xl mx-auto px-6 text-center reveal">
+                <div
+                    class="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-5 py-2 mb-10 backdrop-blur-sm mx-auto">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
+                    </span>
+                    <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">Afiliação
+                        Aprovada Automática</span>
+                </div>
+
+                <h1 class="font-display text-5xl lg:text-8xl font-black leading-[1.05] tracking-tight mb-8">
+                    <span class="text-white">Lucre até</span><br />
+                    <span class="text-gradient-gold drop-shadow-2xl">R$ 137,90</span><br />
+                    <span class="text-white">por cada negócio.</span>
+                </h1>
+
+                <p class="text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                    Oferecemos impressionantes <strong class="text-gold font-semibold text-2xl">70% de comissão</strong>
+                    sobre a principal suíte de Inteligência Artificial para mais de <strong class="text-white">1.000.000
+                        de engenheiros</strong> no Brasil.
+                </p>
+
+                <img src="Gemini_Generated_Image_teanxbteanxbtean.png" alt="Painel VIP Afiliados Agentes Match"
+                    class="w-full max-w-3xl mx-auto rounded-2xl shadow-[0_0_50px_rgba(212,175,55,0.15)] border border-white/10 mb-12 object-cover relative z-10" />
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16 relative z-10">
+                    <a href="#comissoes"
+                        class="btn-premium px-10 py-5 rounded-lg text-sm flex items-center justify-center gap-3">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                        Quero Promover Agora
+                    </a>
+                    <a href="#simulador"
+                        class="btn-outline px-10 py-5 rounded-lg text-sm bg-black/50 backdrop-blur-md">Simular
+                        Faturamento Real ↓</a>
+                </div>
+
+                <div
+                    class="grid grid-cols-3 gap-4 lg:gap-8 max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md divide-x divide-white/10">
+                    <div class="text-center px-2">
+                        <p class="text-2xl lg:text-4xl font-bold text-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+                            70%</p>
+                        <p
+                            class="text-[9px] lg:text-xs text-gray-400 uppercase font-mono mt-2 tracking-widest font-bold">
+                            Taxa Comissão</p>
+                    </div>
+                    <div class="text-center px-2">
+                        <p class="text-2xl lg:text-4xl font-bold text-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+                            60 <span class="text-lg">Dias</span></p>
+                        <p
+                            class="text-[9px] lg:text-xs text-gray-400 uppercase font-mono mt-2 tracking-widest font-bold">
+                            Rastreio (Cookie)</p>
+                    </div>
+                    <div class="text-center px-2">
+                        <p class="text-2xl lg:text-4xl font-bold text-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+                            Zero</p>
+                        <p
+                            class="text-[9px] lg:text-xs text-gray-400 uppercase font-mono mt-2 tracking-widest font-bold">
+                            Custo Inicial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULADOR INTERATIVO (Aesthetics) -->
+        <section class="py-24 relative" id="simulador">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-display text-4xl font-bold text-white mb-4">Projeção Mensal</h2>
+                    <p class="text-gray-400">Resultados baseados em afiliados da categoria Elite (Tickect R$ 197).</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 lg:gap-8 reveal">
+                    <!-- Amador -->
+                    <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-white/5">
+                        <div>
+                            <div class="text-[10px] font-mono text-gold/60 uppercase tracking-widest font-bold mb-4">
+                                Amador • 5 vendas/mês</div>
+                            <h3 class="text-gray-500 mb-2 font-display">Renda Extra</h3>
+                            <p class="font-display text-5xl font-bold text-white mb-6">R$ 689</p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5">
+                            <p class="text-xs text-gray-500 font-mono">1 lead quente convertido por semana.</p>
+                        </div>
+                    </div>
+
+                    <!-- Profissional -->
+                    <div
+                        class="rounded-2xl p-[2px] bg-gradient-to-b from-gold via-goldDark to-carbon/5 relative transform lg:-translate-y-6 shadow-[0_0_40px_rgba(212,175,55,0.15)]">
+                        <div
+                            class="bg-carbonLight h-full rounded-[14px] p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gold/10 blur-2xl rounded-full"></div>
+                            <div
+                                class="absolute -top-4 right-6 bg-gold text-carbon font-mono text-[9px] font-bold px-3 py-1 rounded shadow-lg uppercase tracking-widest">
+                                Meta Escalável</div>
+
+                            <div>
+                                <div class="text-[10px] font-mono text-gold uppercase tracking-widest font-bold mb-4">
+                                    Avançado • 15 vendas/mês</div>
+                                <h3 class="text-gold mb-2 font-display">Operação Contínua</h3>
+                                <p class="font-display text-6xl font-bold text-gradient-gold mb-6 drop-shadow-xl">R$
+                                    2.068</p>
+                            </div>
+                            <div class="pt-6 border-t border-white/10 relative z-10">
+                                <p class="text-xs text-gray-300 font-mono">Apenas 1 venda a cada dois dias. Esforço
+                                    moderado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elite -->
+                    <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-white/5">
+                        <div>
+                            <div class="text-[10px] font-mono text-gold/60 uppercase tracking-widest font-bold mb-4">Top
+                                Afiliado • 30+ vendas/mês</div>
+                            <h3 class="text-gray-500 mb-2 font-display">Escala Massiva</h3>
+                            <p class="font-display text-5xl font-bold text-white mb-6">R$ 4.137+</p>
+                        </div>
+                        <div class="pt-6 border-t border-white/5">
+                            <p class="text-xs text-gray-500 font-mono">1 venda por dia usando tráfego orgânico/pago.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- TABELAS DE COMISSÃO / AFILIAÇÃO DIRETA -->
+        <section class="py-24 relative bg-carbon" id="comissoes">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="font-display text-4xl font-bold text-white mb-4">O Arsenal de Conversão</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Tudo hospedado e trackeado na <span
+                            class="font-bold text-orange-400">Cakto</span>. Basta criar a conta (gratuita), aceitar o
+                        convite e você já tem seu link de vendedor.</p>
+                </div>
+
+                <!-- Combos (Alta Margem) -->
+                <div class="mb-16 reveal">
+                    <h3
+                        class="flex items-center gap-3 text-gold font-mono text-sm uppercase tracking-widest mb-6 font-bold">
+                        <span class="w-6 h-[1px] bg-gold"></span> Kits Premium (Alto Ticket) <span
+                            class="w-6 h-[1px] bg-gold"></span>
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Super Pack Elite (Maior Comissão) -->
+                        <div
+                            class="glass-card rounded-xl p-2 bg-gradient-to-r from-gold/10 hover:from-gold/20 to-transparent transition-all border border-gold/30">
+                            <div
+                                class="bg-carbonLight/80 rounded-lg p-6 lg:p-8 flex flex-col md:flex-row md:items-center gap-6 relative">
+                                <div
+                                    class="absolute top-0 right-0 bg-gold text-carbon text-[9px] font-bold font-mono px-4 py-1 rounded-bl-lg uppercase tracking-widest shadow-lg">
+                                    Diamante - Maior Faturamento</div>
+
+                                <div class="flex-grow pt-4 md:pt-0">
+                                    <h4 class="font-bold text-white text-2xl mb-1">Super Pack Elite</h4>
+                                    <p class="text-sm text-gray-400 font-light">Coleção irrestrita: TODOS os 9 agentes e
+                                        material de apoio.</p>
+                                </div>
+
+                                <div class="border-l border-white/5 pl-0 md:pl-6 text-left md:text-right flex-shrink-0">
+                                    <p class="text-xs text-gray-500 font-mono mb-1 uppercase tracking-widest">Seu Lucro
+                                        Exato</p>
+                                    <p class="text-gold font-bold text-3xl font-display">R$ 137,90</p>
+                                    <p class="text-[10px] text-gray-500 mt-1">Ticket Final: R$ 197</p>
+                                </div>
+
+                                <div class="flex flex-col gap-3 flex-shrink-0">
+                                    <a href="https://app.cakto.com.br/affiliate/invite/82e281ba-2d19-4709-afb3-ba08b548cd79"
+                                        target="_blank"
+                                        class="btn-premium px-8 py-4 rounded text-xs text-center">TORNAR-SE SÓCIO ↗</a>
+                                    <button onclick="copyExt(this, 'https://pay.cakto.com.br/3dzpj4v')"
+                                        class="copy-btn text-[10px] font-mono text-gray-400 border border-gray-600 px-4 py-2 rounded text-center hover:text-white">Copiar
+                                        Checkout Visualização</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profissional -->
+                        <div
+                            class="glass-card rounded-xl p-6 lg:p-8 flex flex-col md:flex-row md:items-center gap-6 border border-white/10 hover:border-gold/30 transition-all">
+                            <div class="flex-grow">
+                                <div
+                                    class="inline-block text-[10px] bg-white/5 border border-white/10 font-bold font-mono px-3 py-1 rounded-full uppercase tracking-widest mb-3 text-gray-400">
+                                    Escalável</div>
+                                <h4 class="font-bold text-white text-2xl mb-1">Combo Profissional</h4>
+                                <p class="text-sm text-gray-400 font-light">LegalMatch + LaudoMatch + EstruturaMatch +
+                                    AvaliaMatch + ArquiMatch</p>
+                            </div>
+                            <div class="border-l border-white/5 pl-0 md:pl-6 text-left md:text-right flex-shrink-0">
+                                <p class="text-gold font-bold text-2xl font-display mt-2">R$ 102,90</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Ticket Final: R$ 147</p>
+                            </div>
+                            <div class="flex flex-col gap-3 flex-shrink-0">
+                                <a href="https://app.cakto.com.br/affiliate/invite/9102bcc5-8da8-4a3c-8447-8eed0359aa3e"
+                                    target="_blank"
+                                    class="btn-outline px-8 py-4 rounded text-xs text-center hover:bg-gold/10">AFILIAR-SE</a>
+                                <button onclick="copyExt(this, 'https://pay.cakto.com.br/gqp3t2u')"
+                                    class="copy-btn text-[10px] font-mono text-gray-400 border border-gray-600 px-4 py-2 rounded text-center hover:text-white">Copiar
+                                    Checkout</button>
+                            </div>
+                        </div>
+
+                        <!-- Starter -->
+                        <div
+                            class="glass-card rounded-xl p-6 lg:p-8 flex flex-col md:flex-row md:items-center gap-6 border border-white/10 hover:border-gold/30 transition-all opacity-80">
+                            <div class="flex-grow">
+                                <h4 class="font-bold text-white text-xl mb-1">Combo Starter</h4>
+                                <p class="text-sm text-gray-400 font-light">NormaMatch + LegalMatch + LaudoMatch</p>
+                            </div>
+                            <div class="border-l border-white/5 pl-0 md:pl-6 text-left md:text-right flex-shrink-0">
+                                <p class="text-gold font-bold text-xl font-display mt-2">R$ 67,90</p>
+                                <p class="text-[10px] text-gray-500 mt-1">Ticket Final: R$ 97</p>
+                            </div>
+                            <div class="flex flex-col gap-3 flex-shrink-0 w-full md:w-48">
+                                <a href="https://app.cakto.com.br/affiliate/invite/ad8ada4b-ee3b-45aa-9e73-717cb7f0bb89"
+                                    target="_blank"
+                                    class="w-full bg-white/5 border border-white/10 text-white font-bold py-3 rounded text-xs text-center uppercase tracking-widest hover:bg-white/10 transition-colors">Afiliar-se</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agentes Individuais Header -->
+                <h3
+                    class="flex items-center gap-3 text-gold/60 font-mono text-sm uppercase tracking-widest mb-6 font-bold reveal">
+                    <span class="w-6 h-[1px] bg-gold/50"></span> Produtos Individuais (Comissão R$ 32,90 / Ticket R$ 47)
+                </h3>
+
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10 reveal shadow-2xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left whitespace-nowrap">
+                            <thead
+                                class="text-xs uppercase bg-black/40 text-gray-400 border-b border-white/5 font-mono tracking-wider">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4">Sistema de IA</th>
+                                    <th scope="col" class="px-6 py-4">Pilar/Setor</th>
+                                    <th scope="col" class="px-6 py-4 text-center">Links de Associação</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/5 font-light">
+                                <!-- Items -->
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-white">MatchOrça PRO</td>
+                                    <td class="px-6 py-4 text-gray-400">Orçamentos & SINAPI</td>
+                                    <td class="px-6 py-4 text-center"><a
+                                            href="https://app.cakto.com.br/affiliate/invite/88e4c31b-875a-499a-8e56-b0530fdcdd8c"
+                                            target="_blank"
+                                            class="text-gold font-bold uppercase tracking-wider text-[10px] px-3 border border-gold/30 rounded py-1 hover:bg-gold hover:text-carbon transition-all">Aceitar
+                                            Convite</a></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-white">NormaMatch PRO</td>
+                                    <td class="px-6 py-4 text-gray-400">Suporte Técnico ABNT</td>
+                                    <td class="px-6 py-4 text-center"><a
+                                            href="https://app.cakto.com.br/affiliate/invite/7e0bfe6c-43f0-4652-ae69-8c6dfe548ff5"
+                                            target="_blank"
+                                            class="text-gold font-bold uppercase tracking-wider text-[10px] px-3 border border-gold/30 rounded py-1 hover:bg-gold hover:text-carbon transition-all">Aceitar
+                                            Convite</a></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-white">LegalMatch PRO</td>
+                                    <td class="px-6 py-4 text-gray-400">Licitações Púb. (14.133)</td>
+                                    <td class="px-6 py-4 text-center"><a
+                                            href="https://app.cakto.com.br/affiliate/invite/5cbe7950-a692-4cf4-90a2-51ffea0526da"
+                                            target="_blank"
+                                            class="text-gold font-bold uppercase tracking-wider text-[10px] px-3 border border-gold/30 rounded py-1 hover:bg-gold hover:text-carbon transition-all">Aceitar
+                                            Convite</a></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="px-6 py-4 font-bold text-white">LaudoMatch PRO</td>
+                                    <td class="px-6 py-4 text-gray-400">Diagnósticos & Laudos</td>
+                                    <td class="px-6 py-4 text-center"><a
+                                            href="https://app.cakto.com.br/affiliate/invite/e63a2f07-86a0-44cb-bac3-99a3612a6cc7"
+                                            target="_blank"
+                                            class="text-gold font-bold uppercase tracking-wider text-[10px] px-3 border border-gold/30 rounded py-1 hover:bg-gold hover:text-carbon transition-all">Aceitar
+                                            Convite</a></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors text-gray-500 italic">
+                                    <td class="px-6 py-4">Demais Módulos (+5)</td>
+                                    <td class="px-6 py-4">Toda a Estrutura</td>
+                                    <td class="px-6 py-4 text-center text-[10px] font-mono">Disponíveis no Dashboard
+                                        Cakto após cadastro.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MOTIVES: THE WHY -->
+        <section class="py-24 relative overflow-hidden bg-carbonLight">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 reveal relative">
+                    <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4 text-white">O Produto que se Vende
+                        Sozinho</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-lg">Veja como nossa tecnologia contrasta o
+                        método longo e manual (ao fundo) com a eficiência instantânea da IA (em destaque).</p>
+
+                    <div
+                        class="relative max-w-3xl mx-auto p-1 rounded-2xl bg-gradient-to-b from-white/10 to-transparent">
+                        <div class="absolute inset-0 bg-gold/5 blur-xl rounded-[2rem] -z-10"></div>
+                        <img src="Gemini_Generated_Image_a9j5yha9j5yha9j5.png"
+                            alt="Comparação Engenharia Tradicional vs Inteligência Artificial"
+                            class="w-full rounded-xl shadow-2xl border border-white/5 object-cover" />
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto mb-16 reveal relative group">
+                    <div
+                        class="absolute inset-0 bg-gold/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                    </div>
+                    <img src="Gemini_Generated_Image_vxoylgvxoylgvxoy.png" alt="Futuro da Engenharia com IA"
+                        class="w-full max-h-[400px] object-cover rounded-2xl border border-white/10 shadow-2xl relative z-10 group-hover:border-gold/30 transition-colors duration-500" />
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 reveal">
+                    <div class="glass-card p-8 rounded-xl border border-white/5 hover:border-gold/30 transition-colors">
+                        <span class="text-4xl block mb-6 drop-shadow-xl">🎯</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Engajamento Instantâneo</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-light">Ofereça nossa Isca (O <strong
+                                class="text-white">EngMatchFree</strong>). Toda a fricção de venda acaba porque o
+                            prospect experimenta a plataforma 100% grátis e o upsell é consequência lógica.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl border border-white/5 hover:border-gold/30 transition-colors">
+                        <span class="text-4xl block mb-6 drop-shadow-xl">⚙️</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Zero Manutenção</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-light">Você repassa o link e acabou.
+                            Liberação, suporte a falhas e tutoriais da IA ficam totalmente do nosso lado e via automação
+                            direta do Google Gemini.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl border border-white/5 hover:border-gold/30 transition-colors">
+                        <span class="text-4xl block mb-6 drop-shadow-xl">💎</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Mercado Azul</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed font-light">Os engenheiros civis conhecem o GPT
+                            básico, mas não possuem um <strong class="text-white">assistente técnico moldado para
+                                ele</strong>. Há um bilhão em orçamentos dependendo de eficiência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SWIPE FILES: COPYWRITING -->
+        <section class="py-24 relative bg-carbon">
+            <div class="max-w-5xl mx-auto px-6 reveal">
+                <h2 class="font-display text-4xl font-bold text-white text-center mb-4">Seu Arsenal de Venda Pronta</h2>
+                <p class="text-center text-gray-400 mb-16 text-sm">Scripts de altíssima conversão. Copie e aplique nas
+                    suas redes.</p>
+
+                <div class="space-y-6">
+
+                    <div class="glass-card rounded-2xl p-8 border border-white/10 group">
+                        <div class="flex justify-between items-center mb-6 pb-6 border-b border-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-gold"></span>
+                                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Cold
+                                    Approach / WhatsApp</span>
+                            </div>
+                            <button onclick="copyContent(this, 'cwa')"
+                                class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-4 py-2 hover:bg-gold/10 rounded">📋
+                                Copiar Prompt</button>
+                        </div>
+                        <div class="font-mono text-sm text-gray-300 leading-relaxed whitespace-pre-wrap font-light"
+                            id="cwa">Fala [NOME], vi sua atuação na engenharia e lembrei disso. A galera está otimizando
+                            orçamentos SINAPI e análise de NBRs em 90% via IA própria pra Civil.
+
+                            Descobri esse hub de Agentes do Google Gemini: AgentesMatch.
+                            Eles liberaram o genérico (EngMatchFree) lá na home gratuitamente. O negócio estrutura até
+                            planilha.
+                            Acessa ali a Demo, achei surreal:
+                            👉 [SEU LINK DA HOME/ISCA AQUI]
+
+                            Vale a pena testar só pra entender onde o mercado de tecnologia está parando.</div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-8 border border-white/10 group">
+                        <div class="flex justify-between items-center mb-6 pb-6 border-b border-white/5">
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Social
+                                    Media / LinkedIn Autoridade</span>
+                            </div>
+                            <button onclick="copyContent(this, 'cln')"
+                                class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-4 py-2 hover:bg-gold/10 rounded">📋
+                                Copiar Prompt</button>
+                        </div>
+                        <div class="font-mono text-sm text-gray-300 leading-relaxed whitespace-pre-wrap font-light"
+                            id="cln">Muitos colegas ainda perdem madrugadas lendo editais de licitação inteiros ou
+                            buscando normativas (NBRs) no olho para estruturar um laudo ou orçamento decente. O tempo da
+                            prancheta acabou. O tempo do Excel sem inteligência também.
+
+                            Usei e homologuei uma suíte de 9 Agentes Nativos do Google Gemini moldados para a Engenharia
+                            Civil (Agentes Match). Eles:
+                            1️⃣ Elaboram composições de base SINAPI;
+                            2️⃣ Dissecam a 14.133 indicando riscos do certame;
+                            3️⃣ Formulam Vistorias Cautelares seguindo literatura real.
+
+                            Nenhum profissional sobrevive à eficiência absurda da IA especializada.
+                            Você pode subestimar, mas a construtora concorrente não vai.
+
+                            Teste gratuitamente o assistente beta deles no link:
+                            👉 [SEU LINK AQUI] #ConstruçãoCivil #Inovação #Engenharia</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CALL -->
+        <section class="py-32 relative overflow-hidden flex items-center bg-carbon/80">
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-gold/5 via-transparent to-transparent pointer-events-none">
+            </div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+                <h2 class="font-display text-4xl lg:text-6xl font-black text-white mb-6">Comece sua Retenção.</h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">Não é preciso
+                    conhecimento técnico de Engenharia para vender. A promessa é brutal: <strong
+                        class="text-white">Tempo</strong>. Cadastre-se na rede Cakto e habilite sua afiliação premium
+                    imediatamente.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-5">
+                    <a href="https://app.cakto.com.br/affiliate/invite/82e281ba-2d19-4709-afb3-ba08b548cd79"
+                        target="_blank"
+                        class="btn-premium px-12 py-5 rounded-lg shadow-2xl shadow-gold/20 flex flex-col items-center">
+                        <span class="text-[10px] font-mono tracking-widest opacity-80 mb-1">Afiliar-se Diretamente
+                            ao</span>
+                        <span class="text-lg">Super Pack Elite (R$ 137,90)</span>
+                    </a>
+                </div>
+                <p class="text-xs text-gray-600 font-mono mt-8 uppercase tracking-widest">Suporte a parceiros:
+                    eng.jandreoliveira@gmail.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-carbonLight border-t border-white/5 py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <div class="font-display font-bold text-lg text-white">Agentes<span class="text-gold">Match</span></div>
+                <div class="h-6 w-px bg-white/10"></div>
+                <span class="text-xs text-gray-500 font-sans">Parte da tecnologia <a href="https://obramatch.com.br"
+                        target="_blank" class="text-gold hover:text-white transition-colors">obramatch.com.br</a></span>
+            </div>
+            <div
+                class="text-[10px] font-mono text-gray-500 bg-white/5 px-4 py-2 border border-white/5 rounded backdrop-blur whitespace-normal md:whitespace-nowrap text-center">
+                PRIVADO AFILIADOS • COMERCIALIZAÇÃO DE ATIVO DIGITAL • 70% HOT COMM • GOOGLE GEMINI BACKED</div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Clipboard Logic
+        function copyExt(btn, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const orig = btn.innerText;
+                btn.innerText = 'COPIADO!';
+                btn.classList.add('text-green-400', 'border-green-400');
+                setTimeout(() => {
+                    btn.innerText = orig;
+                    btn.classList.remove('text-green-400', 'border-green-400');
+                }, 2000);
+            });
+        }
+
+        function copyContent(btn, id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerText = 'COPIADO!';
+                btn.style.color = '#fff';
+                btn.style.background = '#10B981'; /* Tailwind green-500 */
+                btn.style.borderColor = '#10B981';
+                setTimeout(() => {
+                    btn.innerText = '📋 Copiar Prompt';
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            });
+        }
+
+        // Header Dynamic Blur
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-carbon/90', 'shadow-lg');
+                header.classList.remove('bg-carbon/80');
+            } else {
+                header.classList.add('bg-carbon/80');
+                header.classList.remove('bg-carbon/90', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
+
+</html>
