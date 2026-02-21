@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM 02 - PubliMatch PRO - ObraMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-color: #3B82F6;
+            --neon-glow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.8);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--bg-dark) 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(59, 130, 246, 0.05) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid var(--neon-color);
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .access-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(59, 130, 246, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 30px rgba(59, 130, 246, 0.1);
+            border-color: var(--neon-color);
+        }
+        .access-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .access-btn {
+            display: inline-block;
+            background: var(--neon-color);
+            color: #000;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .access-btn:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4);
+            background: #fff;
+        }
+        .section {
+            background: rgba(15, 15, 15, 0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+        .section h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--neon-color);
+            border-radius: 4px;
+            box-shadow: var(--neon-glow);
+        }
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .section h4 {
+            color: var(--neon-color);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 500;
+        }
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section li { margin-bottom: 0.6rem; color: var(--text-muted); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+        
+        .prompt-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--neon-color);
+            transition: all 0.3s ease;
+        }
+        .prompt-card:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transform: translateX(5px);
+        }
+        .prompt-card strong { color: var(--neon-color); }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .agent-item {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--neon-color);
+            box-shadow: var(--neon-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .agent-item:hover { 
+            border-color: rgba(59, 130, 246, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .agent-item:hover::before { opacity: 1; }
+        .agent-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+        .agent-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .agent-item a {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            border: 1px solid var(--neon-color);
+            text-decoration: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .agent-item a:hover {
+            background: var(--neon-color);
+            color: #000;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            background: #000;
+        }
+        .footer a { color: var(--neon-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: #fff; text-shadow: var(--neon-glow); }
+        .tips-list li { color: var(--text-muted); margin-bottom: 0.8rem; }
+        .tips-list li strong { color: #fff; }
+        hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .access-card { padding: 2rem 1.5rem; }
+            .section { padding: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div style="font-size: 3rem;">📢</div>
+        <h1>GEM 02 - PubliMatch PRO</h1>
+        <div class="subtitle">Marketing e Divulgação para Engenharia</div>
+        <div class="badge">Acesso Anual • Todas as Atualizações • ObraMatch</div>
+    </div>
+    <div class="container">
+        <div class="access-card">
+            <h2>📢 Acessar Seu Agente GEM</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Clique no botão abaixo para abrir seu agente no Google Gemini:</p>
+            <a href="https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing" target="_blank" class="access-btn">🚀 Abrir PubliMatch PRO no Gemini</a>
+            <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem;">Requer conta Google. Bookmark este link para acesso rápido.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o PubliMatch PRO?</h3><p>O <strong>PubliMatch PRO</strong> é um agente especializado em marketing digital para o setor de construção civil e engenharia. Ele transforma a presença digital de engenheiros, arquitetos e construtoras, criando conteúdo estratégico que respeita o código de ética do CONFEA/CREA.</p><h3>Como Funciona?</h3><p>O agente opera em três serviços principais:</p><h4>1. Estratégia de Conteúdo Multimodal</h4><ul><li>Analisa fotos de obra usando visão computacional</li><li>Identifica ângulos estratégicos e diferenciais construtivos</li><li>Roteiriza vídeos e cria legendas persuasivas</li><li>Usa Google Veo 3.1 e Imagen 3 para gerar conteúdo visual</li></ul>
+<h4>2. Gestão de SEO Local e Google Meu Negócio</h4><ul><li>Mapeia palavras-chave mais buscadas no seu nicho e região</li><li>Otimiza perfil no Google Meu Negócio</li><li>Aumenta visibilidade em buscas locais</li><li>Estratégias para captar avaliações positivas</li></ul>
+<h4>3. Copywriting Técnico e Ético</h4><ul><li>Textos baseados em Autoridade, Visibilidade, Relacionamento e Conversão</li><li>Linguagem que respeita normas do CREA/CONFEA</li><li>Comunicação clara sobre valor do serviço</li><li>Redação especializada em termos técnicos acessíveis</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina seu objetivo</strong> (captar clientes, criar portfólio, SEO local)</li><li><strong>Envie materiais</strong> (fotos de obra, informações do escritório)</li><li><strong>Especifique seu público</strong> (residencial, comercial, industrial)</li><li><strong>Refine o conteúdo</strong> através de iterações</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Imersão e Diagnóstico</strong> - Análise do portfólio e presença atual</li><li><strong>Planejamento Editorial</strong> - Calendário de postagens estratégico</li><li><strong>Produção de Ativos</strong> - Vídeos, imagens e textos</li><li><strong>Validação em Tempo Real</strong> - Verificação de tendências via Search</li><li><strong>Análise de Performance</strong> - Monitoramento de resultados</li></ol>
+<hr><h2>30 Prompts para Marketing de Engenharia</h2><h3>Conteúdo para Instagram (1-10)</h3><div class="prompt-card"><strong>1.</strong> Crie um carrossel de 7 slides explicando as etapas de uma obra residencial, desde a fundação até o acabamento, para engenheiros que querem educar seus seguidores.</div><div class="prompt-card"><strong>2.</strong> Elabore 10 legendas persuasivas para posts de fotos de obra em andamento, focando em demonstrar qualidade técnica sem parecer vendedor.</div><div class="prompt-card"><strong>3.</strong> Desenvolva um roteiro de Reels de 30 segundos mostrando o processo de concretagem de uma laje, com texto explicativo para leigos.</div><div class="prompt-card"><strong>4.</strong> Crie uma série de 5 posts sobre 'Erros comuns em obras' que demonstrem autoridade técnica e eduquem o público.</div><div class="prompt-card"><strong>5.</strong> Elabore um calendário de conteúdo mensal para Instagram de um engenheiro civil autônomo focado em reformas residenciais.</div><div class="prompt-card"><strong>6.</strong> Desenvolva 15 ideias de Stories interativos para engajamento, usando enquetes e caixas de perguntas sobre construção.</div><div class="prompt-card"><strong>7.</strong> Crie textos para destaques do Instagram: Serviços, Portfólio, Depoimentos, Processo de Trabalho e FAQ.</div><div class="prompt-card"><strong>8.</strong> Elabore um post educativo sobre 'Como identificar problemas estruturais em imóveis usados' para atrair compradores de imóveis.</div><div class="prompt-card"><strong>9.</strong> Desenvolva uma série de posts comparativos: 'Alvenaria convencional vs Steel Frame' em linguagem acessível.</div><div class="prompt-card"><strong>10.</strong> Crie um prompt para Imagen 3 gerar imagens conceituais de antes e depois de uma reforma predial para usar no feed.</div><h3>LinkedIn e Autoridade (11-18)</h3><div class="prompt-card"><strong>11.</strong> Escreva um artigo técnico para LinkedIn sobre 'A importância da NBR 15575 na qualidade das edificações' com linguagem executiva.</div><div class="prompt-card"><strong>12.</strong> Elabore uma série de 5 posts para LinkedIn demonstrando cases de sucesso em obras, focando em problemas resolvidos e resultados.</div><div class="prompt-card"><strong>13.</strong> Crie uma bio profissional impactante para LinkedIn de engenheiro civil com 10 anos de experiência em obras de médio porte.</div><div class="prompt-card"><strong>14.</strong> Desenvolva 10 headlines para artigos técnicos que atraiam gestores de construtoras e incorporadoras.</div><div class="prompt-card"><strong>15.</strong> Elabore um post sobre tendências de construção sustentável para 2024, posicionando o profissional como especialista.</div><div class="prompt-card"><strong>16.</strong> Crie um roteiro de vídeo para LinkedIn sobre 'Os 5 maiores desafios de gerenciar obras residenciais' em tom de mentoria.</div><div class="prompt-card"><strong>17.</strong> Desenvolva uma estratégia de conteúdo para LinkedIn focada em atrair parcerias com arquitetos e designers.</div><div class="prompt-card"><strong>18.</strong> Elabore posts que demonstrem conhecimento em BIM e tecnologias construtivas modernas para um perfil técnico avançado.</div><h3>SEO e Google Meu Negócio (19-24)</h3><div class="prompt-card"><strong>19.</strong> Liste as 20 principais palavras-chave que um engenheiro civil deve usar para SEO local em uma cidade de médio porte.</div><div class="prompt-card"><strong>20.</strong> Elabore uma descrição otimizada para Google Meu Negócio de um escritório de engenharia especializado em laudos e vistorias.</div><div class="prompt-card"><strong>21.</strong> Crie um roteiro de respostas para as perguntas mais frequentes no Google Meu Negócio de um engenheiro civil.</div><div class="prompt-card"><strong>22.</strong> Desenvolva uma estratégia para conseguir 50 avaliações positivas no Google em 6 meses de forma ética.</div><div class="prompt-card"><strong>23.</strong> Elabore textos otimizados para as categorias de serviço no Google Meu Negócio: Projetos, Laudos, Acompanhamento de Obra.</div><div class="prompt-card"><strong>24.</strong> Crie uma lista de posts que podem ser publicados no Google Meu Negócio para melhorar o ranking local.</div><h3>Copywriting e Conversão (25-30)</h3><div class="prompt-card"><strong>25.</strong> Escreva uma página de vendas para serviço de acompanhamento de obra residencial, focando em segurança e economia.</div><div class="prompt-card"><strong>26.</strong> Elabore 5 modelos de e-mail marketing para nutrir leads que solicitaram orçamento mas não fecharam.</div><div class="prompt-card"><strong>27.</strong> Crie textos para WhatsApp Business: mensagem de boas-vindas, ausência e resposta rápida sobre orçamentos.</div><div class="prompt-card"><strong>28.</strong> Desenvolva um script de apresentação de 3 minutos para reuniões com potenciais clientes de obras residenciais.</div><div class="prompt-card"><strong>29.</strong> Elabore uma proposta comercial modelo para serviços de engenharia, com seções de escopo, diferenciais e garantias.</div><div class="prompt-card"><strong>30.</strong> Crie 10 CTAs (chamadas para ação) diferentes para usar em posts, stories e bio que incentivem contato via WhatsApp.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Mantenha ética</strong>: Sempre respeite o código do CONFEA/CREA</li><li><strong>Mostre processo</strong>: Conteúdo de bastidores gera mais confiança</li><li><strong>Use provas sociais</strong>: Depoimentos e cases são poderosos</li><li><strong>Seja consistente</strong>: Poste regularmente seguindo o calendário</li><li><strong>Meça resultados</strong>: Acompanhe métricas de engajamento e conversão</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 ObraMatch - Engenharia Inteligente</p>
+        <p>Suporte: <a href="mailto:obramatch+suporte@gmail.com">obramatch+suporte@gmail.com</a></p>
+        <p><a href="https://obramatch.com.br">obramatch.com.br</a></p>
+    </div>
+</body>
+</html>
