@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM 01 - EngMatchFree - ObraMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-color: #10B981;
+            --neon-glow: 0 0 10px rgba(16, 185, 129, 0.5), 0 0 20px rgba(16, 185, 129, 0.3);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.8);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--bg-dark) 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.3);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(16, 185, 129, 0.05) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid var(--neon-color);
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .access-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(16, 185, 129, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 30px rgba(16, 185, 129, 0.1);
+            border-color: var(--neon-color);
+        }
+        .access-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .access-btn {
+            display: inline-block;
+            background: var(--neon-color);
+            color: #000;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .access-btn:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 0 40px rgba(16, 185, 129, 0.4);
+            background: #fff;
+        }
+        .section {
+            background: rgba(15, 15, 15, 0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+        .section h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.3);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--neon-color);
+            border-radius: 4px;
+            box-shadow: var(--neon-glow);
+        }
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .section h4 {
+            color: var(--neon-color);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 500;
+        }
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section li { margin-bottom: 0.6rem; color: var(--text-muted); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+        
+        .prompt-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--neon-color);
+            transition: all 0.3s ease;
+        }
+        .prompt-card:hover {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transform: translateX(5px);
+        }
+        .prompt-card strong { color: var(--neon-color); }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .agent-item {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--neon-color);
+            box-shadow: var(--neon-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .agent-item:hover { 
+            border-color: rgba(16, 185, 129, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .agent-item:hover::before { opacity: 1; }
+        .agent-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+        .agent-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .agent-item a {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            border: 1px solid var(--neon-color);
+            text-decoration: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .agent-item a:hover {
+            background: var(--neon-color);
+            color: #000;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            background: #000;
+        }
+        .footer a { color: var(--neon-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: #fff; text-shadow: var(--neon-glow); }
+        .tips-list li { color: var(--text-muted); margin-bottom: 0.8rem; }
+        .tips-list li strong { color: #fff; }
+        hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .access-card { padding: 2rem 1.5rem; }
+            .section { padding: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div style="font-size: 3rem;">🏗️</div>
+        <h1>GEM 01 - EngMatchFree</h1>
+        <div class="subtitle">Super Agente Global de Engenharia Civil - Gratuito</div>
+        <div class="badge">Acesso Anual • Todas as Atualizações • ObraMatch</div>
+    </div>
+    <div class="container">
+        <div class="access-card">
+            <h2>🏗️ Acessar Seu Agente GEM</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Clique no botão abaixo para abrir seu agente no Google Gemini:</p>
+            <a href="https://gemini.google.com/gem/1NmdBrs0O0mI8xAuB5AlRFuq-C_6CQSTz?usp=sharing" target="_blank" class="access-btn">🚀 Abrir EngMatchFree no Gemini</a>
+            <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem;">Requer conta Google. Bookmark este link para acesso rápido.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1NmdBrs0O0mI8xAuB5AlRFuq-C_6CQSTz?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o EngMatchFree?</h3><p>O <strong>EngMatchFree</strong> é o agente central do ecossistema ObraMatch, funcionando como um consultor de engenharia civil completo. Ele integra as normas técnicas brasileiras (ABNT) com ferramentas avançadas de IA do Google, oferecendo suporte técnico multimodal para projetos de construção.</p><h3>Como Funciona?</h3><p>O agente opera em quatro pilares principais:</p><h4>1. Garantia de Conformidade Normativa</h4><ul><li>Analisa projetos comparando com NBR 15575 (Desempenho) e NBR 6118 (Estruturas)</li><li>Verifica atualizações de normas em tempo real via Google Search</li><li>Reduz riscos jurídicos e garante Vida Útil de Projeto (VUP)</li></ul>
+<h4>2. Simulação Visual (Veo 3.1)</h4><ul><li>Elabora roteiros para tours 360°</li><li>Cria estudos de iluminação solar</li><li>Gera vídeos de sequência construtiva</li></ul>
+<h4>3. Design e Mockups (Imagen 3)</h4><ul><li>Gera mockups fotorrealistas de fachadas</li><li>Cria visualizações de interiores</li><li>Agiliza aprovação com clientes</li></ul>
+<h4>4. Diagnóstico Mobile (Gemini Nano)</h4><ul><li>Fornece cálculos estruturais rápidos</li><li>Funciona em locais sem internet</li><li>Ideal para vistorias em campo</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Descreva seu projeto</strong> com detalhes (tipo de obra, localização, dimensões)</li><li><strong>Especifique a necessidade</strong> (conformidade, cálculo, visualização)</li><li><strong>Forneça dados técnicos</strong> quando solicitado</li><li><strong>Refine os resultados</strong> através de perguntas complementares</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Imersão Normativa</strong> - Consulta base de conhecimento de normas</li><li><strong>Desenvolvimento no Canvas</strong> - Edição colaborativa de documentos</li><li><strong>Refinamento Multimodal</strong> - Uso de Veo, Imagen e Search</li><li><strong>Validação de Segurança</strong> - Auditoria de integridade das recomendações</li></ol>
+<hr><h2>30 Prompts para Engenheiros</h2><h3>Conformidade Normativa (1-10)</h3><div class="prompt-card"><strong>1.</strong> Analise se este projeto de edifício residencial de 8 pavimentos atende aos requisitos mínimos da NBR 15575 para desempenho acústico entre unidades.</div><div class="prompt-card"><strong>2.</strong> Verifique se as especificações de cobrimento de armadura do meu projeto estão adequadas para Classe de Agressividade Ambiental III conforme NBR 6118.</div><div class="prompt-card"><strong>3.</strong> Faça uma checklist de conformidade com a NBR 15575 para um projeto de casa térrea de 150m² em região de clima quente e úmido.</div><div class="prompt-card"><strong>4.</strong> Quais são os requisitos mínimos de desempenho térmico da NBR 15575 para paredes externas na Zona Bioclimática 8?</div><div class="prompt-card"><strong>5.</strong> Compare as exigências de vida útil de projeto (VUP) entre sistemas estruturais e sistemas de vedação segundo a NBR 15575.</div><div class="prompt-card"><strong>6.</strong> Analise se a especificação de concreto C30 é adequada para fundações em solo com presença de sulfatos, conforme NBR 6118.</div><div class="prompt-card"><strong>7.</strong> Quais ensaios de desempenho são obrigatórios para homologar um novo sistema de vedação vertical conforme NBR 15575?</div><div class="prompt-card"><strong>8.</strong> Elabore um roteiro de inspeção para verificar conformidade com NBR 6118 em estruturas de concreto armado já executadas.</div><div class="prompt-card"><strong>9.</strong> Quais são as tolerâncias dimensionais aceitáveis para elementos estruturais de concreto segundo as normas brasileiras vigentes?</div><div class="prompt-card"><strong>10.</strong> Verifique se o projeto de impermeabilização da laje de cobertura atende à NBR 9575 e NBR 9574.</div><h3>Cálculos e Dimensionamento (11-20)</h3><div class="prompt-card"><strong>11.</strong> Calcule a carga por metro linear para uma viga de baldrame com 6 metros de vão, considerando alvenaria de vedação de 19cm de espessura.</div><div class="prompt-card"><strong>12.</strong> Qual a armadura mínima necessária para uma laje maciça de 12cm de espessura com vão de 4x5 metros?</div><div class="prompt-card"><strong>13.</strong> Faça o pré-dimensionamento de pilares para um edifício de 10 pavimentos com área de influência de 25m² por pilar.</div><div class="prompt-card"><strong>14.</strong> Calcule o volume de concreto necessário para uma fundação em radier de 200m² com espessura de 30cm.</div><div class="prompt-card"><strong>15.</strong> Qual o consumo estimado de aço CA-50 para uma estrutura de concreto armado de 500m² por pavimento?</div><div class="prompt-card"><strong>16.</strong> Dimensione a seção de uma viga contínua de dois vãos de 5 metros cada, com carga distribuída de 15 kN/m.</div><div class="prompt-card"><strong>17.</strong> Calcule a taxa de armadura necessária para um pilar de 20x50cm com carga axial de 800 kN.</div><div class="prompt-card"><strong>18.</strong> Qual a flecha máxima admissível para uma laje de 6 metros de vão segundo a NBR 6118?</div><div class="prompt-card"><strong>19.</strong> Faça a verificação de punção para uma laje lisa de 20cm apoiada em pilar de 30x30cm com carga de 400 kN.</div><div class="prompt-card"><strong>20.</strong> Calcule o espaçamento máximo entre estribos para uma viga de 20x60cm com cortante de 150 kN.</div><h3>Visualização e Apresentação (21-25)</h3><div class="prompt-card"><strong>21.</strong> Crie um roteiro detalhado para vídeo de tour virtual 360° de um apartamento de 80m² com acabamento contemporâneo.</div><div class="prompt-card"><strong>22.</strong> Elabore um prompt para o Imagen 3 gerar uma fachada moderna de edifício residencial de 12 pavimentos com elementos de concreto aparente.</div><div class="prompt-card"><strong>23.</strong> Descreva uma sequência construtiva visual para apresentar ao cliente as etapas de construção de uma casa de 200m².</div><div class="prompt-card"><strong>24.</strong> Crie um estudo de iluminação natural para um escritório de 100m² com fachada orientada para oeste.</div><div class="prompt-card"><strong>25.</strong> Elabore uma apresentação visual comparativa entre três opções de revestimento de fachada para um edifício comercial.</div><h3>Diagnóstico e Consultoria (26-30)</h3><div class="prompt-card"><strong>26.</strong> Analise as possíveis causas de fissuras em formato de mapa em uma laje de cobertura executada há 2 anos.</div><div class="prompt-card"><strong>27.</strong> Quais são os critérios técnicos para decidir entre fundação superficial e profunda em um terreno com SPT médio de 8 golpes?</div><div class="prompt-card"><strong>28.</strong> Elabore um parecer técnico sobre a viabilidade de adicionar mais um pavimento em uma edificação existente de 3 andares.</div><div class="prompt-card"><strong>29.</strong> Quais investigações geotécnicas são necessárias para um projeto de edifício de 15 pavimentos em área urbana?</div><div class="prompt-card"><strong>30.</strong> Desenvolva um plano de manutenção preventiva para os sistemas estruturais de um edifício residencial de 20 anos.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Seja específico</strong>: Forneça dados como dimensões, cargas, localização e tipo de uso</li><li><strong>Mencione normas</strong>: Cite as NBRs relevantes para respostas mais precisas</li><li><strong>Peça detalhamento</strong>: Solicite memórias de cálculo quando necessário</li><li><strong>Use iterações</strong>: Refine as respostas através de perguntas complementares</li><li><strong>Salve resultados</strong>: Exporte documentos importantes para o Google Drive</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 ObraMatch - Engenharia Inteligente</p>
+        <p>Suporte: <a href="mailto:obramatch+suporte@gmail.com">obramatch+suporte@gmail.com</a></p>
+        <p><a href="https://obramatch.com.br">obramatch.com.br</a></p>
+    </div>
+</body>
+</html>

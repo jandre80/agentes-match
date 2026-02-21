@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM 05 - NormaMatch PRO - ObraMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-color: #8B5CF6;
+            --neon-glow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.8);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--bg-dark) 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(139, 92, 246, 0.05) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid var(--neon-color);
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .access-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(139, 92, 246, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 30px rgba(139, 92, 246, 0.1);
+            border-color: var(--neon-color);
+        }
+        .access-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .access-btn {
+            display: inline-block;
+            background: var(--neon-color);
+            color: #000;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .access-btn:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.4);
+            background: #fff;
+        }
+        .section {
+            background: rgba(15, 15, 15, 0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+        .section h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--neon-color);
+            border-radius: 4px;
+            box-shadow: var(--neon-glow);
+        }
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .section h4 {
+            color: var(--neon-color);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 500;
+        }
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section li { margin-bottom: 0.6rem; color: var(--text-muted); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+        
+        .prompt-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--neon-color);
+            transition: all 0.3s ease;
+        }
+        .prompt-card:hover {
+            background: rgba(139, 92, 246, 0.05);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transform: translateX(5px);
+        }
+        .prompt-card strong { color: var(--neon-color); }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .agent-item {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--neon-color);
+            box-shadow: var(--neon-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .agent-item:hover { 
+            border-color: rgba(139, 92, 246, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .agent-item:hover::before { opacity: 1; }
+        .agent-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+        .agent-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .agent-item a {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            border: 1px solid var(--neon-color);
+            text-decoration: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .agent-item a:hover {
+            background: var(--neon-color);
+            color: #000;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            background: #000;
+        }
+        .footer a { color: var(--neon-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: #fff; text-shadow: var(--neon-glow); }
+        .tips-list li { color: var(--text-muted); margin-bottom: 0.8rem; }
+        .tips-list li strong { color: #fff; }
+        hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .access-card { padding: 2rem 1.5rem; }
+            .section { padding: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div style="font-size: 3rem;">📋</div>
+        <h1>GEM 05 - NormaMatch PRO</h1>
+        <div class="subtitle">Normas ABNT e Conformidade Técnica</div>
+        <div class="badge">Acesso Anual • Todas as Atualizações • ObraMatch</div>
+    </div>
+    <div class="container">
+        <div class="access-card">
+            <h2>📋 Acessar Seu Agente GEM</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Clique no botão abaixo para abrir seu agente no Google Gemini:</p>
+            <a href="https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing" target="_blank" class="access-btn">🚀 Abrir NormaMatch PRO no Gemini</a>
+            <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem;">Requer conta Google. Bookmark este link para acesso rápido.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o NormaMatch PRO?</h3><p>O <strong>NormaMatch PRO</strong> é um agente especializado em normas técnicas brasileiras, desenvolvido para garantir que nenhum projeto de engenharia civil seja executado fora dos padrões normativos atuais. Ele transforma a complexidade técnica em segurança jurídica e eficiência operacional.</p><h3>Como Funciona?</h3><p>O agente opera em quatro serviços principais:</p><h4>1. Validação e Verificação de Vigência</h4><ul><li>Verifica versão vigente de normas no catálogo ABNT</li><li>Identifica normas revogadas ou substituídas</li><li>Utiliza Google Search como fonte primária</li><li>Evita uso de normas obsoletas</li></ul>
+<h4>2. Consultoria Técnica em Estruturas e Instalações</h4><ul><li>Interpreta tabelas e requisitos de normas</li><li>Analisa NBR 6118 (Concreto), NBR 5410 (Elétrica)</li><li>Fornece respostas baseadas em itens normativos</li><li>Agiliza detalhamento de projetos</li></ul>
+<h4>3. Gestão de Segurança do Trabalho (NRs)</h4><ul><li>Detalha requisitos de NR-18, NR-35, NR-6</li><li>Orienta sobre condições obrigatórias no canteiro</li><li>Reduz riscos operacionais</li><li>Proteção jurídica para responsável técnico</li></ul>
+<h4>4. Suporte à Qualidade e Desempenho (NBR 15575)</h4><ul><li>Interpretação de critérios de desempenho</li><li>Orientação sobre inspeção predial (NBR 16747)</li><li>Desempenho térmico, acústico e lumínico</li><li>Conformidade com garantias legais</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Informe o número da norma</strong> ou tema técnico</li><li><strong>Especifique a dúvida</strong> (requisito, tabela, procedimento)</li><li><strong>Solicite verificação de vigência</strong> quando necessário</li><li><strong>Peça comparativos</strong> entre normas ou edições</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Identificação e Contextualização</strong> - Localização da norma correspondente</li><li><strong>Triagem de Atualidade</strong> - Verificação no ABNT Catálogo</li><li><strong>Análise e Interpretação</strong> - Tradução em diretrizes práticas</li><li><strong>Enriquecimento Visual</strong> - Vídeos de ensaios via YouTube</li><li><strong>Documentação e Registro</strong> - Orientação para conformidade</li></ol>
+<hr><h2>30 Prompts para Consulta de Normas</h2><h3>Normas Estruturais (1-10)</h3><div class="prompt-card"><strong>1.</strong> Quais são os coeficientes de majoração de cargas e minoração de resistência estabelecidos pela NBR 6118 para verificação de estados limites últimos?</div><div class="prompt-card"><strong>2.</strong> Qual o cobrimento mínimo de armadura para pilares em ambiente de classe de agressividade III segundo a NBR 6118?</div><div class="prompt-card"><strong>3.</strong> Explique os critérios de aceitação do concreto por amostragem parcial conforme NBR 12655, detalhando o cálculo do fck estimado.</div><div class="prompt-card"><strong>4.</strong> Quais são os limites de abertura de fissuras para elementos estruturais de concreto armado em ambiente agressivo segundo NBR 6118?</div><div class="prompt-card"><strong>5.</strong> Detalhe os requisitos da NBR 14931 para prazo mínimo de desforma de lajes, vigas e pilares.</div><div class="prompt-card"><strong>6.</strong> Quais são os critérios de verificação de flambagem para pilares esbeltos segundo a NBR 6118?</div><div class="prompt-card"><strong>7.</strong> Explique os requisitos da NBR 6122 para controle de execução de estacas hélice contínua.</div><div class="prompt-card"><strong>8.</strong> Quais ensaios são obrigatórios para liberação de concreto segundo NBR 12655 e qual a frequência de amostragem?</div><div class="prompt-card"><strong>9.</strong> Detalhe os critérios de durabilidade da NBR 6118 para estruturas em zona de atmosfera marinha.</div><div class="prompt-card"><strong>10.</strong> Quais são os limites de flecha admissível para lajes de concreto armado segundo NBR 6118?</div><h3>Normas de Instalações (11-16)</h3><div class="prompt-card"><strong>11.</strong> Qual a seção mínima de condutores para circuitos de iluminação e tomadas segundo NBR 5410?</div><div class="prompt-card"><strong>12.</strong> Quais são os critérios de dimensionamento de disjuntores e dispositivos de proteção conforme NBR 5410?</div><div class="prompt-card"><strong>13.</strong> Explique os requisitos da NBR 5626 para dimensionamento de instalações de água fria em edifícios residenciais.</div><div class="prompt-card"><strong>14.</strong> Quais são os critérios de ventilação de instalações de esgoto sanitário segundo NBR 8160?</div><div class="prompt-card"><strong>15.</strong> Detalhe os requisitos da NBR 13714 para sistemas de hidrantes e mangotinhos em edificações.</div><div class="prompt-card"><strong>16.</strong> Quais são as distâncias mínimas de segurança para instalações de gás segundo NBR 15526?</div><h3>Normas de Desempenho e Qualidade (17-22)</h3><div class="prompt-card"><strong>17.</strong> Quais são os níveis de desempenho térmico (M, I, S) para paredes externas na zona bioclimática 3 segundo NBR 15575?</div><div class="prompt-card"><strong>18.</strong> Explique os critérios de desempenho acústico entre unidades habitacionais conforme NBR 15575.</div><div class="prompt-card"><strong>19.</strong> Quais são os requisitos de vida útil de projeto (VUP) para sistemas estruturais segundo NBR 15575?</div><div class="prompt-card"><strong>20.</strong> Detalhe os critérios de estanqueidade à água de chuva para fachadas conforme NBR 15575.</div><div class="prompt-card"><strong>21.</strong> Quais ensaios são necessários para avaliar desempenho de portas de madeira segundo NBR 15575?</div><div class="prompt-card"><strong>22.</strong> Explique os requisitos da NBR 16747 para inspeção predial, detalhando os três níveis de inspeção.</div><h3>Normas de Segurança do Trabalho (23-27)</h3><div class="prompt-card"><strong>23.</strong> Quais são os requisitos da NR-18 para proteção de periferias e aberturas em lajes?</div><div class="prompt-card"><strong>24.</strong> Detalhe os requisitos de ancoragem e linhas de vida para trabalho em altura conforme NR-35.</div><div class="prompt-card"><strong>25.</strong> Quais EPIs são obrigatórios para serviços de soldagem segundo NR-6 e NR-18?</div><div class="prompt-card"><strong>26.</strong> Explique os requisitos de PCMAT para obras com mais de 20 trabalhadores segundo NR-18.</div><div class="prompt-card"><strong>27.</strong> Quais são as exigências para instalação e uso de elevadores de obra (cremalheira) conforme NR-18?</div><h3>Normas Complementares (28-30)</h3><div class="prompt-card"><strong>28.</strong> Verifique se a NBR 9050 foi atualizada recentemente e quais as principais alterações sobre acessibilidade.</div><div class="prompt-card"><strong>29.</strong> Quais são os requisitos da NBR 12721 para elaboração de orçamento e registro de incorporação imobiliária?</div><div class="prompt-card"><strong>30.</strong> Explique os critérios da NBR 9575 para classificação de impermeabilizantes e sua aplicação por tipo de área.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Verifique vigência</strong>: Normas são atualizadas frequentemente</li><li><strong>Cite item específico</strong>: Peça referência exata (ex: item 14.6.2.3)</li><li><strong>Compare edições</strong>: Mudanças entre versões podem ser significativas</li><li><strong>Considere contexto</strong>: Normas mais restritivas prevalecem</li><li><strong>Documente consultas</strong>: Mantenha registro das normas utilizadas</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 ObraMatch - Engenharia Inteligente</p>
+        <p>Suporte: <a href="mailto:obramatch+suporte@gmail.com">obramatch+suporte@gmail.com</a></p>
+        <p><a href="https://obramatch.com.br">obramatch.com.br</a></p>
+    </div>
+</body>
+</html>

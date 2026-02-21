@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo PRO - Engenharia sem Complicação - ObraMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-color: #7C3AED;
+            --neon-glow: 0 0 10px rgba(124, 58, 237, 0.5), 0 0 20px rgba(124, 58, 237, 0.3);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.8);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--bg-dark) 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(124, 58, 237, 0.05) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid var(--neon-color);
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .access-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(124, 58, 237, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(124, 58, 237, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 30px rgba(124, 58, 237, 0.1);
+            border-color: var(--neon-color);
+        }
+        .access-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .access-btn {
+            display: inline-block;
+            background: var(--neon-color);
+            color: #000;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .access-btn:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.8), 0 0 40px rgba(124, 58, 237, 0.4);
+            background: #fff;
+        }
+        .section {
+            background: rgba(15, 15, 15, 0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+        .section h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--neon-color);
+            border-radius: 4px;
+            box-shadow: var(--neon-glow);
+        }
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .section h4 {
+            color: var(--neon-color);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 500;
+        }
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section li { margin-bottom: 0.6rem; color: var(--text-muted); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+        
+        .prompt-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--neon-color);
+            transition: all 0.3s ease;
+        }
+        .prompt-card:hover {
+            background: rgba(124, 58, 237, 0.05);
+            border-color: rgba(124, 58, 237, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transform: translateX(5px);
+        }
+        .prompt-card strong { color: var(--neon-color); }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .agent-item {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--neon-color);
+            box-shadow: var(--neon-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .agent-item:hover { 
+            border-color: rgba(124, 58, 237, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .agent-item:hover::before { opacity: 1; }
+        .agent-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+        .agent-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .agent-item a {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            border: 1px solid var(--neon-color);
+            text-decoration: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .agent-item a:hover {
+            background: var(--neon-color);
+            color: #000;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            background: #000;
+        }
+        .footer a { color: var(--neon-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: #fff; text-shadow: var(--neon-glow); }
+        .tips-list li { color: var(--text-muted); margin-bottom: 0.8rem; }
+        .tips-list li strong { color: #fff; }
+        hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .access-card { padding: 2rem 1.5rem; }
+            .section { padding: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div style="font-size: 3rem;">⭐</div>
+        <h1>Combo PRO - Engenharia sem Complicação</h1>
+        <div class="subtitle">5 Agentes GEM • R$ 100,00</div>
+        <div class="badge">Acesso Anual • Todas as Atualizações • ObraMatch</div>
+    </div>
+    <div class="container">
+        <div class="access-card">
+            <h2>⭐ Seus 5 Agentes GEM</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Clique em cada agente para acessar no Google Gemini:</p>
+        </div>
+        
+        <div class="agent-grid">
+                    <div class="agent-item">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📢</div>
+            <h3>GEM 02 - PubliMatch PRO</h3>
+            <p>Marketing e Divulgação para Engenharia</p>
+            <a href="https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing" target="_blank">🚀 Abrir no Gemini</a>
+        </div>        <div class="agent-item">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+            <h3>GEM 03 - MatchOrça PRO</h3>
+            <p>Orçamentos e Composições de Custos</p>
+            <a href="https://gemini.google.com/gem/1jv5Hl2wbAo5W66J2NRH9uqP4MvXS4-ux?usp=sharing" target="_blank">🚀 Abrir no Gemini</a>
+        </div>        <div class="agent-item">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏢</div>
+            <h3>GEM 04 - MatchObra PRO</h3>
+            <p>Gestão e Acompanhamento de Obras</p>
+            <a href="https://gemini.google.com/gem/1mV7RNTqWI6eUaPf5ibK3OkXk6yw4qWc-?usp=sharing" target="_blank">🚀 Abrir no Gemini</a>
+        </div>        <div class="agent-item">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+            <h3>GEM 05 - NormaMatch PRO</h3>
+            <p>Normas ABNT e Conformidade Técnica</p>
+            <a href="https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing" target="_blank">🚀 Abrir no Gemini</a>
+        </div>        <div class="agent-item">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
+            <h3>GEM 06 - LegalMatch PRO</h3>
+            <p>Aspectos Legais da Engenharia</p>
+            <a href="https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing" target="_blank">🚀 Abrir no Gemini</a>
+        </div>
+        </div>
+        
+        <hr>
+        <h2 style="color: #7C3AED; font-size: 1.5rem; text-align: center; margin: 2rem 0;">📖 Tutoriais e Prompts Completos</h2>
+        
+                <div class="section" style="border-left: 4px solid #3B82F6;">
+            <h2>📢 GEM 02 - PubliMatch PRO</h2>
+            <div class="access-card" style="border-color: #3B82F6; background: #3B82F615;">
+                <a href="https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing" target="_blank" class="access-btn" style="background: #3B82F6;">🚀 Abrir PubliMatch PRO</a>
+            </div>
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o PubliMatch PRO?</h3><p>O <strong>PubliMatch PRO</strong> é um agente especializado em marketing digital para o setor de construção civil e engenharia. Ele transforma a presença digital de engenheiros, arquitetos e construtoras, criando conteúdo estratégico que respeita o código de ética do CONFEA/CREA.</p><h3>Como Funciona?</h3><p>O agente opera em três serviços principais:</p><h4>1. Estratégia de Conteúdo Multimodal</h4><ul><li>Analisa fotos de obra usando visão computacional</li><li>Identifica ângulos estratégicos e diferenciais construtivos</li><li>Roteiriza vídeos e cria legendas persuasivas</li><li>Usa Google Veo 3.1 e Imagen 3 para gerar conteúdo visual</li></ul>
+<h4>2. Gestão de SEO Local e Google Meu Negócio</h4><ul><li>Mapeia palavras-chave mais buscadas no seu nicho e região</li><li>Otimiza perfil no Google Meu Negócio</li><li>Aumenta visibilidade em buscas locais</li><li>Estratégias para captar avaliações positivas</li></ul>
+<h4>3. Copywriting Técnico e Ético</h4><ul><li>Textos baseados em Autoridade, Visibilidade, Relacionamento e Conversão</li><li>Linguagem que respeita normas do CREA/CONFEA</li><li>Comunicação clara sobre valor do serviço</li><li>Redação especializada em termos técnicos acessíveis</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina seu objetivo</strong> (captar clientes, criar portfólio, SEO local)</li><li><strong>Envie materiais</strong> (fotos de obra, informações do escritório)</li><li><strong>Especifique seu público</strong> (residencial, comercial, industrial)</li><li><strong>Refine o conteúdo</strong> através de iterações</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Imersão e Diagnóstico</strong> - Análise do portfólio e presença atual</li><li><strong>Planejamento Editorial</strong> - Calendário de postagens estratégico</li><li><strong>Produção de Ativos</strong> - Vídeos, imagens e textos</li><li><strong>Validação em Tempo Real</strong> - Verificação de tendências via Search</li><li><strong>Análise de Performance</strong> - Monitoramento de resultados</li></ol>
+<hr><h2>30 Prompts para Marketing de Engenharia</h2><h3>Conteúdo para Instagram (1-10)</h3><div class="prompt-card"><strong>1.</strong> Crie um carrossel de 7 slides explicando as etapas de uma obra residencial, desde a fundação até o acabamento, para engenheiros que querem educar seus seguidores.</div><div class="prompt-card"><strong>2.</strong> Elabore 10 legendas persuasivas para posts de fotos de obra em andamento, focando em demonstrar qualidade técnica sem parecer vendedor.</div><div class="prompt-card"><strong>3.</strong> Desenvolva um roteiro de Reels de 30 segundos mostrando o processo de concretagem de uma laje, com texto explicativo para leigos.</div><div class="prompt-card"><strong>4.</strong> Crie uma série de 5 posts sobre 'Erros comuns em obras' que demonstrem autoridade técnica e eduquem o público.</div><div class="prompt-card"><strong>5.</strong> Elabore um calendário de conteúdo mensal para Instagram de um engenheiro civil autônomo focado em reformas residenciais.</div><div class="prompt-card"><strong>6.</strong> Desenvolva 15 ideias de Stories interativos para engajamento, usando enquetes e caixas de perguntas sobre construção.</div><div class="prompt-card"><strong>7.</strong> Crie textos para destaques do Instagram: Serviços, Portfólio, Depoimentos, Processo de Trabalho e FAQ.</div><div class="prompt-card"><strong>8.</strong> Elabore um post educativo sobre 'Como identificar problemas estruturais em imóveis usados' para atrair compradores de imóveis.</div><div class="prompt-card"><strong>9.</strong> Desenvolva uma série de posts comparativos: 'Alvenaria convencional vs Steel Frame' em linguagem acessível.</div><div class="prompt-card"><strong>10.</strong> Crie um prompt para Imagen 3 gerar imagens conceituais de antes e depois de uma reforma predial para usar no feed.</div><h3>LinkedIn e Autoridade (11-18)</h3><div class="prompt-card"><strong>11.</strong> Escreva um artigo técnico para LinkedIn sobre 'A importância da NBR 15575 na qualidade das edificações' com linguagem executiva.</div><div class="prompt-card"><strong>12.</strong> Elabore uma série de 5 posts para LinkedIn demonstrando cases de sucesso em obras, focando em problemas resolvidos e resultados.</div><div class="prompt-card"><strong>13.</strong> Crie uma bio profissional impactante para LinkedIn de engenheiro civil com 10 anos de experiência em obras de médio porte.</div><div class="prompt-card"><strong>14.</strong> Desenvolva 10 headlines para artigos técnicos que atraiam gestores de construtoras e incorporadoras.</div><div class="prompt-card"><strong>15.</strong> Elabore um post sobre tendências de construção sustentável para 2024, posicionando o profissional como especialista.</div><div class="prompt-card"><strong>16.</strong> Crie um roteiro de vídeo para LinkedIn sobre 'Os 5 maiores desafios de gerenciar obras residenciais' em tom de mentoria.</div><div class="prompt-card"><strong>17.</strong> Desenvolva uma estratégia de conteúdo para LinkedIn focada em atrair parcerias com arquitetos e designers.</div><div class="prompt-card"><strong>18.</strong> Elabore posts que demonstrem conhecimento em BIM e tecnologias construtivas modernas para um perfil técnico avançado.</div><h3>SEO e Google Meu Negócio (19-24)</h3><div class="prompt-card"><strong>19.</strong> Liste as 20 principais palavras-chave que um engenheiro civil deve usar para SEO local em uma cidade de médio porte.</div><div class="prompt-card"><strong>20.</strong> Elabore uma descrição otimizada para Google Meu Negócio de um escritório de engenharia especializado em laudos e vistorias.</div><div class="prompt-card"><strong>21.</strong> Crie um roteiro de respostas para as perguntas mais frequentes no Google Meu Negócio de um engenheiro civil.</div><div class="prompt-card"><strong>22.</strong> Desenvolva uma estratégia para conseguir 50 avaliações positivas no Google em 6 meses de forma ética.</div><div class="prompt-card"><strong>23.</strong> Elabore textos otimizados para as categorias de serviço no Google Meu Negócio: Projetos, Laudos, Acompanhamento de Obra.</div><div class="prompt-card"><strong>24.</strong> Crie uma lista de posts que podem ser publicados no Google Meu Negócio para melhorar o ranking local.</div><h3>Copywriting e Conversão (25-30)</h3><div class="prompt-card"><strong>25.</strong> Escreva uma página de vendas para serviço de acompanhamento de obra residencial, focando em segurança e economia.</div><div class="prompt-card"><strong>26.</strong> Elabore 5 modelos de e-mail marketing para nutrir leads que solicitaram orçamento mas não fecharam.</div><div class="prompt-card"><strong>27.</strong> Crie textos para WhatsApp Business: mensagem de boas-vindas, ausência e resposta rápida sobre orçamentos.</div><div class="prompt-card"><strong>28.</strong> Desenvolva um script de apresentação de 3 minutos para reuniões com potenciais clientes de obras residenciais.</div><div class="prompt-card"><strong>29.</strong> Elabore uma proposta comercial modelo para serviços de engenharia, com seções de escopo, diferenciais e garantias.</div><div class="prompt-card"><strong>30.</strong> Crie 10 CTAs (chamadas para ação) diferentes para usar em posts, stories e bio que incentivem contato via WhatsApp.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Mantenha ética</strong>: Sempre respeite o código do CONFEA/CREA</li><li><strong>Mostre processo</strong>: Conteúdo de bastidores gera mais confiança</li><li><strong>Use provas sociais</strong>: Depoimentos e cases são poderosos</li><li><strong>Seja consistente</strong>: Poste regularmente seguindo o calendário</li><li><strong>Meça resultados</strong>: Acompanhe métricas de engajamento e conversão</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>        <div class="section" style="border-left: 4px solid #F59E0B;">
+            <h2>💰 GEM 03 - MatchOrça PRO</h2>
+            <div class="access-card" style="border-color: #F59E0B; background: #F59E0B15;">
+                <a href="https://gemini.google.com/gem/1jv5Hl2wbAo5W66J2NRH9uqP4MvXS4-ux?usp=sharing" target="_blank" class="access-btn" style="background: #F59E0B;">🚀 Abrir MatchOrça PRO</a>
+            </div>
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1jv5Hl2wbAo5W66J2NRH9uqP4MvXS4-ux?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o MatchOrça PRO?</h3><p>O <strong>MatchOrça PRO</strong> é um agente especializado em Engenharia de Custos e Orçamentação de Obras no Brasil. Ele transforma a incerteza financeira de um canteiro de obras em operação de alta precisão, lucratividade e conformidade normativa, utilizando bases de dados como SINAPI, TCPO e critérios do TCU.</p><h3>Como Funciona?</h3><p>O agente opera em quatro serviços principais:</p><h4>1. Engenharia de Custos e Orçamentação Detalhada</h4><ul><li>Levantamento rigoroso de quantitativos</li><li>Composições de custos unitários (SINAPI, TCPO, SEINFRA)</li><li>Ajuste de coeficientes de produtividade à realidade local</li><li>Previsibilidade total do desembolso financeiro</li></ul>
+<h4>2. Inteligência em BDI</h4><ul><li>Estruturação detalhada conforme IN TCU 05/2017</li><li>Separação de lucro real, despesas financeiras e tributos</li><li>Faixas de referência precisas (20,34% a 25,00% para obras gerais)</li><li>Competitividade em editais públicos e privados</li></ul>
+<h4>3. Planejamento Físico-Financeiro e Curva S</h4><ul><li>Vinculação de custo ao tempo</li><li>Cronogramas com necessidade financeira por etapa</li><li>Gestão de estoque e mão de obra</li><li>Visualização de desvios entre previsto e realizado</li></ul>
+<h4>4. Simulação de Cenários e Análise de Viabilidade</h4><ul><li>Simulações de impacto (variação de insumos)</li><li>Análise de alternativas de sistema construtivo</li><li>Monitoramento de CUB, IPCA, INCC e commodities</li><li>Tomada de decisão baseada em dados</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina o tipo de obra</strong> (residencial, comercial, infraestrutura)</li><li><strong>Forneça o projeto</strong> ou descreva escopo detalhado</li><li><strong>Especifique a base de referência</strong> (SINAPI, TCPO, etc.)</li><li><strong>Solicite análises específicas</strong> (BDI, cronograma, viabilidade)</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Diagnóstico e Auditoria</strong> - Verificação de consistência</li><li><strong>Levantamento Normatizado</strong> - Seguindo NBR 12721</li><li><strong>Composição Técnica</strong> - Decomposição por material, mão de obra e equipamento</li><li><strong>Integração de Ferramentas</strong> - Dashboards e planilhas automatizadas</li><li><strong>Validação de Mercado</strong> - Consulta de publicações SINAPI/SICRO atuais</li></ol>
+<hr><h2>30 Prompts para Orçamentação</h2><h3>Orçamentação e Quantitativos (1-10)</h3><div class="prompt-card"><strong>1.</strong> Elabore uma planilha de quantitativos para uma casa térrea de 120m² com estrutura convencional, incluindo fundação, estrutura, alvenaria, cobertura e revestimentos básicos.</div><div class="prompt-card"><strong>2.</strong> Calcule o custo estimado de uma laje nervurada de 200m² utilizando a tabela SINAPI mais recente, detalhando materiais e mão de obra.</div><div class="prompt-card"><strong>3.</strong> Monte uma composição de custo unitário para execução de alvenaria de vedação em bloco cerâmico de 14cm, incluindo argamassa e mão de obra.</div><div class="prompt-card"><strong>4.</strong> Elabore o orçamento de uma fundação em estacas hélice contínua para um edifício de 10 pavimentos com 30 estacas de 40cm de diâmetro e 12m de profundidade.</div><div class="prompt-card"><strong>5.</strong> Calcule o custo por m² de construção de um galpão industrial de 1.000m² em estrutura metálica com fechamento em telhas metálicas.</div><div class="prompt-card"><strong>6.</strong> Monte uma planilha orçamentária completa para reforma de apartamento de 80m², incluindo demolição, instalações, revestimentos e acabamentos.</div><div class="prompt-card"><strong>7.</strong> Elabore a curva ABC de insumos para uma obra residencial de 300m², identificando os itens que representam 80% do custo total.</div><div class="prompt-card"><strong>8.</strong> Calcule o consumo de concreto, aço e formas para uma estrutura de concreto armado de um edifício de 5 pavimentos tipo com 200m² cada.</div><div class="prompt-card"><strong>9.</strong> Monte um comparativo de custos entre sistema construtivo convencional e alvenaria estrutural para um edifício de 4 pavimentos.</div><div class="prompt-card"><strong>10.</strong> Elabore o levantamento de quantitativos de pintura (massa corrida, selador e tinta) para um edifício comercial de 2.000m² de área construída.</div><h3>BDI e Composição de Preços (11-18)</h3><div class="prompt-card"><strong>11.</strong> Calcule o BDI adequado para uma obra pública de edificação no valor de R$ 5 milhões, seguindo a IN TCU 05/2017, detalhando cada componente.</div><div class="prompt-card"><strong>12.</strong> Elabore uma análise comparativa entre BDI para obras de edificação (25%) e obras de infraestrutura rodoviária (22%), justificando as diferenças.</div><div class="prompt-card"><strong>13.</strong> Monte a composição detalhada do BDI incluindo: administração central, custos financeiros, seguros, garantias, riscos, tributos e lucro.</div><div class="prompt-card"><strong>14.</strong> Calcule o impacto no preço final de uma variação de 2% na taxa de lucro do BDI em uma obra de R$ 10 milhões.</div><div class="prompt-card"><strong>15.</strong> Elabore uma justificativa técnica para BDI diferenciado em itens de fornecimento de materiais versus serviços de mão de obra.</div><div class="prompt-card"><strong>16.</strong> Monte uma planilha de encargos sociais completa para mão de obra horista e mensalista, com percentuais atualizados.</div><div class="prompt-card"><strong>17.</strong> Calcule o fator de produtividade a ser aplicado em composições SINAPI para adequar à realidade de uma obra na região Norte.</div><div class="prompt-card"><strong>18.</strong> Elabore um memorial de cálculo justificando os percentuais de perdas aplicados em cada insumo do orçamento.</div><h3>Planejamento Físico-Financeiro (19-24)</h3><div class="prompt-card"><strong>19.</strong> Monte um cronograma físico-financeiro para uma obra residencial de 18 meses, com distribuição mensal de custos por etapa construtiva.</div><div class="prompt-card"><strong>20.</strong> Elabore uma Curva S para acompanhamento de obra de R$ 3 milhões com duração de 12 meses, identificando marcos críticos.</div><div class="prompt-card"><strong>21.</strong> Calcule o fluxo de caixa mensal necessário para uma obra de R$ 2 milhões considerando medições quinzenais e pagamento em 30 dias.</div><div class="prompt-card"><strong>22.</strong> Monte um histograma de mão de obra para uma obra de edifício residencial, identificando picos e necessidade de contratação.</div><div class="prompt-card"><strong>23.</strong> Elabore um plano de desembolso vinculado ao cronograma físico, identificando necessidade de capital de giro por mês.</div><div class="prompt-card"><strong>24.</strong> Calcule o impacto financeiro de um atraso de 2 meses no cronograma, considerando custos indiretos e reajuste de preços.</div><h3>Análise de Viabilidade e Cenários (25-30)</h3><div class="prompt-card"><strong>25.</strong> Elabore um estudo de viabilidade econômica para incorporação de edifício residencial de 20 unidades, considerando VGV, custos e margem.</div><div class="prompt-card"><strong>26.</strong> Monte uma análise de sensibilidade para um empreendimento imobiliário, variando o custo de construção em +/- 10% e 20%.</div><div class="prompt-card"><strong>27.</strong> Calcule o impacto de uma variação de 15% no preço do aço em um orçamento de estrutura de concreto armado de R$ 500 mil.</div><div class="prompt-card"><strong>28.</strong> Elabore uma comparação de custos entre três sistemas de vedação: alvenaria cerâmica, drywall e painéis de concreto.</div><div class="prompt-card"><strong>29.</strong> Monte um estudo de otimização de custos para reduzir 10% do orçamento de uma obra sem comprometer qualidade e segurança.</div><div class="prompt-card"><strong>30.</strong> Calcule o payback de investimento em tecnologias construtivas (formas de alumínio vs madeira) para uma construtora que executa 10 obras/ano.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Use bases oficiais</strong>: Sempre referencie SINAPI, TCPO ou bases estaduais</li><li><strong>Atualize preços</strong>: Verifique data de referência das composições</li><li><strong>Documente memórias</strong>: Mantenha registro de critérios de medição</li><li><strong>Considere localização</strong>: Ajuste produtividade por região</li><li><strong>Valide com mercado</strong>: Compare com cotações reais de fornecedores</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>        <div class="section" style="border-left: 4px solid #EF4444;">
+            <h2>🏢 GEM 04 - MatchObra PRO</h2>
+            <div class="access-card" style="border-color: #EF4444; background: #EF444415;">
+                <a href="https://gemini.google.com/gem/1mV7RNTqWI6eUaPf5ibK3OkXk6yw4qWc-?usp=sharing" target="_blank" class="access-btn" style="background: #EF4444;">🚀 Abrir MatchObra PRO</a>
+            </div>
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1mV7RNTqWI6eUaPf5ibK3OkXk6yw4qWc-?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o MatchObra PRO?</h3><p>O <strong>MatchObra PRO</strong> é um agente técnico-supervisor desenvolvido para transformar a gestão de obras civis em processo de precisão cirúrgica. Ele elimina o caos do canteiro, garantindo que cada etapa da construção esteja em conformidade com as normas técnicas e de segurança.</p><h3>Como Funciona?</h3><p>O agente opera em quatro serviços principais:</p><h4>1. Gestão de Execução e Rotina de Canteiro</h4><ul><li>Estruturação de Diários de Obra completos</li><li>Registro de condições climáticas e efetivo</li><li>Controle de atividades e materiais recebidos</li><li>Integração com Google Keep para transcrição de áudio e fotos</li></ul>
+<h4>2. Controle Técnico e Qualidade (NBR & PBQP-H)</h4><ul><li>Checklists baseados em NBR 12655, NBR 15575</li><li>Planos de Verificação de Serviço (FVS)</li><li>Registros de Não Conformidade (RNC)</li><li>Garantia de execução conforme projeto</li></ul>
+<h4>3. Segurança do Trabalho e Gestão de Riscos</h4><ul><li>Suporte em PCMAT, PGR, NR-18 e NR-35</li><li>Organização de DDS (Diálogo Diário de Segurança)</li><li>Inspeções de EPIs</li><li>Orientação com recursos visuais</li></ul>
+<h4>4. Planejamento e Previsão de Insumos</h4><ul><li>Curva S e planejamento semanal com EAP</li><li>Previsão de insumos com 3 semanas de antecedência</li><li>Identificação de caminho crítico</li><li>Resolução de problemas e realocação de recursos</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina a etapa da obra</strong> (fundação, estrutura, acabamento)</li><li><strong>Informe o tipo de controle</strong> necessário (diário, FVS, segurança)</li><li><strong>Forneça dados do projeto</strong> (normas aplicáveis, especificações)</li><li><strong>Solicite documentos específicos</strong> ou orientações de execução</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Diagnóstico e Configuração</strong> - Alinhamento com normas (ISO 9001, PBQP-H, NRs)</li><li><strong>Monitoramento Ativo</strong> - Checklists diários e semanais</li><li><strong>Documentação Estruturada</strong> - Centralização no Google Drive</li><li><strong>Análise e Melhoria</strong> - Ações corretivas para desvios</li></ol>
+<hr><h2>30 Prompts para Gestão de Obras</h2><h3>Diário de Obra e Documentação (1-10)</h3><div class="prompt-card"><strong>1.</strong> Elabore um modelo de Diário de Obra completo para construção de edifício residencial, incluindo todos os campos obrigatórios segundo as boas práticas.</div><div class="prompt-card"><strong>2.</strong> Crie um template de registro diário para obra de infraestrutura urbana (pavimentação), considerando condições climáticas e equipamentos utilizados.</div><div class="prompt-card"><strong>3.</strong> Monte um checklist de informações que devem ser registradas diariamente pelo engenheiro residente em uma obra de médio porte.</div><div class="prompt-card"><strong>4.</strong> Elabore um modelo de comunicação formal para registrar ocorrências e paralisações no Diário de Obra.</div><div class="prompt-card"><strong>5.</strong> Crie um sistema de codificação para organizar fotos de obra por etapa, localização e tipo de registro (avanço, não conformidade, recebimento).</div><div class="prompt-card"><strong>6.</strong> Monte um template de relatório semanal de obra para envio ao cliente, incluindo avanço físico, financeiro e pendências.</div><div class="prompt-card"><strong>7.</strong> Elabore um modelo de ata de reunião de obra com campos para participantes, assuntos tratados, decisões e responsáveis.</div><div class="prompt-card"><strong>8.</strong> Crie um checklist de documentos que devem estar disponíveis no canteiro de obras para fiscalização.</div><div class="prompt-card"><strong>9.</strong> Monte um modelo de boletim de medição para apresentação de serviços executados e liberação de pagamento.</div><div class="prompt-card"><strong>10.</strong> Elabore um formulário de registro de recebimento de materiais com verificações de quantidade, qualidade e documentação.</div><h3>Fichas de Verificação de Serviço - FVS (11-18)</h3><div class="prompt-card"><strong>11.</strong> Crie uma FVS completa para execução de fundação em estacas, incluindo todos os itens de verificação conforme NBR 6122.</div><div class="prompt-card"><strong>12.</strong> Elabore uma FVS para concretagem de laje, contemplando verificações antes, durante e após a execução conforme NBR 14931.</div><div class="prompt-card"><strong>13.</strong> Monte uma FVS para execução de alvenaria de vedação em bloco cerâmico, incluindo prumo, nível e espessura de juntas.</div><div class="prompt-card"><strong>14.</strong> Crie uma FVS para execução de impermeabilização de áreas molhadas, seguindo NBR 9575.</div><div class="prompt-card"><strong>15.</strong> Elabore uma FVS para assentamento de revestimento cerâmico em piso, com verificações de caimento e aderência.</div><div class="prompt-card"><strong>16.</strong> Monte uma FVS para execução de instalações elétricas embutidas, conforme NBR 5410.</div><div class="prompt-card"><strong>17.</strong> Crie uma FVS para execução de contrapiso, incluindo verificação de espessura, caimento e cura.</div><div class="prompt-card"><strong>18.</strong> Elabore uma FVS para montagem de esquadrias de alumínio, com verificações de prumo, nível e vedação.</div><h3>Segurança do Trabalho (19-24)</h3><div class="prompt-card"><strong>19.</strong> Elabore um modelo de DDS (Diálogo Diário de Segurança) sobre trabalho em altura para equipe de forma e armação.</div><div class="prompt-card"><strong>20.</strong> Crie um checklist de inspeção de EPIs para equipe de obra, incluindo periodicidade de verificação e critérios de reprovação.</div><div class="prompt-card"><strong>21.</strong> Monte um plano de ação para adequação de canteiro às exigências da NR-18, listando itens prioritários.</div><div class="prompt-card"><strong>22.</strong> Elabore um roteiro de integração de segurança para novos trabalhadores no canteiro de obras.</div><div class="prompt-card"><strong>23.</strong> Crie um modelo de Permissão de Trabalho (PT) para serviços em espaços confinados e trabalho a quente.</div><div class="prompt-card"><strong>24.</strong> Monte um checklist de verificação de andaimes conforme NR-18, incluindo critérios de liberação e interdição.</div><h3>Planejamento e Controle (25-30)</h3><div class="prompt-card"><strong>25.</strong> Elabore um modelo de programação semanal de obra com distribuição de frentes de serviço e equipes.</div><div class="prompt-card"><strong>26.</strong> Crie uma planilha de acompanhamento de Curva S para comparar avanço físico previsto versus realizado.</div><div class="prompt-card"><strong>27.</strong> Monte um sistema de gestão de pedidos de materiais com lead time por fornecedor e estoque mínimo.</div><div class="prompt-card"><strong>28.</strong> Elabore um modelo de Registro de Não Conformidade (RNC) com campos para descrição, causa raiz, ação corretiva e verificação.</div><div class="prompt-card"><strong>29.</strong> Crie um checklist de verificação para liberação de etapas construtivas (ex: liberação para concretagem após verificação de armadura).</div><div class="prompt-card"><strong>30.</strong> Monte um dashboard de indicadores de obra incluindo: SPI, CPI, índice de retrabalho e taxa de acidentes.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Documente tudo</strong>: Fotos com data, hora e localização são provas técnicas</li><li><strong>Siga normas</strong>: PBQP-H e ISO 9001 exigem registros padronizados</li><li><strong>Antecipe problemas</strong>: Use FVS preventivamente, não apenas para registro</li><li><strong>Comunique desvios</strong>: RNCs devem ser tratadas imediatamente</li><li><strong>Treine a equipe</strong>: Segurança é responsabilidade de todos</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>        <div class="section" style="border-left: 4px solid #8B5CF6;">
+            <h2>📋 GEM 05 - NormaMatch PRO</h2>
+            <div class="access-card" style="border-color: #8B5CF6; background: #8B5CF615;">
+                <a href="https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing" target="_blank" class="access-btn" style="background: #8B5CF6;">🚀 Abrir NormaMatch PRO</a>
+            </div>
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o NormaMatch PRO?</h3><p>O <strong>NormaMatch PRO</strong> é um agente especializado em normas técnicas brasileiras, desenvolvido para garantir que nenhum projeto de engenharia civil seja executado fora dos padrões normativos atuais. Ele transforma a complexidade técnica em segurança jurídica e eficiência operacional.</p><h3>Como Funciona?</h3><p>O agente opera em quatro serviços principais:</p><h4>1. Validação e Verificação de Vigência</h4><ul><li>Verifica versão vigente de normas no catálogo ABNT</li><li>Identifica normas revogadas ou substituídas</li><li>Utiliza Google Search como fonte primária</li><li>Evita uso de normas obsoletas</li></ul>
+<h4>2. Consultoria Técnica em Estruturas e Instalações</h4><ul><li>Interpreta tabelas e requisitos de normas</li><li>Analisa NBR 6118 (Concreto), NBR 5410 (Elétrica)</li><li>Fornece respostas baseadas em itens normativos</li><li>Agiliza detalhamento de projetos</li></ul>
+<h4>3. Gestão de Segurança do Trabalho (NRs)</h4><ul><li>Detalha requisitos de NR-18, NR-35, NR-6</li><li>Orienta sobre condições obrigatórias no canteiro</li><li>Reduz riscos operacionais</li><li>Proteção jurídica para responsável técnico</li></ul>
+<h4>4. Suporte à Qualidade e Desempenho (NBR 15575)</h4><ul><li>Interpretação de critérios de desempenho</li><li>Orientação sobre inspeção predial (NBR 16747)</li><li>Desempenho térmico, acústico e lumínico</li><li>Conformidade com garantias legais</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Informe o número da norma</strong> ou tema técnico</li><li><strong>Especifique a dúvida</strong> (requisito, tabela, procedimento)</li><li><strong>Solicite verificação de vigência</strong> quando necessário</li><li><strong>Peça comparativos</strong> entre normas ou edições</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Identificação e Contextualização</strong> - Localização da norma correspondente</li><li><strong>Triagem de Atualidade</strong> - Verificação no ABNT Catálogo</li><li><strong>Análise e Interpretação</strong> - Tradução em diretrizes práticas</li><li><strong>Enriquecimento Visual</strong> - Vídeos de ensaios via YouTube</li><li><strong>Documentação e Registro</strong> - Orientação para conformidade</li></ol>
+<hr><h2>30 Prompts para Consulta de Normas</h2><h3>Normas Estruturais (1-10)</h3><div class="prompt-card"><strong>1.</strong> Quais são os coeficientes de majoração de cargas e minoração de resistência estabelecidos pela NBR 6118 para verificação de estados limites últimos?</div><div class="prompt-card"><strong>2.</strong> Qual o cobrimento mínimo de armadura para pilares em ambiente de classe de agressividade III segundo a NBR 6118?</div><div class="prompt-card"><strong>3.</strong> Explique os critérios de aceitação do concreto por amostragem parcial conforme NBR 12655, detalhando o cálculo do fck estimado.</div><div class="prompt-card"><strong>4.</strong> Quais são os limites de abertura de fissuras para elementos estruturais de concreto armado em ambiente agressivo segundo NBR 6118?</div><div class="prompt-card"><strong>5.</strong> Detalhe os requisitos da NBR 14931 para prazo mínimo de desforma de lajes, vigas e pilares.</div><div class="prompt-card"><strong>6.</strong> Quais são os critérios de verificação de flambagem para pilares esbeltos segundo a NBR 6118?</div><div class="prompt-card"><strong>7.</strong> Explique os requisitos da NBR 6122 para controle de execução de estacas hélice contínua.</div><div class="prompt-card"><strong>8.</strong> Quais ensaios são obrigatórios para liberação de concreto segundo NBR 12655 e qual a frequência de amostragem?</div><div class="prompt-card"><strong>9.</strong> Detalhe os critérios de durabilidade da NBR 6118 para estruturas em zona de atmosfera marinha.</div><div class="prompt-card"><strong>10.</strong> Quais são os limites de flecha admissível para lajes de concreto armado segundo NBR 6118?</div><h3>Normas de Instalações (11-16)</h3><div class="prompt-card"><strong>11.</strong> Qual a seção mínima de condutores para circuitos de iluminação e tomadas segundo NBR 5410?</div><div class="prompt-card"><strong>12.</strong> Quais são os critérios de dimensionamento de disjuntores e dispositivos de proteção conforme NBR 5410?</div><div class="prompt-card"><strong>13.</strong> Explique os requisitos da NBR 5626 para dimensionamento de instalações de água fria em edifícios residenciais.</div><div class="prompt-card"><strong>14.</strong> Quais são os critérios de ventilação de instalações de esgoto sanitário segundo NBR 8160?</div><div class="prompt-card"><strong>15.</strong> Detalhe os requisitos da NBR 13714 para sistemas de hidrantes e mangotinhos em edificações.</div><div class="prompt-card"><strong>16.</strong> Quais são as distâncias mínimas de segurança para instalações de gás segundo NBR 15526?</div><h3>Normas de Desempenho e Qualidade (17-22)</h3><div class="prompt-card"><strong>17.</strong> Quais são os níveis de desempenho térmico (M, I, S) para paredes externas na zona bioclimática 3 segundo NBR 15575?</div><div class="prompt-card"><strong>18.</strong> Explique os critérios de desempenho acústico entre unidades habitacionais conforme NBR 15575.</div><div class="prompt-card"><strong>19.</strong> Quais são os requisitos de vida útil de projeto (VUP) para sistemas estruturais segundo NBR 15575?</div><div class="prompt-card"><strong>20.</strong> Detalhe os critérios de estanqueidade à água de chuva para fachadas conforme NBR 15575.</div><div class="prompt-card"><strong>21.</strong> Quais ensaios são necessários para avaliar desempenho de portas de madeira segundo NBR 15575?</div><div class="prompt-card"><strong>22.</strong> Explique os requisitos da NBR 16747 para inspeção predial, detalhando os três níveis de inspeção.</div><h3>Normas de Segurança do Trabalho (23-27)</h3><div class="prompt-card"><strong>23.</strong> Quais são os requisitos da NR-18 para proteção de periferias e aberturas em lajes?</div><div class="prompt-card"><strong>24.</strong> Detalhe os requisitos de ancoragem e linhas de vida para trabalho em altura conforme NR-35.</div><div class="prompt-card"><strong>25.</strong> Quais EPIs são obrigatórios para serviços de soldagem segundo NR-6 e NR-18?</div><div class="prompt-card"><strong>26.</strong> Explique os requisitos de PCMAT para obras com mais de 20 trabalhadores segundo NR-18.</div><div class="prompt-card"><strong>27.</strong> Quais são as exigências para instalação e uso de elevadores de obra (cremalheira) conforme NR-18?</div><h3>Normas Complementares (28-30)</h3><div class="prompt-card"><strong>28.</strong> Verifique se a NBR 9050 foi atualizada recentemente e quais as principais alterações sobre acessibilidade.</div><div class="prompt-card"><strong>29.</strong> Quais são os requisitos da NBR 12721 para elaboração de orçamento e registro de incorporação imobiliária?</div><div class="prompt-card"><strong>30.</strong> Explique os critérios da NBR 9575 para classificação de impermeabilizantes e sua aplicação por tipo de área.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Verifique vigência</strong>: Normas são atualizadas frequentemente</li><li><strong>Cite item específico</strong>: Peça referência exata (ex: item 14.6.2.3)</li><li><strong>Compare edições</strong>: Mudanças entre versões podem ser significativas</li><li><strong>Considere contexto</strong>: Normas mais restritivas prevalecem</li><li><strong>Documente consultas</strong>: Mantenha registro das normas utilizadas</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>        <div class="section" style="border-left: 4px solid #EC4899;">
+            <h2>⚖️ GEM 06 - LegalMatch PRO</h2>
+            <div class="access-card" style="border-color: #EC4899; background: #EC489915;">
+                <a href="https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing" target="_blank" class="access-btn" style="background: #EC4899;">🚀 Abrir LegalMatch PRO</a>
+            </div>
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o LegalMatch PRO?</h3><p>O <strong>LegalMatch PRO</strong> é um consultor estratégico de engenharia e direito administrativo, otimizado para o ecossistema Gemini. Ele oferece blindagem jurídica e eficiência técnica para profissionais que atuam no mercado de obras públicas e licitações sob a Nova Lei de Licitações (Lei 14.133/2021).</p><h3>Como Funciona?</h3><p>O agente opera em três serviços principais:</p><h4>1. Inteligência em Editais e Análise de Risco</h4><ul><li>"Autópsia" completa de editais</li><li>Cruzamento com acórdãos do TCU</li><li>Verificação de conformidade legal</li><li>Sugestão de impugnações fundamentadas (Art. 164)</li></ul>
+<h4>2. Estruturação de Termos de Referência (TR)</h4><ul><li>Definição clara do objeto</li><li>Justificativa robusta</li><li>Requisitos técnicos precisos</li><li>Critérios de aceitação claros</li></ul>
+<h4>3. Gestão de Equilíbrio Econômico-Financeiro</h4><ul><li>Identificação de requisitos para reequilíbrio</li><li>Estruturação de planilhas de cálculo</li><li>Análise baseada em matriz de riscos</li><li>Fundamentação para revisão de preços</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina sua posição</strong> (licitante, gestor público, engenheiro)</li><li><strong>Forneça o edital ou documento</strong> para análise</li><li><strong>Especifique a dúvida</strong> (habilitação, preço, prazo)</li><li><strong>Solicite pareceres ou minutas</strong> quando necessário</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Imersão e Diagnóstico</strong> - Entendimento da posição do usuário</li><li><strong>Varredura de Dados</strong> - Consulta ao PNCP e TCU via Google Search</li><li><strong>Redação Estratégica</strong> - Minutas em Google Docs compartilháveis</li><li><strong>Monitoramento Ativo</strong> - Google Alerts para novas licitações</li></ol>
+<hr><h2>30 Prompts para Licitações</h2><h3>Análise de Editais (1-10)</h3><div class="prompt-card"><strong>1.</strong> Analise este edital de obra pública e identifique cláusulas que possam ser consideradas restritivas à competitividade segundo a Lei 14.133/2021.</div><div class="prompt-card"><strong>2.</strong> Verifique se a exigência de atestado técnico com quantitativo mínimo de 50% está em conformidade com a jurisprudência do TCU.</div><div class="prompt-card"><strong>3.</strong> Elabore uma impugnação fundamentada contra exigência de certidão negativa de débitos municipais para licitação federal.</div><div class="prompt-card"><strong>4.</strong> Analise se o prazo de execução de 6 meses para obra de 2.000m² é tecnicamente viável e se pode ser questionado.</div><div class="prompt-card"><strong>5.</strong> Verifique a legalidade de exigência de visita técnica obrigatória em edital de obra de pequeno porte.</div><div class="prompt-card"><strong>6.</strong> Elabore recurso contra inabilitação por suposta falta de capacidade técnico-operacional em obra similar.</div><div class="prompt-card"><strong>7.</strong> Analise se a exigência de capital social mínimo de 10% do valor estimado está de acordo com a Lei 14.133/2021.</div><div class="prompt-card"><strong>8.</strong> Verifique se o critério de julgamento por menor preço global é adequado para obra de reforma com escopo variável.</div><div class="prompt-card"><strong>9.</strong> Elabore pedido de esclarecimento sobre indefinição de critérios de medição no Termo de Referência.</div><div class="prompt-card"><strong>10.</strong> Analise se a matriz de riscos do edital está adequada e se há riscos transferidos indevidamente ao contratado.</div><h3>Elaboração de Propostas (11-16)</h3><div class="prompt-card"><strong>11.</strong> Estruture uma proposta técnica para licitação tipo técnica e preço, destacando os critérios de pontuação mais relevantes.</div><div class="prompt-card"><strong>12.</strong> Elabore uma justificativa de preço para item com valor acima da mediana do SINAPI, demonstrando particularidades locais.</div><div class="prompt-card"><strong>13.</strong> Monte um checklist de documentos de habilitação conforme Art. 62 a 70 da Lei 14.133/2021.</div><div class="prompt-card"><strong>14.</strong> Elabore declarações obrigatórias para habilitação: não emprego de menores, inexistência de fatos impeditivos, etc.</div><div class="prompt-card"><strong>15.</strong> Estruture uma planilha de composição de BDI diferenciado para fornecimento de materiais versus serviços.</div><div class="prompt-card"><strong>16.</strong> Monte uma proposta de cronograma físico-financeiro para obra de 18 meses com marcos de medição.</div><h3>Termos de Referência (17-22)</h3><div class="prompt-card"><strong>17.</strong> Elabore um Termo de Referência para contratação de serviços de engenharia para reforma de prédio público.</div><div class="prompt-card"><strong>18.</strong> Estruture a justificativa técnica para contratação direta por dispensa de licitação (Art. 75).</div><div class="prompt-card"><strong>19.</strong> Monte um modelo de Estudo Técnico Preliminar (ETP) para obra de construção de escola pública.</div><div class="prompt-card"><strong>20.</strong> Elabore critérios de sustentabilidade ambiental para inclusão em edital de obra pública conforme IN 01/2010.</div><div class="prompt-card"><strong>21.</strong> Estruture uma pesquisa de preços com no mínimo três fontes válidas conforme IN SEGES 65/2021.</div><div class="prompt-card"><strong>22.</strong> Monte um modelo de Mapa de Riscos com probabilidade, impacto e ações de contingência.</div><h3>Execução Contratual (23-27)</h3><div class="prompt-card"><strong>23.</strong> Elabore um pedido formal de reequilíbrio econômico-financeiro fundamentado no Art. 124 da Lei 14.133/2021.</div><div class="prompt-card"><strong>24.</strong> Estruture uma justificativa técnica para termo aditivo de prazo superior a 25% do prazo original.</div><div class="prompt-card"><strong>25.</strong> Monte um modelo de relatório de fiscalização de contrato para apresentação ao gestor.</div><div class="prompt-card"><strong>26.</strong> Elabore uma defesa contra aplicação de multa por atraso, demonstrando culpa exclusiva da Administração.</div><div class="prompt-card"><strong>27.</strong> Estruture um pedido de apostilamento para reajuste de preços por índice contratual.</div><h3>Gestão Pública (28-30)</h3><div class="prompt-card"><strong>28.</strong> Elabore um parecer técnico para designação de fiscal de contrato de obra pública.</div><div class="prompt-card"><strong>29.</strong> Monte um checklist de verificação de conformidade para recebimento definitivo de obra.</div><div class="prompt-card"><strong>30.</strong> Estruture um modelo de atesto de medição com verificações técnicas obrigatórias para liberação de pagamento.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Consulte advogado</strong>: Este agente fornece base técnica, mas decisões legais exigem assessoria jurídica</li><li><strong>Atualize-se</strong>: A Lei 14.133/2021 e jurisprudência do TCU evoluem constantemente</li><li><strong>Documente tudo</strong>: Registros são essenciais para defesas e recursos</li><li><strong>Respeite prazos</strong>: Impugnações e recursos têm prazos preclusivos</li><li><strong>Use o PNCP</strong>: Portal Nacional de Contratações Públicas é fonte oficial</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 ObraMatch - Engenharia Inteligente</p>
+        <p>Suporte: <a href="mailto:obramatch+suporte@gmail.com">obramatch+suporte@gmail.com</a></p>
+        <p><a href="https://obramatch.com.br">obramatch.com.br</a></p>
+    </div>
+</body>
+</html>

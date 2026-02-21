@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEM 06 - LegalMatch PRO - ObraMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-color: #EC4899;
+            --neon-glow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
+            --bg-dark: #050505;
+            --bg-card: rgba(15, 15, 15, 0.8);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, var(--bg-dark) 0%, #000000 100%);
+            min-height: 100vh;
+        }
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(236, 72, 153, 0.05) 100%);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--neon-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            border: 1px solid var(--neon-color);
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .access-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(236, 72, 153, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 20px rgba(236, 72, 153, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), inset 0 0 30px rgba(236, 72, 153, 0.1);
+            border-color: var(--neon-color);
+        }
+        .access-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .access-btn {
+            display: inline-block;
+            background: var(--neon-color);
+            color: #000;
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+        .access-btn:hover { 
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.8), 0 0 40px rgba(236, 72, 153, 0.4);
+            background: #fff;
+        }
+        .section {
+            background: rgba(15, 15, 15, 0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+        .section h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background: var(--neon-color);
+            border-radius: 4px;
+            box-shadow: var(--neon-glow);
+        }
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        .section h4 {
+            color: var(--neon-color);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 500;
+        }
+        .section ul, .section ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .section li { margin-bottom: 0.6rem; color: var(--text-muted); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; }
+        
+        .prompt-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            border-left: 4px solid var(--neon-color);
+            transition: all 0.3s ease;
+        }
+        .prompt-card:hover {
+            background: rgba(236, 72, 153, 0.05);
+            border-color: rgba(236, 72, 153, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transform: translateX(5px);
+        }
+        .prompt-card strong { color: var(--neon-color); }
+        
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .agent-item {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .agent-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--neon-color);
+            box-shadow: var(--neon-glow);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .agent-item:hover { 
+            border-color: rgba(236, 72, 153, 0.5); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .agent-item:hover::before { opacity: 1; }
+        .agent-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.8rem; font-weight: 600; }
+        .agent-item p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .agent-item a {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-color);
+            border: 1px solid var(--neon-color);
+            text-decoration: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .agent-item a:hover {
+            background: var(--neon-color);
+            color: #000;
+            box-shadow: var(--neon-glow);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #4b5563;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+            background: #000;
+        }
+        .footer a { color: var(--neon-color); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: #fff; text-shadow: var(--neon-glow); }
+        .tips-list li { color: var(--text-muted); margin-bottom: 0.8rem; }
+        .tips-list li strong { color: #fff; }
+        hr { border: none; border-top: 1px solid var(--border-color); margin: 2rem 0; }
+        
+        @media (max-width: 768px) {
+            .hero { padding: 3rem 1.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .access-card { padding: 2rem 1.5rem; }
+            .section { padding: 1.5rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div style="font-size: 3rem;">⚖️</div>
+        <h1>GEM 06 - LegalMatch PRO</h1>
+        <div class="subtitle">Aspectos Legais da Engenharia</div>
+        <div class="badge">Acesso Anual • Todas as Atualizações • ObraMatch</div>
+    </div>
+    <div class="container">
+        <div class="access-card">
+            <h2>⚖️ Acessar Seu Agente GEM</h2>
+            <p style="color: #94a3b8; margin-bottom: 1rem;">Clique no botão abaixo para abrir seu agente no Google Gemini:</p>
+            <a href="https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing" target="_blank" class="access-btn">🚀 Abrir LegalMatch PRO no Gemini</a>
+            <p style="color: #64748b; font-size: 0.8rem; margin-top: 1rem;">Requer conta Google. Bookmark este link para acesso rápido.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Link de Acesso</h2><p><strong>https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing</strong></p><hr><h2>Tutorial Completo</h2><h3>O Que é o LegalMatch PRO?</h3><p>O <strong>LegalMatch PRO</strong> é um consultor estratégico de engenharia e direito administrativo, otimizado para o ecossistema Gemini. Ele oferece blindagem jurídica e eficiência técnica para profissionais que atuam no mercado de obras públicas e licitações sob a Nova Lei de Licitações (Lei 14.133/2021).</p><h3>Como Funciona?</h3><p>O agente opera em três serviços principais:</p><h4>1. Inteligência em Editais e Análise de Risco</h4><ul><li>"Autópsia" completa de editais</li><li>Cruzamento com acórdãos do TCU</li><li>Verificação de conformidade legal</li><li>Sugestão de impugnações fundamentadas (Art. 164)</li></ul>
+<h4>2. Estruturação de Termos de Referência (TR)</h4><ul><li>Definição clara do objeto</li><li>Justificativa robusta</li><li>Requisitos técnicos precisos</li><li>Critérios de aceitação claros</li></ul>
+<h4>3. Gestão de Equilíbrio Econômico-Financeiro</h4><ul><li>Identificação de requisitos para reequilíbrio</li><li>Estruturação de planilhas de cálculo</li><li>Análise baseada em matriz de riscos</li><li>Fundamentação para revisão de preços</li></ul>
+<h3>Como Usar?</h3><ol><li><strong>Acesse o link</strong> do agente no Gemini</li><li><strong>Defina sua posição</strong> (licitante, gestor público, engenheiro)</li><li><strong>Forneça o edital ou documento</strong> para análise</li><li><strong>Especifique a dúvida</strong> (habilitação, preço, prazo)</li><li><strong>Solicite pareceres ou minutas</strong> quando necessário</li></ol>
+<h3>Metodologia de Trabalho</h3><ol><li><strong>Imersão e Diagnóstico</strong> - Entendimento da posição do usuário</li><li><strong>Varredura de Dados</strong> - Consulta ao PNCP e TCU via Google Search</li><li><strong>Redação Estratégica</strong> - Minutas em Google Docs compartilháveis</li><li><strong>Monitoramento Ativo</strong> - Google Alerts para novas licitações</li></ol>
+<hr><h2>30 Prompts para Licitações</h2><h3>Análise de Editais (1-10)</h3><div class="prompt-card"><strong>1.</strong> Analise este edital de obra pública e identifique cláusulas que possam ser consideradas restritivas à competitividade segundo a Lei 14.133/2021.</div><div class="prompt-card"><strong>2.</strong> Verifique se a exigência de atestado técnico com quantitativo mínimo de 50% está em conformidade com a jurisprudência do TCU.</div><div class="prompt-card"><strong>3.</strong> Elabore uma impugnação fundamentada contra exigência de certidão negativa de débitos municipais para licitação federal.</div><div class="prompt-card"><strong>4.</strong> Analise se o prazo de execução de 6 meses para obra de 2.000m² é tecnicamente viável e se pode ser questionado.</div><div class="prompt-card"><strong>5.</strong> Verifique a legalidade de exigência de visita técnica obrigatória em edital de obra de pequeno porte.</div><div class="prompt-card"><strong>6.</strong> Elabore recurso contra inabilitação por suposta falta de capacidade técnico-operacional em obra similar.</div><div class="prompt-card"><strong>7.</strong> Analise se a exigência de capital social mínimo de 10% do valor estimado está de acordo com a Lei 14.133/2021.</div><div class="prompt-card"><strong>8.</strong> Verifique se o critério de julgamento por menor preço global é adequado para obra de reforma com escopo variável.</div><div class="prompt-card"><strong>9.</strong> Elabore pedido de esclarecimento sobre indefinição de critérios de medição no Termo de Referência.</div><div class="prompt-card"><strong>10.</strong> Analise se a matriz de riscos do edital está adequada e se há riscos transferidos indevidamente ao contratado.</div><h3>Elaboração de Propostas (11-16)</h3><div class="prompt-card"><strong>11.</strong> Estruture uma proposta técnica para licitação tipo técnica e preço, destacando os critérios de pontuação mais relevantes.</div><div class="prompt-card"><strong>12.</strong> Elabore uma justificativa de preço para item com valor acima da mediana do SINAPI, demonstrando particularidades locais.</div><div class="prompt-card"><strong>13.</strong> Monte um checklist de documentos de habilitação conforme Art. 62 a 70 da Lei 14.133/2021.</div><div class="prompt-card"><strong>14.</strong> Elabore declarações obrigatórias para habilitação: não emprego de menores, inexistência de fatos impeditivos, etc.</div><div class="prompt-card"><strong>15.</strong> Estruture uma planilha de composição de BDI diferenciado para fornecimento de materiais versus serviços.</div><div class="prompt-card"><strong>16.</strong> Monte uma proposta de cronograma físico-financeiro para obra de 18 meses com marcos de medição.</div><h3>Termos de Referência (17-22)</h3><div class="prompt-card"><strong>17.</strong> Elabore um Termo de Referência para contratação de serviços de engenharia para reforma de prédio público.</div><div class="prompt-card"><strong>18.</strong> Estruture a justificativa técnica para contratação direta por dispensa de licitação (Art. 75).</div><div class="prompt-card"><strong>19.</strong> Monte um modelo de Estudo Técnico Preliminar (ETP) para obra de construção de escola pública.</div><div class="prompt-card"><strong>20.</strong> Elabore critérios de sustentabilidade ambiental para inclusão em edital de obra pública conforme IN 01/2010.</div><div class="prompt-card"><strong>21.</strong> Estruture uma pesquisa de preços com no mínimo três fontes válidas conforme IN SEGES 65/2021.</div><div class="prompt-card"><strong>22.</strong> Monte um modelo de Mapa de Riscos com probabilidade, impacto e ações de contingência.</div><h3>Execução Contratual (23-27)</h3><div class="prompt-card"><strong>23.</strong> Elabore um pedido formal de reequilíbrio econômico-financeiro fundamentado no Art. 124 da Lei 14.133/2021.</div><div class="prompt-card"><strong>24.</strong> Estruture uma justificativa técnica para termo aditivo de prazo superior a 25% do prazo original.</div><div class="prompt-card"><strong>25.</strong> Monte um modelo de relatório de fiscalização de contrato para apresentação ao gestor.</div><div class="prompt-card"><strong>26.</strong> Elabore uma defesa contra aplicação de multa por atraso, demonstrando culpa exclusiva da Administração.</div><div class="prompt-card"><strong>27.</strong> Estruture um pedido de apostilamento para reajuste de preços por índice contratual.</div><h3>Gestão Pública (28-30)</h3><div class="prompt-card"><strong>28.</strong> Elabore um parecer técnico para designação de fiscal de contrato de obra pública.</div><div class="prompt-card"><strong>29.</strong> Monte um checklist de verificação de conformidade para recebimento definitivo de obra.</div><div class="prompt-card"><strong>30.</strong> Estruture um modelo de atesto de medição com verificações técnicas obrigatórias para liberação de pagamento.</div><hr><h2>Dicas de Uso</h2><ul><li><strong>Consulte advogado</strong>: Este agente fornece base técnica, mas decisões legais exigem assessoria jurídica</li><li><strong>Atualize-se</strong>: A Lei 14.133/2021 e jurisprudência do TCU evoluem constantemente</li><li><strong>Documente tudo</strong>: Registros são essenciais para defesas e recursos</li><li><strong>Respeite prazos</strong>: Impugnações e recursos têm prazos preclusivos</li><li><strong>Use o PNCP</strong>: Portal Nacional de Contratações Públicas é fonte oficial</li></ul>
+<hr><p><em>Documento gerado para o ecossistema ObraMatch</em></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 ObraMatch - Engenharia Inteligente</p>
+        <p>Suporte: <a href="mailto:obramatch+suporte@gmail.com">obramatch+suporte@gmail.com</a></p>
+        <p><a href="https://obramatch.com.br">obramatch.com.br</a></p>
+    </div>
+</body>
+</html>
