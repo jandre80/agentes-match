@@ -323,6 +323,19 @@
       </div>
     </section>
 
+    <!-- SHOWCASE BAND -->
+    <section class="pb-8 -mt-4 lg:-mt-8 relative">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="relative rounded-2xl p-[2px] bg-gradient-to-br from-gold/40 via-white/5 to-transparent">
+          <div class="absolute -inset-2 bg-gold/10 blur-2xl rounded-3xl -z-10"></div>
+          <img src="Gemini_Generated_Image_teanxbteanxbtean.png"
+            alt="Equipe de engenharia usando os Agentes Match no canteiro de obras"
+            class="w-full rounded-[14px] object-cover" loading="eager" />
+        </div>
+        <p class="text-center text-xs font-mono text-gray-500 uppercase tracking-widest mt-5">Seu novo ambiente de trabalho técnico</p>
+      </div>
+    </section>
+
     <!-- PROBLEM / SOLUTION -->
     <section class="py-24 relative">
       <div class="max-w-6xl mx-auto px-6">
@@ -449,28 +462,38 @@
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Você pergunta. O agente entrega.</h2>
         </div>
 
-        <!-- TODO ANDRÉ: troque este exemplo ilustrativo por um PRINT real de um agente respondendo.
-             Basta adicionar a imagem ao repositório e substituir este bloco por:
-             <img src="print-matchorca.png" alt="MatchOrça gerando orçamento" class="w-full rounded-2xl border border-gold/15" /> -->
-        <div class="glass-card rounded-2xl p-6 lg:p-8 reveal max-w-3xl mx-auto">
-          <div class="flex items-center gap-2 mb-6 pb-4 border-b border-white/10">
-            <span class="w-3 h-3 rounded-full bg-gold/60"></span>
-            <span class="font-mono text-xs text-gray-400 uppercase tracking-widest">MatchOrça PRO · exemplo ilustrativo</span>
+        <!-- TODO ANDRÉ: quando tiver um PRINT real de um agente respondendo, troque o bloco da direita (chat ilustrativo)
+             por: <img src="print-matchorca.png" alt="MatchOrça gerando orçamento" class="w-full rounded-2xl border border-gold/15" /> -->
+        <div class="grid lg:grid-cols-2 gap-8 items-center reveal">
+          <!-- Produto (imagem real) -->
+          <div class="relative rounded-2xl p-[2px] bg-gradient-to-br from-gold/40 via-white/5 to-transparent">
+            <div class="absolute -inset-2 bg-gold/10 blur-2xl rounded-3xl -z-10"></div>
+            <img src="Gemini_Generated_Image_vxoylgvxoylgvxoy.png"
+              alt="Caixa dos Agentes Match com painel aberto no notebook"
+              class="w-full rounded-[14px] object-cover" loading="lazy" />
           </div>
-          <div class="space-y-5 text-sm">
-            <div class="flex justify-end">
-              <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-md text-gray-200">
-                Preciso do orçamento de uma laje maciça de 80 m², concreto fck 25, com fôrma e armação. Me dá a composição e uma estimativa por SINAPI.
+
+          <!-- Exemplo de conversa -->
+          <div class="glass-card rounded-2xl p-6 lg:p-8">
+            <div class="flex items-center gap-2 mb-6 pb-4 border-b border-white/10">
+              <span class="w-3 h-3 rounded-full bg-gold/60"></span>
+              <span class="font-mono text-xs text-gray-400 uppercase tracking-widest">MatchOrça PRO · exemplo ilustrativo</span>
+            </div>
+            <div class="space-y-5 text-sm">
+              <div class="flex justify-end">
+                <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-md text-gray-200">
+                  Preciso do orçamento de uma laje maciça de 80 m², concreto fck 25, com fôrma e armação. Me dá a composição e uma estimativa por SINAPI.
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-lg text-gray-100">
+                  <p class="mb-2 font-medium text-gold">Composição sugerida (laje maciça 80 m²):</p>
+                  <p class="text-gray-300 leading-relaxed">Concretagem fck 25 MPa · fôrma de madeira · armação CA-50 · lançamento e adensamento. Puxo os códigos SINAPI de cada item, monto o quantitativo e devolvo o subtotal com BDI aplicado — pronto pra você revisar e assinar.</p>
+                </div>
               </div>
             </div>
-            <div class="flex justify-start">
-              <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-lg text-gray-100">
-                <p class="mb-2 font-medium text-gold">Composição sugerida (laje maciça 80 m²):</p>
-                <p class="text-gray-300 leading-relaxed">Concretagem fck 25 MPa · fôrma de madeira · armação CA-50 · lançamento e adensamento. Puxo os códigos SINAPI de cada item, monto o quantitativo e devolvo o subtotal com BDI aplicado — pronto pra você revisar e assinar.</p>
-              </div>
-            </div>
+            <p class="text-[11px] text-gray-600 font-mono mt-6">Exemplo demonstrativo. Resultados reais dependem dos dados que você fornecer e exigem revisão do engenheiro responsável.</p>
           </div>
-          <p class="text-[11px] text-gray-600 font-mono mt-6">Exemplo demonstrativo. Resultados reais dependem dos dados que você fornecer e exigem revisão do engenheiro responsável.</p>
         </div>
       </div>
     </section>
