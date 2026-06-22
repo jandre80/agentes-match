@@ -170,58 +170,109 @@
       background: rgba(212, 175, 55, 0.15);
       border-color: #D4AF37;
     }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) SoftwareApplication -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "LaudoMatch PRO",
-    "operatingSystem": "All",
-    "applicationCategory": "BusinessApplication",
-    "description": "Elabore laudos de vistoria cautelar de vizinhança, laudos de patologia predial e perícias técnicas em conformidade com as normas ABNT NBR utilizando IA.",
-    "offers": {
-      "@type": "Offer",
-      "price": "47.00",
-      "priceCurrency": "BRL"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LaudoMatch PRO",
+  "operatingSystem": "All",
+  "applicationCategory": "BusinessApplication",
+  "description": "Elabore laudos de vistoria cautelar de vizinhança, laudos de patologia predial e perícias técnicas em conformidade com as normas ABNT NBR utilizando IA.",
+  "offers": {
+    "@type": "Offer",
+    "price": "47.00",
+    "priceCurrency": "BRL"
   }
-  </script>
+}
+</script>
 
   <!-- Structured Data (JSON-LD) FAQ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O LaudoMatch PRO consegue analisar fotos de rachaduras ou infiltrações?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. Graças à capacidade multimodal do Gemini, você pode carregar imagens de patologias da construção diretamente no chat. O agente avalia as características visuais e propõe causas e soluções."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O laudo gerado segue as normas da ABNT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, a redação e estrutura são orientadas pelas principais normas vigentes de engenharia diagnóstica, como a NBR 13752 (Perícias de Engenharia na Construção Civil) e NBR 16747 (Inspeção Predial)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ele auxilia na emissão da ART?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O agente orienta sobre a correta classificação de atividades e seleção de códigos TOS na emissão da Anotação de Responsabilidade Técnica (ART) do laudo junto ao CREA."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O LaudoMatch PRO consegue analisar fotos de rachaduras ou infiltrações?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Graças à capacidade multimodal do Gemini, você pode carregar imagens de patologias da construção diretamente no chat. O agente avalia as características visuais e propõe causas e soluções."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "O laudo gerado segue as normas da ABNT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, a redação e estrutura são orientadas pelas principais normas vigentes de engenharia diagnóstica, como a NBR 13752 (Perícias de Engenharia na Construção Civil) e NBR 16747 (Inspeção Predial)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele auxilia na emissão da ART?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente orienta sobre a correta classificação de atividades e seleção de códigos TOS na emissão da Anotação de Responsabilidade Técnica (ART) do laudo junto ao CREA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o upload de fotos no Gemini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na interface do Google Gemini (no computador ou celular), você clica no ícone de anexo de imagem '+', seleciona a foto da patologia em alta resolução e cola o prompt correspondente para análise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente substitui a vistoria presencial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De forma alguma. A vistoria física é indispensável e obrigatória para atestar a realidade do imóvel. O agente funciona na retaguarda, ajudando a organizar e fundamentar os dados levantados em campo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele classifica danos de acordo com as normas de seguro predial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Você pode pedir para o agente estruturar a análise para verificar se a anomalia se enquadra nas coberturas de danos de sinistros ou falhas decorrentes de falta de manutenção predial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual é a velocidade de geração de um laudo pericial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Em menos de 2 minutos você obtém a fundamentação teórica, a estrutura e a indicação metodológica para o laudo. O preenchimento dos detalhes específicos da vistoria é feito em seguida pelo profissional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "É cobrada alguma taxa mensal pelo uso do agente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O acesso aos prompts e à configuração do especialista é vitalício após o pagamento único do pacote Agentes Match."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="antialiased font-sans">
@@ -244,7 +295,8 @@
         </div>
       </div>
       <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
-        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Recursos</a>
         <a href="#prompts" class="text-gray-400 hover:text-white transition-colors">Prompts prontos</a>
         <a href="#faq" class="text-gray-400 hover:text-white transition-colors">Dúvidas</a>
       </nav>
@@ -267,20 +319,31 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
             </span>
-            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 07 · Especialista Oficial</span>
+            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 07 · Engenharia Diagnóstica</span>
           </div>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 text-white">
-            Domine as buscas de<br />
-            ia laudo de vistoria cautelar com <span class="text-gradient-gold">LaudoMatch PRO</span>
+            Laudos de Vistoria e Diagnósticos de Patologias com Rigor Técnico
           </h1>
 
-          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light">
+          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light font-sans">
             Estrutura e diagnósticos técnicos para engenharia diagnóstica, laudos de patologia predial, perícias judiciais e vistorias cautelares. Tenha um copiloto de inteligência artificial de alta performance integrado ao seu Google Gemini.
           </p>
 
-          <!-- Form inline or box -->
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 relative max-w-xl">
+          <div class="flex gap-4 mb-8">
+            <a href="#inicio" class="btn-premium px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Abrir Agente no Gemini ↗
+            </a>
+            <a href="#prompts" class="btn-outline px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Visualizar Prompts
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Lead Form Box / Chat Simulation -->
+        <div class="lg:col-span-5 reveal relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 relative z-10 border border-white/10">
             <div id="leadFormContainer">
               <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao LaudoMatch PRO no Gemini</h3>
               <p class="text-xs text-gray-400 mb-6">Preencha os dados e abra o agente gratuitamente de imediato.</p>
@@ -320,48 +383,35 @@
           </div>
         </div>
 
-        <!-- Right: Interactive SVG Interface Mock -->
-        <div class="lg:col-span-5 reveal relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
-          <div class="glass-card rounded-2xl p-6 relative z-10 border border-white/10">
-            <div class="flex items-center justify-between pb-4 border-b border-white/5 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-              </div>
-              <span class="font-mono text-[10px] text-gray-500 tracking-wider">Google Gemini API / LaudoMatch PRO</span>
-            </div>
-            
-            <!-- Mock Chat Area -->
-            <div class="space-y-4 min-h-[300px] flex flex-col justify-end text-xs">
-              <div class="flex justify-end">
-                <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%] text-gray-300">
-                  Como o <b class="text-white font-medium">LaudoMatch PRO</b> pode me ajudar na rotina diária como engenheiro civil?
-                </div>
-              </div>
-              <div class="flex justify-start">
-                <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-gray-200">
-                  <div class="flex items-center gap-2 mb-2 font-mono text-[10px] text-gold font-bold">
-                    
-            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><path d="M8.5 12.5l2 2 4-4"/>
-            </svg>
-        
-                    <span>LaudoMatch PRO</span>
-                  </div>
-                  <p class="leading-relaxed">Como um super agente do Gemini, fui moldado especificamente para o pilar de <b>ia laudo de vistoria cautelar</b>. Analiso regulamentações, formato memoriais e orçamentos, e elaboro diagnósticos de forma técnica e precisa em minutos.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM & TRANSFORMATION -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="problema-transformacao">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 font-bold border border-red-500/20">✕</div>
+            <span class="font-mono text-red-400 text-xs uppercase tracking-widest font-bold block">O Cenário Manual e Ineficiente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">Como a tarefa é realizada hoje</h2>
+            <p class="text-gray-400 leading-relaxed font-light text-sm">
+              A engenharia diagnóstica requer uma riqueza de detalhes minuciosa e termos precisos. Redigir laudos de vistoria cautelar de vizinhança ou classificar anomalias prediais manualmente gera dias de trabalho burocrático. Além disso, classificar erroneamente uma fissura estrutural como mera fissura de reboco ou deixar de citar as exigências da NBR 13752 e NBR 16747 abre brechas para questionamentos judiciais e prejuízos imensos.
+            </p>
+          </div>
+          <div class="lg:col-span-6 space-y-6 bg-gold/5 border border-gold/15 p-8 lg:p-10 rounded-3xl">
+            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold border border-gold/20">✔</div>
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold block">A Solução Inteligente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">A Transformação Prática</h2>
+            <p class="text-gray-300 leading-relaxed font-light text-sm">
+              Com o LaudoMatch PRO, você acelera a montagem dos seus laudos. O agente ajuda a classificar anomalias (endógenas, exógenas) e falhas, sugere ensaios tecnológicos apropriados e prescreve métodos de recuperação corretos. Graças ao suporte a imagens do Gemini, você pode analisar fotos de patologias (trincas, corrosão de armadura, infiltrações) e obter pré-diagnósticos imediatos e fundamentação normativa impecável.
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="py-24 bg-carbonLight/50 border-y border-white/5" id="recursos">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="recursos">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Recursos e Funcionalidades</span>
@@ -372,23 +422,108 @@
         <div class="grid md:grid-cols-2 gap-8 reveal">
           
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><path d="M8.5 12.5l2 2 4-4"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Engenharia Diagnóstica Estruturada</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Estrutura laudos técnicos, vistorias cautelares de vizinhança e inspeções de manutenção em conformidade com as normas vigentes.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Laudos padronizados e aceitos pelo mercado e justiça.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><path d="M8.5 12.5l2 2 4-4"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Inspeção Predial (NBR 16747:2020)</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Auxilia na classificação sistemática de anomalias (endógenas, exógenas) e falhas, organizando por grau de prioridade técnica.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Clareza operacional na definição de prioridades do condomínio.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><path d="M8.5 12.5l2 2 4-4"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Perícias Judiciais (NBR 13752)</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Ajuda peritos e assistentes técnicos a formatarem petições, laudos periciais e a responderem a quesitos técnicos judiciais com rigor.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Segurança no trabalho pericial perante o juízo.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><path d="M8.5 12.5l2 2 4-4"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Análise Visual de Patologias</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Envie fotos de fissuras, infiltrações ou corrosão e obtenha pré-diagnósticos técnicos detalhados e causas prováveis.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Diagnósticos iniciais ágeis baseados em imagens claras.</div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="como-funciona">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Fluxo de Trabalho</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Como Utilizar em 4 Passos</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                1
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Descreva a Manifestação Patológica</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Descreva as características visuais da anomalia (ou anexe fotos da trinca, infiltração ou oxidação estrutural).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                2
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Indique a Metodologia de Inspeção</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Indique o tipo de laudo desejado: Vistoria Cautelar, Inspeção Predial NBR 16747 ou Laudo Pericial Judicial.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                3
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Processamento do Diagnóstico</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">O LaudoMatch PRO pesquisa causas prováveis, termos científicos exatos e normas aplicáveis.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                4
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Gere e Entregue o Laudo</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Copie o texto estruturado com diagnóstico e diretrizes de reparo, insira seu registro profissional (CREA) e emita a ART.</p>
+            </div>
           </div>
         
         </div>
@@ -396,74 +531,242 @@
     </section>
 
     <!-- PROMPTS SWIPE FILE -->
-    <section class="py-24 relative" id="prompts">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5 relative" id="prompts">
       <div class="max-w-5xl mx-auto px-6 reveal">
         <div class="text-center mb-16">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acervo de Prompts</span>
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Copie e use no seu Gemini</h2>
-          <p class="text-gray-400">Modelos de comando altamente precisos para extrair os melhores resultados técnicos.</p>
+          <p class="text-gray-400">Modelos de comando altamente precisos estruturados para extrair os melhores resultados técnicos.</p>
         </div>
 
-        <div class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-8">
           
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 1 — Estrutura de Laudo de Vistoria Cautelar</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_laudomatchpro_0')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Gerar o escopo e seções obrigatórias para vistoria de vizinhança.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_laudomatchpro_0">Você é o LaudoMatch PRO. Monte a estrutura técnica completa e o roteiro de inspeção para um Laudo de Vistoria Cautelar de Vizinhança para um imóvel residencial térreo que faz divisa com um terreno onde será executada uma obra de edifício com [PROFUNDIDADE_ESCAVACAO] metros de escavação e contenção em parede diafragma.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[PROFUNDIDADE_ESCAVACAO] (ex: 6)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 2 — Classificação e Diagnóstico de Fissuras</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_laudomatchpro_1')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Classificar anomalias físicas e propor a causa provável.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_laudomatchpro_1">Você é o LaudoMatch PRO. Analise a seguinte descrição de anomalia: [DESCRICAO_ANOMALIA] localizada em [LOCALIZACAO]. Classifique o fenômeno técnico (anomalia endógena, exógena, funcional), a gravidade ou urgência da manutenção conforme a NBR 16747 e apresente as causas prováveis e sugestão de ensaios complementares.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[DESCRICAO_ANOMALIA] (ex: trincas a 45 graus partindo dos cantos das janelas), [LOCALIZACAO] (ex: fachada de alvenaria estrutural)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 3 — Resposta a Quesitos Judiciais</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_laudomatchpro_2')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Redigir a resposta técnica formal de quesito formulado pelo juiz ou partes.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_laudomatchpro_2">Você é o LaudoMatch PRO. Redija a resposta pericial técnica, formal e embasada cientificamente para o seguinte quesito judicial: [QUESITO_JUDICIAL]. Considere que a perícia versa sobre [TIPO_PERICIA] em condomínio edilício e fundamente conforme a NBR 13752.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[QUESITO_JUDICIAL] (ex: Se a umidade constatada no subsolo provém de vazamento na rede de águas pluviais ou de falha de impermeabilização), [TIPO_PERICIA] (ex: vício construtivo e infiltração)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 4 — Memorial de Recuperação Estrutural</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_laudomatchpro_3')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Especificar o método de tratamento de armaduras corroídas.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_laudomatchpro_3">Você é o LaudoMatch PRO. Elabore a especificação técnica e o passo a passo de procedimentos para a recuperação de uma viga de concreto armado com [PATOLOGIA_CONCRETO] (ex: armadura exposta com corrosão acentuada e perda de seção). Indique materiais de reparo, tratamento das barras e etapas de cura.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[PATOLOGIA_CONCRETO] (ex: cobrimento desplacado, oxidação acentuada das armaduras e estribos rompidos)</span>
+            </div>
           </div>
         
         </div>
       </div>
     </section>
 
+    <!-- BENEFITS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="beneficios">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Vantagens Reais</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Por que integrar o LaudoMatch PRO ao seu fluxo</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Terminologia Científica</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Laudos redigidos com termos específicos da engenharia diagnóstica (concreto, patologia).</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Diretrizes de Manutenção</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Indicação de procedimentos de reparo adequados conforme as boas práticas do IBAPE.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Rigor Normativo</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Redução de contestações judiciais de laudos devido a falhas conceituais ou falta de referências técnicas.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="para-quem">
+      <div class="max-w-5xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Público-Alvo</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Para quem é recomendado?</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Peritos de Engenharia e Assistentes Técnicos</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que atuam em disputas judiciais de vícios construtivos ou danos de vizinhança.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Síndicos e Administradores de Condomínio</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que necessitam de pareceres para contratar obras de manutenção estrutural.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Construtores e Empreiteiros</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que realizam reformas e necessitam registrar as condições de imóveis vizinhos antes de iniciar a obra.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS INCLUDED -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="o-que-esta-incluido">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <div class="glass-card rounded-3xl p-8 lg:p-12 border border-gold/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full filter blur-[50px] -z-10"></div>
+          <div class="text-center mb-8">
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acesso Completo</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mt-2">O que você recebe ao adquirir?</h2>
+          </div>
+          <ul class="space-y-4 text-gray-300 text-sm max-w-2xl mx-auto mb-10">
+            
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Acesso imediato ao agente LaudoMatch PRO no Google Gemini.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 prompts avançados para vistorias, diagnósticos e respostas judiciais.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Guia de bolso de termos periciais e códigos de engenharia diagnóstica.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Atualizações técnicas constantes integradas ao desenvolvimento de IA.</span>
+          </li>
+        
+          </ul>
+          <div class="text-center">
+            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 agentes de IA por preço promocional e impulsione seus resultados de engenharia civil.</p>
+            <a href="https://pay.cakto.com.br/3dzpj4v" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Adquirir Acesso Completo (9 Agentes)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MONETIZATION / CTA -->
-    <section class="py-24 bg-carbonLight border-y border-white/5 relative">
+    <section class="py-24 bg-carbonLight border-t border-white/5 relative">
       <div class="absolute inset-0 bg-gold/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Eleve o nível do seu escritório técnico</h2>
@@ -477,7 +780,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 relative" id="faq">
+    <section class="py-24 bg-carbon border-t border-white/5" id="faq">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Perguntas Frequentes</span>
@@ -486,33 +789,83 @@
 
         <div class="space-y-4 reveal">
           
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" open>
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O LaudoMatch PRO consegue analisar fotos de rachaduras ou infiltrações?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim. Graças à capacidade multimodal do Gemini, você pode carregar imagens de patologias da construção diretamente no chat. O agente avalia as características visuais e propõe causas e soluções.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O laudo gerado segue as normas da ABNT?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim, a redação e estrutura são orientadas pelas principais normas vigentes de engenharia diagnóstica, como a NBR 13752 (Perícias de Engenharia na Construção Civil) e NBR 16747 (Inspeção Predial).
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>Ele auxilia na emissão da ART?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              O agente orienta sobre a correta classificação de atividades e seleção de códigos TOS na emissão da Anotação de Responsabilidade Técnica (ART) do laudo junto ao CREA.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como funciona o upload de fotos no Gemini?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Na interface do Google Gemini (no computador ou celular), você clica no ícone de anexo de imagem '+', seleciona a foto da patologia em alta resolução e cola o prompt correspondente para análise.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>O agente substitui a vistoria presencial?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              De forma alguma. A vistoria física é indispensável e obrigatória para atestar a realidade do imóvel. O agente funciona na retaguarda, ajudando a organizar e fundamentar os dados levantados em campo.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Ele classifica danos de acordo com as normas de seguro predial?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Sim. Você pode pedir para o agente estruturar a análise para verificar se a anomalia se enquadra nas coberturas de danos de sinistros ou falhas decorrentes de falta de manutenção predial.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Qual é a velocidade de geração de um laudo pericial?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Em menos de 2 minutos você obtém a fundamentação teórica, a estrutura e a indicação metodológica para o laudo. O preenchimento dos detalhes específicos da vistoria é feito em seguida pelo profissional.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>É cobrada alguma taxa mensal pelo uso do agente?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Não. O acesso aos prompts e à configuração do especialista é vitalício após o pagamento único do pacote Agentes Match.
             </div>
           </details>
         
@@ -546,8 +899,8 @@
           <h4 class="font-bold text-white uppercase tracking-wider mb-4 font-mono text-[10px]">Gestão e Produção</h4>
           <ul class="space-y-3">
             <li><a href="diario-obra-rdo-checklist-ia.html" class="hover:text-gold transition-colors">MatchObra PRO (Gestão)</a></li>
-            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch (Cálculo)</a></li>
-            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch (Avaliações)</a></li>
+            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch PRO (Cálculo)</a></li>
+            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch PRO (Avaliações)</a></li>
           </ul>
         </div>
         <div>
@@ -560,9 +913,16 @@
         </div>
       </div>
 
+      <div class="py-8 border-b border-white/5 text-[11px] text-gray-500 leading-relaxed max-w-4xl font-light">
+        <p class="font-medium text-gray-400 mb-1">Aviso de Responsabilidade Técnica e Regulamentação:</p>
+        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos agentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
+      </div>
+
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-xs text-gray-500 font-mono">
-        <p>© 2026 ObraMatch. Todos os direitos reservados. Projetos executados exigem a responsabilidade técnica de profissional habilitado.</p>
+        <p>© 2026 ObraMatch. Todos os direitos reservados.</p>
         <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
           <a href="https://obramatch.com.br" target="_blank" rel="noopener" class="hover:text-white transition-colors">obramatch.com.br</a>
         </div>
       </div>

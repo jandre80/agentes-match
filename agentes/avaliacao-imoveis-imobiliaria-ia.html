@@ -170,58 +170,109 @@
       background: rgba(212, 175, 55, 0.15);
       border-color: #D4AF37;
     }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) SoftwareApplication -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AvaliaMatch PRO",
-    "operatingSystem": "All",
-    "applicationCategory": "BusinessApplication",
-    "description": "Elabore laudos de avaliação de imóveis urbanos pelo Método Comparativo Direto de Dados de Mercado em conformidade com a NBR 14653 com IA.",
-    "offers": {
-      "@type": "Offer",
-      "price": "47.00",
-      "priceCurrency": "BRL"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AvaliaMatch PRO",
+  "operatingSystem": "All",
+  "applicationCategory": "BusinessApplication",
+  "description": "Elabore laudos de avaliação de imóveis urbanos pelo Método Comparativo Direto de Dados de Mercado em conformidade com a NBR 14653 com IA.",
+  "offers": {
+    "@type": "Offer",
+    "price": "47.00",
+    "priceCurrency": "BRL"
   }
-  </script>
+}
+</script>
 
   <!-- Structured Data (JSON-LD) FAQ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O AvaliaMatch PRO realiza cálculos de regressão linear sozinho?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O agente orienta sobre a montagem da planilha, tratamento dos dados, cálculo dos fatores (fator de área, localização) e interpretação estatística. Para rodar a estatística inferencial complexa, recomenda-se usar softwares de apoio (como SISDEA ou TS-Sisvel) sob a orientação técnica estruturada pelo agente."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ele é válido para avaliações periciais judiciais?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. A metodologia empregada nas respostas do agente baseia-se estritamente na NBR 14653 (partes 1 e 2), fornecendo embasamento técnico que resiste a impugnações judiciais."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O agente ajuda a identificar o Grau de Precisão do laudo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, auxiliando na conferência dos critérios normativos exigidos para enquadramento de Grau I, II ou III de Fundamentação e Precisão."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O AvaliaMatch PRO realiza cálculos de regressão linear sozinho?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente orienta sobre a montagem da planilha, tratamento dos dados, cálculo dos fatores (fator de área, localização) e interpretação estatística. Para rodar a estatística inferencial complexa, recomenda-se usar softwares de apoio (como SISDEA ou TS-Sisvel) sob a orientação técnica estruturada pelo agente."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Ele é válido para avaliações periciais judiciais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A metodologia empregada nas respostas do agente baseia-se estritamente na NBR 14653 (partes 1 e 2), fornecendo embasamento técnico que resiste a impugnações judiciais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente ajuda a identificar o Grau de Precisão do laudo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, auxiliando na conferência dos critérios normativos exigidos para enquadramento de Grau I, II ou III de Fundamentação e Precisão."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a homogeneização por fatores no agente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você insere os dados do imóvel de referência e dos comparativos, e o agente calcula as proporções analíticas básicas aplicando as fórmulas recomendadas pela metodologia científica de avaliações."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente tem integração direta com portais imobiliários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente pode realizar buscas na web em tempo real (via Google Search integrado no Gemini) para identificar imóveis semelhantes ofertados na região desejada, auxiliando na formação inicial da amostra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele calcula o Método Evolutivo e Involutivo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O agente fornece a roteirização do cálculo de viabilidade econômica do empreendimento (Método Involutivo) e o somatório depreciado de benfeitorias + terreno (Método Evolutivo)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Corretores de imóveis com CNAI podem utilizar o agente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perfeitamente. O agente auxilia na redação técnica de PTAMs (Parecer Técnico de Avaliação Mercadológica) em conformidade com as exigências metodológicas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Onde recebo os acessos da suíte Agentes Match?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os links de acesso e o guia técnico de prompts são disponibilizados de forma automática por e-mail e na área de membros de imediato após a aprovação do seu pagamento."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="antialiased font-sans">
@@ -244,7 +295,8 @@
         </div>
       </div>
       <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
-        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Recursos</a>
         <a href="#prompts" class="text-gray-400 hover:text-white transition-colors">Prompts prontos</a>
         <a href="#faq" class="text-gray-400 hover:text-white transition-colors">Dúvidas</a>
       </nav>
@@ -267,20 +319,31 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
             </span>
-            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 09 · Especialista Oficial</span>
+            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 09 · Avaliação Imobiliária</span>
           </div>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 text-white">
-            Domine as buscas de<br />
-            ia avaliacao de imoveis com <span class="text-gradient-gold">AvaliaMatch PRO</span>
+            Laudos de Avaliação de Imóveis (NBR 14653) Prontos para Bancos e Perícias
           </h1>
 
-          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light">
+          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light font-sans">
             Engenharia de avaliações: método comparativo direto, tratamento estatístico de dados de mercado, laudos bancários e perícias. Tenha um copiloto de inteligência artificial de alta performance integrado ao seu Google Gemini.
           </p>
 
-          <!-- Form inline or box -->
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 relative max-w-xl">
+          <div class="flex gap-4 mb-8">
+            <a href="#inicio" class="btn-premium px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Abrir Agente no Gemini ↗
+            </a>
+            <a href="#prompts" class="btn-outline px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Visualizar Prompts
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Lead Form Box / Chat Simulation -->
+        <div class="lg:col-span-5 reveal relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 relative z-10 border border-white/10">
             <div id="leadFormContainer">
               <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao AvaliaMatch PRO no Gemini</h3>
               <p class="text-xs text-gray-400 mb-6">Preencha os dados e abra o agente gratuitamente de imediato.</p>
@@ -320,48 +383,35 @@
           </div>
         </div>
 
-        <!-- Right: Interactive SVG Interface Mock -->
-        <div class="lg:col-span-5 reveal relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
-          <div class="glass-card rounded-2xl p-6 relative z-10 border border-white/10">
-            <div class="flex items-center justify-between pb-4 border-b border-white/5 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-              </div>
-              <span class="font-mono text-[10px] text-gray-500 tracking-wider">Google Gemini API / AvaliaMatch PRO</span>
-            </div>
-            
-            <!-- Mock Chat Area -->
-            <div class="space-y-4 min-h-[300px] flex flex-col justify-end text-xs">
-              <div class="flex justify-end">
-                <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%] text-gray-300">
-                  Como o <b class="text-white font-medium">AvaliaMatch PRO</b> pode me ajudar na rotina diária como engenheiro civil?
-                </div>
-              </div>
-              <div class="flex justify-start">
-                <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-gray-200">
-                  <div class="flex items-center gap-2 mb-2 font-mono text-[10px] text-gold font-bold">
-                    
-            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-            </svg>
-        
-                    <span>AvaliaMatch PRO</span>
-                  </div>
-                  <p class="leading-relaxed">Como um super agente do Gemini, fui moldado especificamente para o pilar de <b>ia avaliacao de imoveis</b>. Analiso regulamentações, formato memoriais e orçamentos, e elaboro diagnósticos de forma técnica e precisa em minutos.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM & TRANSFORMATION -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="problema-transformacao">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 font-bold border border-red-500/20">✕</div>
+            <span class="font-mono text-red-400 text-xs uppercase tracking-widest font-bold block">O Cenário Manual e Ineficiente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">Como a tarefa é realizada hoje</h2>
+            <p class="text-gray-400 leading-relaxed font-light text-sm">
+              A engenharia de avaliações de imóveis urbanos exige muito rigor estatístico. Pesquisar comparativos de mercado corretos, aplicar fatores de homogeneização de padrão, área, testada e localização manualmente, além de enquadrar o Grau de Precisão e Fundamentação da NBR 14653-2 toma dias inteiros de trabalho de planilhamento e abre espaço para descarte incorreto de comparativos e contestações periciais judiciais.
+            </p>
+          </div>
+          <div class="lg:col-span-6 space-y-6 bg-gold/5 border border-gold/15 p-8 lg:p-10 rounded-3xl">
+            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold border border-gold/20">✔</div>
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold block">A Solução Inteligente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">A Transformação Prática</h2>
+            <p class="text-gray-300 leading-relaxed font-light text-sm">
+              Com o AvaliaMatch PRO, você simplifica o tratamento estatístico. O agente ajuda a planejar a vistoria de mercado, estruturar a planilha de homogeneização por fatores (Fator de Área, Padrão Construtivo, Localização), orienta sobre a exclusão de outliers por critérios matemáticos (como o teste de Chauvenet) e auxilia no cálculo da depreciação pelo método Ross-Heidecke de edificações antigas.
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="py-24 bg-carbonLight/50 border-y border-white/5" id="recursos">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="recursos">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Recursos e Funcionalidades</span>
@@ -372,23 +422,108 @@
         <div class="grid md:grid-cols-2 gap-8 reveal">
           
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Método Comparativo de Mercado</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Estrutura avaliações com base na coleta de dados, fatores de homogeneização e regressões lineares conforme NBR 14653.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Tratamento de dados científicos e padronizados.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Laudos de Garantia Bancária</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Agiliza a elaboração de laudos técnicos exigidos por bancos para financiamentos habitacionais e garantias reais.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Aprovação de processos de crédito ágeis e corretos.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Métodos de Renda e Evolutivo</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Avaliação de aluguéis e taxas de capitalização (Método da Renda) ou cálculo de custo de reprodução de imóveis únicos (Método Evolutivo).</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Versatilidade metodológica para qualquer tipo de imóvel.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Tratamento Estatístico e Outliers</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Orienta no descarte de dados discrepantes da amostra utilizando o critério estatístico de Chauvenet.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Precisão matemática e consistência estatística.</div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="como-funciona">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Fluxo de Trabalho</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Como Utilizar em 4 Passos</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                1
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Descreva o Imóvel Avaliando</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Forneça as características básicas do imóvel (área construída, idade, padrão, vagas de garagem e localização).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                2
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Amostra de Comparativos</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Insira os dados coletados de imóveis similares ofertados na mesma região (comparativos de mercado).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                3
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Homogeneização de Dados</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">O AvaliaMatch PRO calcula e orienta sobre a aplicação dos fatores de correção e homogeneização estatística.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                4
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Valor de Mercado Final</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Obtenha o valor de mercado estruturado, a faixa de preços admissível e as diretrizes para classificar o Grau de Fundamentação.</p>
+            </div>
           </div>
         
         </div>
@@ -396,74 +531,242 @@
     </section>
 
     <!-- PROMPTS SWIPE FILE -->
-    <section class="py-24 relative" id="prompts">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5 relative" id="prompts">
       <div class="max-w-5xl mx-auto px-6 reveal">
         <div class="text-center mb-16">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acervo de Prompts</span>
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Copie e use no seu Gemini</h2>
-          <p class="text-gray-400">Modelos de comando altamente precisos para extrair os melhores resultados técnicos.</p>
+          <p class="text-gray-400">Modelos de comando altamente precisos estruturados para extrair os melhores resultados técnicos.</p>
         </div>
 
-        <div class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-8">
           
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 1 — Homogeneização por Fatores (NBR 14653-2)</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_avaliamatchpro_0')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Estruturar o cálculo dos fatores de área e localização para dados de mercado.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_avaliamatchpro_0">Você é o AvaliaMatch PRO. Explique e monte o memorial de cálculo para homogeneizar uma amostra de comparativos em relação a um imóvel avaliando de [AREA_AVALIANDO] m². O comparativo 1 possui [AREA_COMP1] m² e fator de localização de [LOC_COMP1]. Aplique os fatores de área e de transposição de oferta recomendados pela NBR 14653-2.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[AREA_AVALIANDO] (ex: 120), [AREA_COMP1] (ex: 150), [LOC_COMP1] (ex: 0.90)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 2 — Depreciação por Ross-Heidecke</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_avaliamatchpro_1')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Calcular a depreciação física de uma benfeitoria antiga.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_avaliamatchpro_1">Você é o AvaliaMatch PRO. Calcule o coeficiente de depreciação física de Ross-Heidecke (kd) e o valor depreciado de uma edificação comercial que possui [IDADE_IMOVIL] anos de idade real, vida útil regulamentar estimada em [VIDA_UTIL] anos, com estado de conservação classificado como [ESTADO_CONSERVACAO] (conforme tabela de Ross-Heidecke). O custo de reprodução a novo estimado é de [CUSTO_NOVO].</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[IDADE_IMOVIL] (ex: 18), [VIDA_UTIL] (ex: 50), [ESTADO_CONSERVACAO] (ex: regular carecendo de reparos simples), [CUSTO_NOVO] (ex: R$ 450.000,00)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 3 — Metodologia de Avaliação pelo Método da Renda</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_avaliamatchpro_2')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Estimar o valor do imóvel com base no rendimento de locação.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_avaliamatchpro_2">Você é o AvaliaMatch PRO. Estruture a memória de cálculo para estimar o valor de mercado de um imóvel comercial cujo aluguel mensal líquido projetado é de [ALUGUEL_MENSAL] por mês. Considere uma taxa de capitalização de mercado recomendada de [TAXA_CAP]% ao ano e período de projeção de [PRAZO] meses, indicando a fórmula e fundamentação teórica.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[ALUGUEL_MENSAL] (ex: R$ 6.500,00), [TAXA_CAP] (ex: 7.5), [PRAZO] (ex: 120)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 4 — Enquadramento de Grau de Fundamentação</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_avaliamatchpro_3')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Identificar os requisitos técnicos atendidos para classificar a fundamentação do laudo.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_avaliamatchpro_3">Você é o AvaliaMatch PRO. Elabore o checklist de verificação de requisitos mínimos exigidos pela NBR 14653-2 para classificar um laudo de avaliação de imóvel urbano com Grau [GRAU_ALVO] de Fundamentação, focando na identificação dos dados, identificação das variáveis e número de elementos da amostra.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[GRAU_ALVO] (ex: II)</span>
+            </div>
           </div>
         
         </div>
       </div>
     </section>
 
+    <!-- BENEFITS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="beneficios">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Vantagens Reais</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Por que integrar o AvaliaMatch PRO ao seu fluxo</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Conformidade Bancária</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Estrutura técnica aceita por instituições financeiras (Caixa, BB, etc.) para garantia real.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Rigor Estatístico</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Eliminação de achismos no cálculo de fatores de padrão, localização e cubagem.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Laudos Periciais Robustos</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Pareceres de avaliação imobiliária que resistem a impugnações judiciais com facilidade.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="para-quem">
+      <div class="max-w-5xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Público-Alvo</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Para quem é recomendado?</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Engenheiros e Arquitetos Avaliadores</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que elaboram laudos periciais judiciais ou laudos para contratação de garantias de crédito.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Peritos de Engenharia e Corretores Avaliadores (CNAI)</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que desejam fundamentar estatisticamente seus valores de mercado.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Escritórios Técnicos e Incorporadoras</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que realizam pesquisas rápidas de terrenos e valores de venda de empreendimentos.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS INCLUDED -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="o-que-esta-incluido">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <div class="glass-card rounded-3xl p-8 lg:p-12 border border-gold/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full filter blur-[50px] -z-10"></div>
+          <div class="text-center mb-8">
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acesso Completo</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mt-2">O que você recebe ao adquirir?</h2>
+          </div>
+          <ul class="space-y-4 text-gray-300 text-sm max-w-2xl mx-auto mb-10">
+            
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Acesso imediato ao agente AvaliaMatch PRO no Google Gemini.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 prompts de homogeneização, depreciação, método da renda e enquadramento.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Guia prático em PDF de fatores de homogeneização da NBR 14653.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Atualizações automáticas alinhadas à evolução de IA na engenharia.</span>
+          </li>
+        
+          </ul>
+          <div class="text-center">
+            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 agentes de IA por preço promocional e impulsione seus resultados de engenharia civil.</p>
+            <a href="https://pay.cakto.com.br/3dzpj4v" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Adquirir Acesso Completo (9 Agentes)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MONETIZATION / CTA -->
-    <section class="py-24 bg-carbonLight border-y border-white/5 relative">
+    <section class="py-24 bg-carbonLight border-t border-white/5 relative">
       <div class="absolute inset-0 bg-gold/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Eleve o nível do seu escritório técnico</h2>
@@ -477,7 +780,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 relative" id="faq">
+    <section class="py-24 bg-carbon border-t border-white/5" id="faq">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Perguntas Frequentes</span>
@@ -486,33 +789,83 @@
 
         <div class="space-y-4 reveal">
           
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" open>
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O AvaliaMatch PRO realiza cálculos de regressão linear sozinho?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              O agente orienta sobre a montagem da planilha, tratamento dos dados, cálculo dos fatores (fator de área, localização) e interpretação estatística. Para rodar a estatística inferencial complexa, recomenda-se usar softwares de apoio (como SISDEA ou TS-Sisvel) sob a orientação técnica estruturada pelo agente.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>Ele é válido para avaliações periciais judiciais?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim. A metodologia empregada nas respostas do agente baseia-se estritamente na NBR 14653 (partes 1 e 2), fornecendo embasamento técnico que resiste a impugnações judiciais.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O agente ajuda a identificar o Grau de Precisão do laudo?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim, auxiliando na conferência dos critérios normativos exigidos para enquadramento de Grau I, II ou III de Fundamentação e Precisão.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como funciona a homogeneização por fatores no agente?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Você insere os dados do imóvel de referência e dos comparativos, e o agente calcula as proporções analíticas básicas aplicando as fórmulas recomendadas pela metodologia científica de avaliações.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>O agente tem integração direta com portais imobiliários?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O agente pode realizar buscas na web em tempo real (via Google Search integrado no Gemini) para identificar imóveis semelhantes ofertados na região desejada, auxiliando na formação inicial da amostra.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Ele calcula o Método Evolutivo e Involutivo?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Sim. O agente fornece a roteirização do cálculo de viabilidade econômica do empreendimento (Método Involutivo) e o somatório depreciado de benfeitorias + terreno (Método Evolutivo).
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Corretores de imóveis com CNAI podem utilizar o agente?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Perfeitamente. O agente auxilia na redação técnica de PTAMs (Parecer Técnico de Avaliação Mercadológica) em conformidade com as exigências metodológicas.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Onde recebo os acessos da suíte Agentes Match?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Os links de acesso e o guia técnico de prompts são disponibilizados de forma automática por e-mail e na área de membros de imediato após a aprovação do seu pagamento.
             </div>
           </details>
         
@@ -546,8 +899,8 @@
           <h4 class="font-bold text-white uppercase tracking-wider mb-4 font-mono text-[10px]">Gestão e Produção</h4>
           <ul class="space-y-3">
             <li><a href="diario-obra-rdo-checklist-ia.html" class="hover:text-gold transition-colors">MatchObra PRO (Gestão)</a></li>
-            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch (Cálculo)</a></li>
-            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch (Avaliações)</a></li>
+            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch PRO (Cálculo)</a></li>
+            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch PRO (Avaliações)</a></li>
           </ul>
         </div>
         <div>
@@ -560,9 +913,16 @@
         </div>
       </div>
 
+      <div class="py-8 border-b border-white/5 text-[11px] text-gray-500 leading-relaxed max-w-4xl font-light">
+        <p class="font-medium text-gray-400 mb-1">Aviso de Responsabilidade Técnica e Regulamentação:</p>
+        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos agentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
+      </div>
+
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-xs text-gray-500 font-mono">
-        <p>© 2026 ObraMatch. Todos os direitos reservados. Projetos executados exigem a responsabilidade técnica de profissional habilitado.</p>
+        <p>© 2026 ObraMatch. Todos os direitos reservados.</p>
         <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
           <a href="https://obramatch.com.br" target="_blank" rel="noopener" class="hover:text-white transition-colors">obramatch.com.br</a>
         </div>
       </div>

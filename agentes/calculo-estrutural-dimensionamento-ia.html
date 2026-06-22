@@ -170,58 +170,109 @@
       background: rgba(212, 175, 55, 0.15);
       border-color: #D4AF37;
     }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) SoftwareApplication -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "EstruturaMatch PRO",
-    "operatingSystem": "All",
-    "applicationCategory": "BusinessApplication",
-    "description": "Realize pré-dimensionamentos estruturais de concreto armado, vigas, pilares e sapatas em conformidade com as normas ABNT NBR utilizando IA.",
-    "offers": {
-      "@type": "Offer",
-      "price": "47.00",
-      "priceCurrency": "BRL"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "EstruturaMatch PRO",
+  "operatingSystem": "All",
+  "applicationCategory": "BusinessApplication",
+  "description": "Realize pré-dimensionamentos estruturais de concreto armado, vigas, pilares e sapatas em conformidade com as normas ABNT NBR utilizando IA.",
+  "offers": {
+    "@type": "Offer",
+    "price": "47.00",
+    "priceCurrency": "BRL"
   }
-  </script>
+}
+</script>
 
   <!-- Structured Data (JSON-LD) FAQ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O EstruturaMatch PRO calcula estruturas inteiras de prédios?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não. O agente serve para pré-dimensionamento de elementos isolados, auditoria de cálculos e auxílio de tomada de decisão técnica. Projetos estruturais completos devem ser modelados em softwares dedicados (TQS, Eberick) e detalhados por engenheiro especialista."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ele faz cálculo de estruturas de aço e madeira?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, fornece diretrizes de dimensionamento seguindo a NBR 8800 (Aço) e NBR 7190 (Madeira)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ele detalha o processo de cura do concreto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim. O agente fornece todas as recomendações de desforma e cura úmida normatizadas pela NBR 14931."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O EstruturaMatch PRO calcula estruturas inteiras de prédios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O agente serve para pré-dimensionamento de elementos isolados, auditoria de cálculos e auxílio de tomada de decisão técnica. Projetos estruturais completos devem ser modelados em softwares dedicados (TQS, Eberick) e detalhados por engenheiro especialista."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Ele faz cálculo de estruturas de aço e madeira?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, fornece diretrizes de dimensionamento seguindo a NBR 8800 (Aço) e NBR 7190 (Madeira)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele detalha o processo de cura do concreto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O agente fornece todas as recomendações de desforma e cura úmida normatizadas pela NBR 14931."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como a IA consegue realizar contas matemáticas complexas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Através dos algoritmos avançados do Google Gemini integrados com recursos de execução de códigos (code execution) no background, o agente resolve as equações com precisão decimal matemática."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente emite desenhos de detalhamento técnico de ferragens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O agente gera as especificações de área de aço e seções de concreto textuais. O detalhamento gráfico de armaduras em prancha deve ser executado no CAD/BIM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como posso integrar os resultados do agente no meu memorial estrutural?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você pode copiar a memória de cálculo gerada pelo agente no Gemini e colá-la no seu editor de texto como memorial de pré-dimensionamento preliminar do projeto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele suporta verificação de vento e sismo conforme a NBR 6123?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente fornece os conceitos e roteiro de cálculo para cargas de vento, mas análises de pórticos espaciais complexos sob ação dinâmica devem ser efetuados em softwares dedicados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O pagamento é único ou recorrente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O pagamento é único. Comprando a suíte de 9 agentes, você ganha acesso irrestrito e vitalício sem mensalidades."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="antialiased font-sans">
@@ -244,7 +295,8 @@
         </div>
       </div>
       <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
-        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Recursos</a>
         <a href="#prompts" class="text-gray-400 hover:text-white transition-colors">Prompts prontos</a>
         <a href="#faq" class="text-gray-400 hover:text-white transition-colors">Dúvidas</a>
       </nav>
@@ -267,20 +319,31 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
             </span>
-            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 08 · Especialista Oficial</span>
+            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 08 · Cálculo Estrutural</span>
           </div>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 text-white">
-            Domine as buscas de<br />
-            ia calculo estrutural com <span class="text-gradient-gold">EstruturaMatch PRO</span>
+            Pré-Dimensionamento Estrutural e Memoriais Rápidos de Concreto e Aço
           </h1>
 
-          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light">
+          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light font-sans">
             Dimensionamento e pré-dimensionamento de elementos estruturais (concreto, aço, madeira), reforços de patologias e análise da NBR 6118. Tenha um copiloto de inteligência artificial de alta performance integrado ao seu Google Gemini.
           </p>
 
-          <!-- Form inline or box -->
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 relative max-w-xl">
+          <div class="flex gap-4 mb-8">
+            <a href="#inicio" class="btn-premium px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Abrir Agente no Gemini ↗
+            </a>
+            <a href="#prompts" class="btn-outline px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Visualizar Prompts
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Lead Form Box / Chat Simulation -->
+        <div class="lg:col-span-5 reveal relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 relative z-10 border border-white/10">
             <div id="leadFormContainer">
               <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao EstruturaMatch PRO no Gemini</h3>
               <p class="text-xs text-gray-400 mb-6">Preencha os dados e abra o agente gratuitamente de imediato.</p>
@@ -320,49 +383,35 @@
           </div>
         </div>
 
-        <!-- Right: Interactive SVG Interface Mock -->
-        <div class="lg:col-span-5 reveal relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
-          <div class="glass-card rounded-2xl p-6 relative z-10 border border-white/10">
-            <div class="flex items-center justify-between pb-4 border-b border-white/5 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-              </div>
-              <span class="font-mono text-[10px] text-gray-500 tracking-wider">Google Gemini API / EstruturaMatch PRO</span>
-            </div>
-            
-            <!-- Mock Chat Area -->
-            <div class="space-y-4 min-h-[300px] flex flex-col justify-end text-xs">
-              <div class="flex justify-end">
-                <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%] text-gray-300">
-                  Como o <b class="text-white font-medium">EstruturaMatch PRO</b> pode me ajudar na rotina diária como engenheiro civil?
-                </div>
-              </div>
-              <div class="flex justify-start">
-                <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-gray-200">
-                  <div class="flex items-center gap-2 mb-2 font-mono text-[10px] text-gold font-bold">
-                    
-            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
-                <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
-            </svg>
-        
-                    <span>EstruturaMatch PRO</span>
-                  </div>
-                  <p class="leading-relaxed">Como um super agente do Gemini, fui moldado especificamente para o pilar de <b>ia calculo estrutural</b>. Analiso regulamentações, formato memoriais e orçamentos, e elaboro diagnósticos de forma técnica e precisa em minutos.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM & TRANSFORMATION -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="problema-transformacao">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 font-bold border border-red-500/20">✕</div>
+            <span class="font-mono text-red-400 text-xs uppercase tracking-widest font-bold block">O Cenário Manual e Ineficiente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">Como a tarefa é realizada hoje</h2>
+            <p class="text-gray-400 leading-relaxed font-light text-sm">
+              Realizar pré-dimensionamentos estruturais no início do projeto arquitetônico manualmente é trabalhoso. Os arquitetos precisam de respostas rápidas sobre a altura das vigas ou dimensões de pilares, e o engenheiro calculista gasta horas modelando no software estrutural apenas para fazer estimativas geométricas básicas ou calcular taxas mínimas de armaduras e sapatas.
+            </p>
+          </div>
+          <div class="lg:col-span-6 space-y-6 bg-gold/5 border border-gold/15 p-8 lg:p-10 rounded-3xl">
+            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold border border-gold/20">✔</div>
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold block">A Solução Inteligente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">A Transformação Prática</h2>
+            <p class="text-gray-300 leading-relaxed font-light text-sm">
+              Com o EstruturaMatch PRO, você resolve pré-dimensionamentos estruturais instantaneamente. O agente calcula a seção aproximada de vigas, pilares e sapatas de forma paramétrica seguindo a NBR 6118 (Concreto) e NBR 8800 (Metálicas). Ele gera memoriais de cálculo preliminares, auxilia a calcular comprimentos de ancoragem e propõe sistemas de reforço estrutural estruturados.
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="py-24 bg-carbonLight/50 border-y border-white/5" id="recursos">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="recursos">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Recursos e Funcionalidades</span>
@@ -373,23 +422,112 @@
         <div class="grid md:grid-cols-2 gap-8 reveal">
           
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Pré-Dimensionamento Rápido</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Calcula de forma rápida seções estimadas para vigas, pilares, lajes e sapatas em função das cargas e vãos de projeto.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Esboço e lançamento estrutural coerente em minutos.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">NBR 6118 de Concreto Armado</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Verificação de conformidade de cobrimentos, domínios de deformação, taxa mínima de armaduras e cálculo de flexão simples.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Segurança contra erros conceituais de dimensionamento.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Análise de Patologias Estruturais</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Auxilia na identificação de causas de fissuras, deformações excessivas ou corrosão de armaduras em elementos estruturais existentes.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Direcionamento técnico rápido de soluções de reforço.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+                <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Comparação de Sistemas</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Avalia o impacto financeiro e arquitetônico comparando concreto armado convencional, alvenaria estrutural e concreto protendido.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Decisões de engenharia assertivas e econômicas.</div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="como-funciona">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Fluxo de Trabalho</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Como Utilizar em 4 Passos</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                1
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Indique os Parâmetros</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Forneça o vão do elemento, cargas aplicadas (permanentes e variáveis) e as propriedades do material (fck do concreto, classe do aço).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                2
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Processamento e Verificação</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">O EstruturaMatch PRO aplica as equações analíticas básicas da teoria de concreto armado ou perfis metálicos.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                3
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Geração do Memorial</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">O agente apresenta a seção estimada do elemento, área de aço mínima necessária e referências normativas.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                4
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Modelagem Fina</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Você insere os dados pré-dimensionados no seu software de modelagem estrutural final (TQS, Eberick) para detalhamento fino.</p>
+            </div>
           </div>
         
         </div>
@@ -397,74 +535,242 @@
     </section>
 
     <!-- PROMPTS SWIPE FILE -->
-    <section class="py-24 relative" id="prompts">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5 relative" id="prompts">
       <div class="max-w-5xl mx-auto px-6 reveal">
         <div class="text-center mb-16">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acervo de Prompts</span>
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Copie e use no seu Gemini</h2>
-          <p class="text-gray-400">Modelos de comando altamente precisos para extrair os melhores resultados técnicos.</p>
+          <p class="text-gray-400">Modelos de comando altamente precisos estruturados para extrair os melhores resultados técnicos.</p>
         </div>
 
-        <div class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-8">
           
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 1 — Cálculo de Flexão Simples (Viga)</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_estruturamatchpro_0')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Calcular a área de aço necessária para flexão em viga de concreto.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_estruturamatchpro_0">Você é o EstruturaMatch PRO. Calcule a armadura longitudinal de tração para uma viga de concreto armado com seção retangular de [LARGURA] cm x [ALTURA] cm, submetida a um momento fletor de cálculo (Md) de [MOMENTO] kN.m. Considere fck de [FCK] MPa, aço CA-50 e cobrimento de [COBRIMENTO] cm.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[LARGURA] (ex: 20), [ALTURA] (ex: 50), [MOMENTO] (ex: 120), [FCK] (ex: 30), [COBRIMENTO] (ex: 3.0)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 2 — Pré-Dimensionamento de Sapata Isolada</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_estruturamatchpro_1')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Estimar a área da base de uma sapata baseada na carga do pilar.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_estruturamatchpro_1">Você é o EstruturaMatch PRO. Faça o pré-dimensionamento geométrico (largura e comprimento da base) de uma sapata isolada para um pilar de seção [DIMENSAO_PILAR] cm que descarrega uma carga vertical em serviço de [CARGA] kN, sabendo que a tensão admissível do solo é de [TENSAO_SOLO] kPa.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[DIMENSAO_PILAR] (ex: 30x30), [CARGA] (ex: 800), [TENSAO_SOLO] (ex: 150)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 3 — Comprimento de Ancoragem de Barras</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_estruturamatchpro_2')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Calcular o comprimento de ancoragem de barras de aço no concreto.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_estruturamatchpro_2">Você é o EstruturaMatch PRO. Determine o comprimento de ancoragem básico e necessário (com e sem gancho) para barras de diâmetro [DIAMETRO] mm de aço CA-50 tracionadas, em uma região de [ADESAOO] (boa ou má aderência), imersas em concreto com fck de [FCK] MPa.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[DIAMETRO] (ex: 12.5), [ADESAOO] (ex: boa aderência), [FCK] (ex: 25)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 4 — Pré-Dimensionamento de Vigas de Aço</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_estruturamatchpro_3')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Estimar a seção de perfil laminado I metálico.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_estruturamatchpro_3">Você é o EstruturaMatch PRO. Faça o pré-dimensionamento de uma viga biapoiada em perfil metálico tipo I laminado, vencendo um vão de [VAO] metros, sob uma carga distribuída de serviço de [CARGA_DISTRIBUIDA] kN/m. Siga as diretrizes de deflexão máxima (flecha) da NBR 8800.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[VAO] (ex: 6.0), [CARGA_DISTRIBUIDA] (ex: 15)</span>
+            </div>
           </div>
         
         </div>
       </div>
     </section>
 
+    <!-- BENEFITS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="beneficios">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Vantagens Reais</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Por que integrar o EstruturaMatch PRO ao seu fluxo</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Respostas Rápidas</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Ideal para sanar dúvidas estruturais no canteiro de obras ou reuniões de compatibilização.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Memoriais Didáticos</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Demonstração do passo a passo matemático analítico para estudantes e engenheiros juniores.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Rendimento Construtivo</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Ajuda a escolher o sistema estrutural mais viável geometricamente no início do projeto.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="para-quem">
+      <div class="max-w-5xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Público-Alvo</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Para quem é recomendado?</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Engenheiros Civis Calculistas</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que desejam realizar pré-dimensionamentos e conferir cálculos rápidos de vigas e pilares.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Arquitetos e Urbanistas</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que precisam de parâmetros geométricos coerentes para estruturar o projeto arquitetônico preliminar.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Estudantes de Engenharia Civil</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que necessitam de auxílio no aprendizado analítico das matérias de estruturas.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS INCLUDED -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="o-que-esta-incluido">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <div class="glass-card rounded-3xl p-8 lg:p-12 border border-gold/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full filter blur-[50px] -z-10"></div>
+          <div class="text-center mb-8">
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acesso Completo</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mt-2">O que você recebe ao adquirir?</h2>
+          </div>
+          <ul class="space-y-4 text-gray-300 text-sm max-w-2xl mx-auto mb-10">
+            
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Acesso imediato ao agente EstruturaMatch PRO no Google Gemini.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 prompts estruturados para concreto armado, fundações e estruturas metálicas.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Guia digital de fórmulas estruturais analíticas básicas.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Atualizações futuras para novos elementos (madeira e alvenaria estrutural).</span>
+          </li>
+        
+          </ul>
+          <div class="text-center">
+            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 agentes de IA por preço promocional e impulsione seus resultados de engenharia civil.</p>
+            <a href="https://pay.cakto.com.br/3dzpj4v" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Adquirir Acesso Completo (9 Agentes)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MONETIZATION / CTA -->
-    <section class="py-24 bg-carbonLight border-y border-white/5 relative">
+    <section class="py-24 bg-carbonLight border-t border-white/5 relative">
       <div class="absolute inset-0 bg-gold/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Eleve o nível do seu escritório técnico</h2>
@@ -478,7 +784,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 relative" id="faq">
+    <section class="py-24 bg-carbon border-t border-white/5" id="faq">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Perguntas Frequentes</span>
@@ -487,33 +793,83 @@
 
         <div class="space-y-4 reveal">
           
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" open>
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O EstruturaMatch PRO calcula estruturas inteiras de prédios?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Não. O agente serve para pré-dimensionamento de elementos isolados, auditoria de cálculos e auxílio de tomada de decisão técnica. Projetos estruturais completos devem ser modelados em softwares dedicados (TQS, Eberick) e detalhados por engenheiro especialista.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>Ele faz cálculo de estruturas de aço e madeira?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim, fornece diretrizes de dimensionamento seguindo a NBR 8800 (Aço) e NBR 7190 (Madeira).
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>Ele detalha o processo de cura do concreto?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim. O agente fornece todas as recomendações de desforma e cura úmida normatizadas pela NBR 14931.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como a IA consegue realizar contas matemáticas complexas?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Através dos algoritmos avançados do Google Gemini integrados com recursos de execução de códigos (code execution) no background, o agente resolve as equações com precisão decimal matemática.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>O agente emite desenhos de detalhamento técnico de ferragens?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Não. O agente gera as especificações de área de aço e seções de concreto textuais. O detalhamento gráfico de armaduras em prancha deve ser executado no CAD/BIM.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como posso integrar os resultados do agente no meu memorial estrutural?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Você pode copiar a memória de cálculo gerada pelo agente no Gemini e colá-la no seu editor de texto como memorial de pré-dimensionamento preliminar do projeto.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Ele suporta verificação de vento e sismo conforme a NBR 6123?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O agente fornece os conceitos e roteiro de cálculo para cargas de vento, mas análises de pórticos espaciais complexos sob ação dinâmica devem ser efetuados em softwares dedicados.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>O pagamento é único ou recorrente?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O pagamento é único. Comprando a suíte de 9 agentes, você ganha acesso irrestrito e vitalício sem mensalidades.
             </div>
           </details>
         
@@ -547,8 +903,8 @@
           <h4 class="font-bold text-white uppercase tracking-wider mb-4 font-mono text-[10px]">Gestão e Produção</h4>
           <ul class="space-y-3">
             <li><a href="diario-obra-rdo-checklist-ia.html" class="hover:text-gold transition-colors">MatchObra PRO (Gestão)</a></li>
-            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch (Cálculo)</a></li>
-            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch (Avaliações)</a></li>
+            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch PRO (Cálculo)</a></li>
+            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch PRO (Avaliações)</a></li>
           </ul>
         </div>
         <div>
@@ -561,9 +917,16 @@
         </div>
       </div>
 
+      <div class="py-8 border-b border-white/5 text-[11px] text-gray-500 leading-relaxed max-w-4xl font-light">
+        <p class="font-medium text-gray-400 mb-1">Aviso de Responsabilidade Técnica e Regulamentação:</p>
+        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos agentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
+      </div>
+
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-xs text-gray-500 font-mono">
-        <p>© 2026 ObraMatch. Todos os direitos reservados. Projetos executados exigem a responsabilidade técnica de profissional habilitado.</p>
+        <p>© 2026 ObraMatch. Todos os direitos reservados.</p>
         <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
           <a href="https://obramatch.com.br" target="_blank" rel="noopener" class="hover:text-white transition-colors">obramatch.com.br</a>
         </div>
       </div>

@@ -170,58 +170,109 @@
       background: rgba(212, 175, 55, 0.15);
       border-color: #D4AF37;
     }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 
   <!-- Structured Data (JSON-LD) SoftwareApplication -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "NormaMatch PRO",
-    "operatingSystem": "All",
-    "applicationCategory": "BusinessApplication",
-    "description": "Tire dúvidas sobre normas técnicas ABNT NBR (6118, 15575, 9050, etc.) em segundos com o consultor de Inteligência Artificial NormaMatch PRO.",
-    "offers": {
-      "@type": "Offer",
-      "price": "47.00",
-      "priceCurrency": "BRL"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "NormaMatch PRO",
+  "operatingSystem": "All",
+  "applicationCategory": "BusinessApplication",
+  "description": "Tire dúvidas sobre normas técnicas ABNT NBR (6118, 15575, 9050, etc.) em segundos com o consultor de Inteligência Artificial NormaMatch PRO.",
+  "offers": {
+    "@type": "Offer",
+    "price": "47.00",
+    "priceCurrency": "BRL"
   }
-  </script>
+}
+</script>
 
   <!-- Structured Data (JSON-LD) FAQ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "O NormaMatch PRO tem acesso ao texto completo de todas as NBRs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "O agente possui uma ampla base de conhecimento sobre as principais NBRs da construção civil e está conectado ao Google Search para buscar dados atualizados, mas recomenda-se sempre confrontar dados críticos com as normas adquiridas formalmente na ABNT."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ele pode ajudar em processos de certificação PBQP-H?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, fornecendo checklists de conformidade técnica, requisitos de controle de qualidade e validação de procedimentos em conformidade com as normas do SiAC/PBQP-H."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "O agente ajuda a elaborar justificativas para laudos técnicos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Com certeza. Ele ajuda a redigir fundamentações técnicas impecáveis, citando os itens específicos e exigências das normas aplicáveis."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O NormaMatch PRO tem acesso ao texto completo de todas as NBRs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente possui uma ampla base de conhecimento sobre as principais NBRs da construção civil e está conectado ao Google Search para buscar dados atualizados, mas recomenda-se sempre confrontar dados críticos com as normas adquiridas formalmente na ABNT."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Ele pode ajudar em processos de certificação PBQP-H?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, fornecendo checklists de conformidade técnica, requisitos de controle de qualidade e validação de procedimentos em conformidade com as normas do SiAC/PBQP-H."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente ajuda a elaborar justificativas para laudos técnicos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Com certeza. Ele ajuda a redigir fundamentações técnicas impecáveis, citando os itens específicos e exigências das normas aplicáveis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como a IA lida com normas que foram atualizadas recentemente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente utiliza pesquisa web ativa (Google Search) integrada no Gemini para cruzar as informações da sua base com as notícias e atualizações mais recentes do portal de catálogo da ABNT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "As respostas do agente podem ser usadas diretamente em laudos judiciais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O agente ajuda na redação e na pesquisa dos itens normativos, mas as respostas devem ser revisadas e assinadas por um engenheiro devidamente registrado no CREA com emissão de ART."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ele abrange também normas internacionais como ASTM ou Eurocode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O foco principal do NormaMatch PRO são as normas brasileiras (ABNT NBR) e as Normas Regulamentadoras (NR) do Ministério do Trabalho, mas ele pode realizar pesquisas comparativas com padrões internacionais se solicitado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente necessita de instalação local?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O agente roda em nuvem através da plataforma Google Gemini. Você recebe o link de configuração oficial para uso imediato."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o suporte pós-compra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oferecemos suporte por e-mail e canal de dúvidas para ajudar você a obter o máximo desempenho nas suas consultas de prompts."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="antialiased font-sans">
@@ -244,7 +295,8 @@
         </div>
       </div>
       <nav class="hidden lg:flex items-center gap-10 text-sm font-medium">
-        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors">Como funciona</a>
+        <a href="#recursos" class="text-gray-400 hover:text-white transition-colors">Recursos</a>
         <a href="#prompts" class="text-gray-400 hover:text-white transition-colors">Prompts prontos</a>
         <a href="#faq" class="text-gray-400 hover:text-white transition-colors">Dúvidas</a>
       </nav>
@@ -267,20 +319,31 @@
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
             </span>
-            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 05 · Especialista Oficial</span>
+            <span class="font-mono text-[11px] text-white font-bold uppercase tracking-widest">GEM 05 · Normas e Conformidade</span>
           </div>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight mb-6 text-white">
-            Domine as buscas de<br />
-            ia normas abnt com <span class="text-gradient-gold">NormaMatch PRO</span>
+            Tire Qualquer Dúvida sobre Normas ABNT NBR em Segundos
           </h1>
 
-          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light">
+          <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light font-sans">
             Sua enciclopédia interativa de NBRs. Esclarece exigências da NBR 15575 (Desempenho), NBR 6118 (Concreto) e muito mais. Tenha um copiloto de inteligência artificial de alta performance integrado ao seu Google Gemini.
           </p>
 
-          <!-- Form inline or box -->
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 relative max-w-xl">
+          <div class="flex gap-4 mb-8">
+            <a href="#inicio" class="btn-premium px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Abrir Agente no Gemini ↗
+            </a>
+            <a href="#prompts" class="btn-outline px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+              Visualizar Prompts
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Lead Form Box / Chat Simulation -->
+        <div class="lg:col-span-5 reveal relative">
+          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 relative z-10 border border-white/10">
             <div id="leadFormContainer">
               <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao NormaMatch PRO no Gemini</h3>
               <p class="text-xs text-gray-400 mb-6">Preencha os dados e abra o agente gratuitamente de imediato.</p>
@@ -320,48 +383,35 @@
           </div>
         </div>
 
-        <!-- Right: Interactive SVG Interface Mock -->
-        <div class="lg:col-span-5 reveal relative">
-          <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
-          <div class="glass-card rounded-2xl p-6 relative z-10 border border-white/10">
-            <div class="flex items-center justify-between pb-4 border-b border-white/5 mb-4">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-              </div>
-              <span class="font-mono text-[10px] text-gray-500 tracking-wider">Google Gemini API / NormaMatch PRO</span>
-            </div>
-            
-            <!-- Mock Chat Area -->
-            <div class="space-y-4 min-h-[300px] flex flex-col justify-end text-xs">
-              <div class="flex justify-end">
-                <div class="bg-white/5 border border-white/10 rounded-2xl rounded-tr-sm px-4 py-3 max-w-[85%] text-gray-300">
-                  Como o <b class="text-white font-medium">NormaMatch PRO</b> pode me ajudar na rotina diária como engenheiro civil?
-                </div>
-              </div>
-              <div class="flex justify-start">
-                <div class="bg-gold/10 border border-gold/20 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[90%] text-gray-200">
-                  <div class="flex items-center gap-2 mb-2 font-mono text-[10px] text-gold font-bold">
-                    
-            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path d="M12 6c-1.5-1-4-1.5-6-1.5V18c2 0 4.5.5 6 1.5 1.5-1 4-1.5 6-1.5V4.5c-2 0-4.5.5-6 1.5z"/><line x1="12" y1="6" x2="12" y2="19.5"/>
-            </svg>
-        
-                    <span>NormaMatch PRO</span>
-                  </div>
-                  <p class="leading-relaxed">Como um super agente do Gemini, fui moldado especificamente para o pilar de <b>ia normas abnt</b>. Analiso regulamentações, formato memoriais e orçamentos, e elaboro diagnósticos de forma técnica e precisa em minutos.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM & TRANSFORMATION -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="problema-transformacao">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6">
+            <div class="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 font-bold border border-red-500/20">✕</div>
+            <span class="font-mono text-red-400 text-xs uppercase tracking-widest font-bold block">O Cenário Manual e Ineficiente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">Como a tarefa é realizada hoje</h2>
+            <p class="text-gray-400 leading-relaxed font-light text-sm">
+              Pesquisar diretrizes de normas técnicas ABNT NBR consome um tempo precioso que deveria estar sendo usado no projeto. O catálogo é imenso, as normas são constantemente atualizadas ou canceladas, e ler centenas de páginas para encontrar um simples valor de cobrimento nominal ou nível de desempenho acústico é ineficiente e abre margem para erros graves que podem invalidar projetos inteiros na prefeitura.
+            </p>
+          </div>
+          <div class="lg:col-span-6 space-y-6 bg-gold/5 border border-gold/15 p-8 lg:p-10 rounded-3xl">
+            <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold border border-gold/20">✔</div>
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold block">A Solução Inteligente</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-tight">A Transformação Prática</h2>
+            <p class="text-gray-300 leading-relaxed font-light text-sm">
+              Com o NormaMatch PRO, você tem um consultor normativo virtual de plantão. O agente sintetiza as exigências de normas cruciais como a NBR 15575 (Desempenho), NBR 6118 (Concreto Armado) e NBR 9050 (Acessibilidade) em segundos. Ele ajuda a estruturar listas de conformidade, verificar a vigência de exigências e embasar tecnicamente seus relatórios com as cláusulas corretas.
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="py-24 bg-carbonLight/50 border-y border-white/5" id="recursos">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="recursos">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Recursos e Funcionalidades</span>
@@ -372,23 +422,108 @@
         <div class="grid md:grid-cols-2 gap-8 reveal">
           
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 6c-1.5-1-4-1.5-6-1.5V18c2 0 4.5.5 6 1.5 1.5-1 4-1.5 6-1.5V4.5c-2 0-4.5.5-6 1.5z"/><line x1="12" y1="6" x2="12" y2="19.5"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Consulta Normativa Instantânea</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Responde dúvidas complexas de normas técnicas ABNT em segundos, indicando os itens específicos para dar embasamento técnico.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Embasamento técnico sem leitura manual exaustiva.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 6c-1.5-1-4-1.5-6-1.5V18c2 0 4.5.5 6 1.5 1.5-1 4-1.5 6-1.5V4.5c-2 0-4.5.5-6 1.5z"/><line x1="12" y1="6" x2="12" y2="19.5"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Validação de Vigência</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Integrado à pesquisa em tempo real para verificar se uma NBR foi revogada, atualizada ou substituída pela ABNT.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Segurança contra o uso de normas desatualizadas.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 6c-1.5-1-4-1.5-6-1.5V18c2 0 4.5.5 6 1.5 1.5-1 4-1.5 6-1.5V4.5c-2 0-4.5.5-6 1.5z"/><line x1="12" y1="6" x2="12" y2="19.5"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">NBR 15575 de Desempenho</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Checklists e orientações rigorosas sobre vida útil de projeto (VUP), desempenho acústico, térmico e lumínico de edificações.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Adequação completa a exigências habitacionais.</div>
           </div>
         
           <div class="glass-card rounded-2xl p-6 lg:p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-3">{f['title']}</h3>
-            <p class="text-sm text-gray-400 leading-relaxed font-light">{f['desc']}</p>
+            <div class="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-6 border border-gold/20">
+              
+            <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 6c-1.5-1-4-1.5-6-1.5V18c2 0 4.5.5 6 1.5 1.5-1 4-1.5 6-1.5V4.5c-2 0-4.5.5-6 1.5z"/><line x1="12" y1="6" x2="12" y2="19.5"/>
+            </svg>
+        
+            </div>
+            <h3 class="font-display text-xl font-bold text-white mb-3">Normas de Segurança (NRs)</h3>
+            <p class="text-sm text-gray-400 leading-relaxed font-light mb-4">Consulte regras de segurança de canteiro de obras (NR-18, NR-35 e outras) para reduzir riscos jurídicos e operacionais.</p>
+            <div class="text-[11px] text-gold font-semibold uppercase tracking-wider">⚡ Benefício Prático: Conformidade física e jurídica garantida no canteiro.</div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="como-funciona">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Fluxo de Trabalho</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Como Utilizar em 4 Passos</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                1
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Escolha o Tema Técnico</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Defina o tema da dúvida técnica (ex: acessibilidade de rampa, taxa de armadura, desempenho acústico).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                2
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Indique a Norma (Opcional)</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Opcionalmente, especifique a NBR que deseja focar (ex: NBR 9050, NBR 6118, NBR 15575).</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                3
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Processamento da IA</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">O NormaMatch PRO busca em sua base de conhecimento e na web as exigências exatas vigentes.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center font-mono text-gold font-bold text-sm mb-6 border border-gold/20">
+                4
+              </div>
+              <h3 class="font-display text-lg font-bold text-white mb-3">Aplique a Resolução</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">Copie os parâmetros normativos recomendados para o seu memorial descritivo, projeto ou relatório técnico.</p>
+            </div>
           </div>
         
         </div>
@@ -396,74 +531,242 @@
     </section>
 
     <!-- PROMPTS SWIPE FILE -->
-    <section class="py-24 relative" id="prompts">
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5 relative" id="prompts">
       <div class="max-w-5xl mx-auto px-6 reveal">
         <div class="text-center mb-16">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acervo de Prompts</span>
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Copie e use no seu Gemini</h2>
-          <p class="text-gray-400">Modelos de comando altamente precisos para extrair os melhores resultados técnicos.</p>
+          <p class="text-gray-400">Modelos de comando altamente precisos estruturados para extrair os melhores resultados técnicos.</p>
         </div>
 
-        <div class="space-y-6">
+        <div class="grid md:grid-cols-2 gap-8">
           
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 1 — Verificação de Coeficientes</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_normamatchpro_0')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Consultar coeficientes de ponderação e limites estruturais.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_normamatchpro_0">Você é o NormaMatch PRO. Quais são os coeficientes de majoração de cargas e minoração de resistência estabelecidos pela NBR 6118 para verificação de estados limites últimos em estruturas de concreto armado convencionais?</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">Nenhum campo necessário</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 2 — Cobrimento de Armadura por Classe</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_normamatchpro_1')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Identificar o cobrimento mínimo exigido conforme a agressividade ambiental.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_normamatchpro_1">Você é o NormaMatch PRO. Qual o cobrimento nominal mínimo de armadura exigido para pilares de concreto armado em ambiente com Classe de Agressividade Ambiental [CLASSE] conforme a NBR 6118?</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[CLASSE] (ex: III - Forte)</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 3 — Exigências de Desempenho Acústico</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_normamatchpro_2')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Enquadrar os limites de isolamento acústico entre unidades habitacionais.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_normamatchpro_2">Você é o NormaMatch PRO. Quais são as exigências mínimas e métodos de avaliação de desempenho acústico estabelecidos pela NBR 15575 para paredes divisórias entre unidades habitacionais autônomas (dormitório/dormitório e dormitório/sala)?</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">Nenhum campo necessário</span>
+            </div>
           </div>
         
-          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group">
-            <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
-              <div class="flex items-center gap-3">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="font-mono text-xs text-white uppercase tracking-widest font-bold">Prompt {i+1}</span>
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/10 group flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-gold"></span>
+                  <h4 class="font-display font-bold text-white text-base">Prompt 4 — Rampa de Acessibilidade (NBR 9050)</h4>
+                </div>
+                <button onclick="copyPrompt(this, 'prompt_normamatchpro_3')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
+                  📋 Copiar Prompt
+                </button>
               </div>
-              <button onclick="copyPrompt(this, '{id_str}')" class="copy-btn text-[10px] font-mono text-gold border border-gold/30 px-3 py-1.5 rounded hover:bg-gold hover:text-carbon transition-colors">
-                📋 Copiar Prompt
-              </button>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Objetivo:</span>
+                <p class="text-xs text-gray-300 font-light leading-relaxed">Dimensionar inclinações máximas de rampas acessíveis.</p>
+              </div>
+              <div class="mb-4">
+                <span class="block text-[10px] font-mono uppercase tracking-wider text-gray-500 mb-1">Instrução (Pronta para usar):</span>
+                <div class="bg-carbon/60 border border-white/5 rounded-lg p-4 font-mono text-xs text-gray-300 leading-relaxed select-all" id="prompt_normamatchpro_3">Você é o NormaMatch PRO. Com base nas exigências da NBR 9050, determine a inclinação admissível e o dimensionamento correto para uma rampa de acessibilidade que vence um desnível de [DESNIVEL] metros. Indique a quantidade de patamares necessários.</div>
+              </div>
             </div>
-            <div class="font-mono text-sm text-gray-300 leading-relaxed font-light" id="{id_str}">{p}</div>
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <span class="block text-[10px] font-mono uppercase tracking-wider text-gold/70 mb-1">Campos para substituir:</span>
+              <span class="text-xs text-gray-400 font-light italic">[DESNIVEL] (ex: 1.2)</span>
+            </div>
           </div>
         
         </div>
       </div>
     </section>
 
+    <!-- BENEFITS -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="beneficios">
+      <div class="max-w-6xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Vantagens Reais</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Por que integrar o NormaMatch PRO ao seu fluxo</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Agilidade de Pesquisa</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Economize horas de folheação de normas gigantescas.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Conformidade Garantida</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Reduza o risco de reprovação de projetos em órgãos fiscalizadores.</p>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 lg:p-8 border border-white/5">
+            <div class="text-gold text-2xl mb-4">✔</div>
+            <h3 class="font-display text-lg font-bold text-white mb-2">Embasamento Profissional</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-light">Justifique suas decisões de projeto citando artigos específicos das NBRs.</p>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="py-24 bg-carbonLight/50 border-t border-white/5" id="para-quem">
+      <div class="max-w-5xl mx-auto px-6 reveal">
+        <div class="text-center mb-16">
+          <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Público-Alvo</span>
+          <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 text-white">Para quem é recomendado?</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Projetistas e Arquitetos</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que precisam especificar materiais e layouts de acordo com as normas.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Engenheiros Calculistas e de Fundações</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que devem seguir rigorosamente a NBR 6118 e NBR 6122.</p>
+            </div>
+          </div>
+        
+          <div class="glass-card rounded-2xl p-6 border border-white/5 flex gap-4 items-start">
+            <div class="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center text-gold font-bold text-sm shrink-0 border border-gold/20">👤</div>
+            <div>
+              <h4 class="font-display font-semibold text-white text-sm mb-1">Peritos e Auditores</h4>
+              <p class="text-xs text-gray-400 font-light leading-relaxed">que necessitam de embasamento normativo sólido para emitir laudos incontestáveis.</p>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS INCLUDED -->
+    <section class="py-24 bg-carbon border-t border-white/5" id="o-que-esta-incluido">
+      <div class="max-w-4xl mx-auto px-6 reveal">
+        <div class="glass-card rounded-3xl p-8 lg:p-12 border border-gold/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full filter blur-[50px] -z-10"></div>
+          <div class="text-center mb-8">
+            <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Acesso Completo</span>
+            <h2 class="font-display text-3xl lg:text-4xl font-bold text-white mt-2">O que você recebe ao adquirir?</h2>
+          </div>
+          <ul class="space-y-4 text-gray-300 text-sm max-w-2xl mx-auto mb-10">
+            
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Acesso imediato ao agente NormaMatch PRO no Google Gemini.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 prompts de consulta e checklist técnico baseados nas principais NBRs.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Guia de bolso digital para navegação de normas de engenharia.</span>
+          </li>
+        
+          <li class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Atualizações periódicas alinhadas às revisões da ABNT.</span>
+          </li>
+        
+          </ul>
+          <div class="text-center">
+            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 agentes de IA por preço promocional e impulsione seus resultados de engenharia civil.</p>
+            <a href="https://pay.cakto.com.br/3dzpj4v" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Adquirir Acesso Completo (9 Agentes)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MONETIZATION / CTA -->
-    <section class="py-24 bg-carbonLight border-y border-white/5 relative">
+    <section class="py-24 bg-carbonLight border-t border-white/5 relative">
       <div class="absolute inset-0 bg-gold/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Eleve o nível do seu escritório técnico</h2>
@@ -477,7 +780,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-24 relative" id="faq">
+    <section class="py-24 bg-carbon border-t border-white/5" id="faq">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Perguntas Frequentes</span>
@@ -486,33 +789,83 @@
 
         <div class="space-y-4 reveal">
           
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" open>
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O NormaMatch PRO tem acesso ao texto completo de todas as NBRs?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              O agente possui uma ampla base de conhecimento sobre as principais NBRs da construção civil e está conectado ao Google Search para buscar dados atualizados, mas recomenda-se sempre confrontar dados críticos com as normas adquiridas formalmente na ABNT.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>Ele pode ajudar em processos de certificação PBQP-H?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Sim, fornecendo checklists de conformidade técnica, requisitos de controle de qualidade e validação de procedimentos em conformidade com as normas do SiAC/PBQP-H.
             </div>
           </details>
         
-          <details class="glass-card rounded-xl p-5 border border-white/10" {"open" if i==0 else ""}>
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
             <summary class="flex justify-between items-center font-display font-semibold text-white">
-              <span>{item['q']}</span>
+              <span>O agente ajuda a elaborar justificativas para laudos técnicos?</span>
               <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
             </summary>
             <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
-              {item['a']}
+              Com certeza. Ele ajuda a redigir fundamentações técnicas impecáveis, citando os itens específicos e exigências das normas aplicáveis.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como a IA lida com normas que foram atualizadas recentemente?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O agente utiliza pesquisa web ativa (Google Search) integrada no Gemini para cruzar as informações da sua base com as notícias e atualizações mais recentes do portal de catálogo da ABNT.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>As respostas do agente podem ser usadas diretamente em laudos judiciais?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O agente ajuda na redação e na pesquisa dos itens normativos, mas as respostas devem ser revisadas e assinadas por um engenheiro devidamente registrado no CREA com emissão de ART.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Ele abrange também normas internacionais como ASTM ou Eurocode?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              O foco principal do NormaMatch PRO são as normas brasileiras (ABNT NBR) e as Normas Regulamentadoras (NR) do Ministério do Trabalho, mas ele pode realizar pesquisas comparativas com padrões internacionais se solicitado.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>O agente necessita de instalação local?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Não. O agente roda em nuvem através da plataforma Google Gemini. Você recebe o link de configuração oficial para uso imediato.
+            </div>
+          </details>
+        
+          <details class="glass-card rounded-xl p-5 border border-white/10" >
+            <summary class="flex justify-between items-center font-display font-semibold text-white">
+              <span>Como funciona o suporte pós-compra?</span>
+              <span class="faq-icon text-gold transition-transform duration-300 font-mono text-xl">+</span>
+            </summary>
+            <div class="mt-4 text-sm text-gray-400 leading-relaxed font-light border-t border-white/5 pt-4">
+              Oferecemos suporte por e-mail e canal de dúvidas para ajudar você a obter o máximo desempenho nas suas consultas de prompts.
             </div>
           </details>
         
@@ -546,8 +899,8 @@
           <h4 class="font-bold text-white uppercase tracking-wider mb-4 font-mono text-[10px]">Gestão e Produção</h4>
           <ul class="space-y-3">
             <li><a href="diario-obra-rdo-checklist-ia.html" class="hover:text-gold transition-colors">MatchObra PRO (Gestão)</a></li>
-            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch (Cálculo)</a></li>
-            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch (Avaliações)</a></li>
+            <li><a href="calculo-estrutural-dimensionamento-ia.html" class="hover:text-gold transition-colors">EstruturaMatch PRO (Cálculo)</a></li>
+            <li><a href="avaliacao-imoveis-imobiliaria-ia.html" class="hover:text-gold transition-colors">AvaliaMatch PRO (Avaliações)</a></li>
           </ul>
         </div>
         <div>
@@ -560,9 +913,16 @@
         </div>
       </div>
 
+      <div class="py-8 border-b border-white/5 text-[11px] text-gray-500 leading-relaxed max-w-4xl font-light">
+        <p class="font-medium text-gray-400 mb-1">Aviso de Responsabilidade Técnica e Regulamentação:</p>
+        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos agentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
+      </div>
+
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-xs text-gray-500 font-mono">
-        <p>© 2026 ObraMatch. Todos os direitos reservados. Projetos executados exigem a responsabilidade técnica de profissional habilitado.</p>
+        <p>© 2026 ObraMatch. Todos os direitos reservados.</p>
         <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
           <a href="https://obramatch.com.br" target="_blank" rel="noopener" class="hover:text-white transition-colors">obramatch.com.br</a>
         </div>
       </div>
