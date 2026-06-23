@@ -13,14 +13,14 @@ agents_data = [
         "name": "MatchOrça PRO",
         "category": "Orçamento e Custos",
         "keyword": "ia para orcamento de obras",
-        "title": "MatchOrça PRO | IA para Orçamento de Obras e SINAPI",
-        "meta_desc": "Crie orçamentos de obras, composições de custos unitários SINAPI/SICRO e cálculo de BDI automaticamente com o agente de Inteligência Artificial MatchOrça PRO.",
-        "short_desc": "Orçamentos paramétricos, SINAPI/SICRO, cálculo de BDI, cronogramas físico-financeiros e análise de curva S em minutos.",
+        "title": "MatchOrça PRO | Orçamento de Obras e Composições SINAPI",
+        "meta_desc": "Elabore orçamentos de obras, composições de custos unitários SINAPI/SICRO e cálculos de BDI de forma ágil e estruturada.",
+        "short_desc": "Orçamentos paramétricos, composições SINAPI/SICRO, cálculo de BDI e cronogramas físico-financeiros estruturados.",
         "gemini_link": "https://gemini.google.com/gem/1jv5Hl2wbAo5W66J2NRH9uqP4MvXS4-ux?usp=sharing",
         "emoji": "💰",
         "color": "#D4AF37", # Gold
         "checkout_link": "https://pay.cakto.com.br/3dzpj4v",
-        "headline": "Orçamentos de Obras 90% Mais Rápidos e 100% Alinhados ao SINAPI",
+        "headline": "Orçamentos de Obras Mais Rápidos e Alinhados ao SINAPI/SICRO",
         "icon_svg": """
             <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="13" y2="11"/>
@@ -28,7 +28,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "Elaborar orçamentos de obras e composições de custos unitários (CPU) manualmente é exaustivo. Você passa horas pesquisando códigos SINAPI/SICRO desatualizados, calculando BDI sem justificativa técnica robusta e montando cronogramas físico-financeiros complexos no Excel. Um único erro de quantitativo ou índice pode destruir a margem de lucro de um projeto inteiro.",
-        "transformation": "Com o MatchOrça PRO, você transforma esse gargalo em uma vantagem competitiva. O agente analisa o escopo do seu projeto e sugere as composições de custos unitários exatas utilizando códigos SINAPI. Em poucos minutos, você gera cálculos de BDI estruturados, cronogramas físico-financeiros e análises de Curva S prontos para validação final e importação nas suas planilhas.",
+        "transformation": "Com o MatchOrça PRO, você transforma esse gargalo em uma vantagem competitiva. A estrutura do assistente ajuda a guiar o escopo do seu projeto e estimar as composições de custos unitários exatas utilizando códigos SINAPI. Em poucos minutos, você gera cálculos de BDI estruturados, cronogramas físico-financeiros e análises de Curva S prontos para validação técnica e importação nas suas planilhas.",
         "features": [
             {"title": "Orçamentação Paramétrica & SINAPI", "desc": "Gera composições de custos detalhadas utilizando códigos SINAPI ou SICRO para materiais, equipamentos e mão de obra.", "benefit": "Precisão instantânea em CPUs de mercado."},
             {"title": "Cálculo de BDI Inteligente", "desc": "Estrutura o cálculo de BDI de forma justificada e compatível com as regras do TCU (IN TCU 05/2017) para obras públicas e privadas.", "benefit": "Segurança jurídica e técnica em licitações."},
@@ -78,17 +78,17 @@ agents_data = [
             "Profissionais Autônomos: que desejam apresentar propostas comerciais com BDI e cronogramas profissionais."
         ],
         "included": [
-            "Acesso imediato ao agente MatchOrça PRO no Google Gemini.",
+            "Acesso imediato ao assistente MatchOrça PRO no Google Gemini.",
             "4 prompts estruturados de alta performance para orçamentação e planejamento.",
             "Guia rápido de uso integrado com links e documentação técnica.",
-            "Atualizações automáticas do agente conforme evolução do ecossistema Gemini."
+            "Atualizações automáticas do assistente conforme evolução do ecossistema Gemini."
         ],
         "faq": [
             {"q": "O MatchOrça PRO utiliza tabelas SINAPI atualizadas?", "a": "Sim. O agente é integrado à busca do Google e acessa dados atualizados do SINAPI por estado, gerando estimativas e composições em conformidade com o mercado atual."},
             {"q": "Consigo exportar o orçamento gerado para o Excel?", "a": "Com certeza. Ao gerar o orçamento no Google Gemini, você pode solicitar a formatação em tabela estruturada e copiá-la diretamente para o Excel ou Google Planilhas com um clique."},
             {"q": "O agente substitui o engenheiro orçamentista?", "a": "Não. O agente funciona como um copiloto técnico de alta velocidade, acelerando em até 90% a montagem e pesquisa inicial de composições, mas a validação e responsabilidade técnica final são do engenheiro."},
             {"q": "Preciso ter conhecimento de IA para usar o MatchOrça PRO?", "a": "Nenhum. Basta copiar os prompts estruturados fornecidos na landing page, preencher as variáveis entre colchetes e colar no chat do Google Gemini."},
-            {"q": "O acesso é vitalício?", "a": "Sim. Ao adquirir o pacote de agentes do Agentes Match, você tem acesso vitalício aos prompts e atualizações dos agentes oficiais."},
+            {"q": "O acesso é vitalício?", "a": "Sim. Ao adquirir o pacote de agentes do Agentes Match, você tem acesso vitalício aos prompts e atualizações dos assistentes oficiais."},
             {"q": "Quais são as limitações do agente?", "a": "O agente auxilia a pesquisar e estruturar dados com base em prompts avançados, mas não realiza integrações de banco de dados diretamente em softwares de ERP proprietários sem intervenção humana de cópia de tabelas."},
             {"q": "Qual o modelo de licença do agente?", "a": "O agente é disponibilizado através de um link compartilhado do Google Gemini, configurado como um especialista personalizado pronto para uso imediato no seu navegador."},
             {"q": "Existe garantia de reembolso?", "a": "Sim, oferecemos garantia incondicional de 7 dias. Se você testar e achar que a suíte não economiza seu tempo de engenharia, basta solicitar o reembolso integral."}
@@ -100,8 +100,8 @@ agents_data = [
         "name": "NormaMatch PRO",
         "category": "Normas e Conformidade",
         "keyword": "ia normas abnt",
-        "title": "NormaMatch PRO | IA para Consulta de Normas NBR e ABNT",
-        "meta_desc": "Tire dúvidas sobre normas técnicas ABNT NBR (6118, 15575, 9050, etc.) em segundos com o consultor de Inteligência Artificial NormaMatch PRO.",
+        "title": "NormaMatch PRO | Consulta de Normas NBR e ABNT",
+        "meta_desc": "Consulte diretrizes de normas técnicas ABNT NBR e tire dúvidas em segundos com o assistente especializado.",
         "short_desc": "Sua enciclopédia interativa de NBRs. Esclarece exigências da NBR 15575 (Desempenho), NBR 6118 (Concreto) e muito mais.",
         "gemini_link": "https://gemini.google.com/gem/1dwzgUaDyQzmIHNQ5rIQhQPnHz2fuK980?usp=sharing",
         "emoji": "📋",
@@ -164,7 +164,7 @@ agents_data = [
             "Peritos e Auditores: que necessitam de embasamento normativo sólido para emitir laudos incontestáveis."
         ],
         "included": [
-            "Acesso imediato ao agente NormaMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente NormaMatch PRO no Google Gemini.",
             "4 prompts de consulta e checklist técnico baseados nas principais NBRs.",
             "Guia de bolso digital para navegação de normas de engenharia.",
             "Atualizações periódicas alinhadas às revisões da ABNT."
@@ -174,7 +174,7 @@ agents_data = [
             {"q": "Ele pode ajudar em processos de certificação PBQP-H?", "a": "Sim, fornecendo checklists de conformidade técnica, requisitos de controle de qualidade e validação de procedimentos em conformidade com as normas do SiAC/PBQP-H."},
             {"q": "O agente ajuda a elaborar justificativas para laudos técnicos?", "a": "Com certeza. Ele ajuda a redigir fundamentações técnicas impecáveis, citando os itens específicos e exigências das normas aplicáveis."},
             {"q": "Como a IA lida com normas que foram atualizadas recentemente?", "a": "O agente utiliza pesquisa web ativa (Google Search) integrada no Gemini para cruzar as informações da sua base com as notícias e atualizações mais recentes do portal de catálogo da ABNT."},
-            {"q": "As respostas do agente podem ser usadas diretamente em laudos judiciais?", "a": "O agente ajuda na redação e na pesquisa dos itens normativos, mas as respostas devem ser revisadas e assinadas por um engenheiro devidamente registrado no CREA com emissão de ART."},
+            {"q": "As respostas do assistente podem ser usadas diretamente em laudos judiciais?", "a": "O agente ajuda na redação e na pesquisa dos itens normativos, mas as respostas devem ser revisadas e assinadas por um engenheiro devidamente registrado no CREA com emissão de ART."},
             {"q": "Ele abrange também normas internacionais como ASTM ou Eurocode?", "a": "O foco principal do NormaMatch PRO são as normas brasileiras (ABNT NBR) e as Normas Regulamentadoras (NR) do Ministério do Trabalho, mas ele pode realizar pesquisas comparativas com padrões internacionais se solicitado."},
             {"q": "O agente necessita de instalação local?", "a": "Não. O agente roda em nuvem através da plataforma Google Gemini. Você recebe o link de configuração oficial para uso imediato."},
             {"q": "Como funciona o suporte pós-compra?", "a": "Oferecemos suporte por e-mail e canal de dúvidas para ajudar você a obter o máximo desempenho nas suas consultas de prompts."}
@@ -186,8 +186,8 @@ agents_data = [
         "name": "LegalMatch PRO",
         "category": "Licitações e Contratos",
         "keyword": "ia para licitacoes",
-        "title": "LegalMatch PRO | IA para Licitações e Análise de Editais",
-        "meta_desc": "Analise editais de obras, identifique riscos jurídicos, monte justificativas técnicas e minutas de recursos sob a Nova Lei de Licitações (Lei 14.133) com IA.",
+        "title": "LegalMatch PRO | Licitações e Análise de Editais",
+        "meta_desc": "Analise editais de obras, identifique riscos jurídicos, elabore justificativas e minutas de recursos sob a Nova Lei de Licitações (Lei 14.133).",
         "short_desc": "Blindagem jurídica e inteligência administrativa para editais de obras públicas sob a Lei 14.133/2021 e orientações do TCU.",
         "gemini_link": "https://gemini.google.com/gem/17hhJkiI1p9uItxf5pOWpq3ltqDIN0K1U?usp=sharing",
         "emoji": "⚖️",
@@ -201,7 +201,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "A participação ineficiente em licitações de obras públicas envolve um cipoal jurídico e burocrático. Editais frequentemente contêm exigências de qualificação técnica abusivas ou ilegais, prazos inexequíveis e matrizes de riscos desbalanceadas que transferem toda a responsabilidade de imprevistos geológicos ou climáticos para a construtora, resultando em inabilitações injustas ou contratos deficitários.",
-        "transformation": "Com o LegalMatch PRO, você analisa editais inteiros em minutos. O agente identifica pontos críticos, restrições à competitividade e cláusulas em desacordo com a Lei 14.133/2021 e decisões do TCU. Ele redige minutas de impugnação sólidas, pedidos de esclarecimento estruturados e defesas técnicas contra inabilitações injustas com rapidez e rigor jurídico.",
+        "transformation": "Com o LegalMatch PRO, você analisa editais inteiros em minutos. O assistente identifica pontos críticos, restrições à competitividade e cláusulas em desacordo com a Lei 14.133/2021 e decisões do TCU. Ele redige minutas de impugnação sólidas, pedidos de esclarecimento estruturados e defesas técnicas contra inabilitações injustas com rapidez e rigor jurídico.",
         "features": [
             {"title": "Análise de Riscos em Editais", "desc": "Faz uma varredura completa em editais de licitação, identificando exigências abusivas, restrições e riscos de engenharia.", "benefit": "Evita assumir contratos com armadilhas financeiras."},
             {"title": "Minutas de Recursos e Impugnações", "desc": "Escreve minutas robustas para recursos administrativos ou impugnações fundamentadas de acordo com a Nova Lei de Licitações (Lei 14.133).", "benefit": "Agilidade em contestações legais urgentes."},
@@ -251,19 +251,19 @@ agents_data = [
             "Advogados e Assessores Jurídicos da Área de Infraestrutura: que desejam acelerar a pesquisa de jurisprudência do TCU."
         ],
         "included": [
-            "Acesso imediato ao agente LegalMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente LegalMatch PRO no Google Gemini.",
             "4 prompts de alto impacto para análise contratual e impugnações.",
             "Modelos prontos de estrutura de petição administrativa de licitação.",
             "Atualizações e melhorias alinhadas às novas resoluções do PNCP."
         ],
         "faq": [
-            {"q": "O LegalMatch PRO é atualizado com a Nova Lei de Licitações (Lei 14.133)?", "a": "Sim. O agente foi totalmente calibrado de acordo com a Lei 14.133/2021, jurisprudência do TCU e PNCP (Portal Nacional de Contratações Públicas)."},
-            {"q": "Consigo analisar editais em formato PDF?", "a": "Sim. Você pode fazer upload do edital em PDF diretamente no Google Gemini (disponível na interface) e o agente fará a leitura e análise completa das seções indicadas."},
-            {"q": "Ele serve também para elaboração de Termos de Referência?", "a": "Com certeza. O agente auxilia gestores públicos a estruturarem Termos de Referência (TR) e especificações técnicas de forma clara e blindada juridicamente."},
-            {"q": "O agente emite laudos jurídicos formais?", "a": "Não. O agente gera minutas, pareceres e orientações de apoio técnico e jurisprudencial. A decisão final de peticionar e a assinatura das peças são de responsabilidade do profissional de engenharia ou do advogado da empresa."},
-            {"q": "Como funciona o cruzamento com acórdãos do TCU?", "a": "O agente utiliza sua base interna integrada com a pesquisa do Google Search em tempo real para encontrar as deliberações e acórdãos mais recentes do Tribunal de Contas da União sobre licitações de obras."},
-            {"q": "Ele pode ser usado para licitações municipais e estaduais?", "a": "Sim. Como a Lei 14.133/2021 é de caráter nacional, o agente atende perfeitamente a licitações em esferas municipal, estadual e federal, além de considerar particularidades estaduais quando fornecidas."},
-            {"q": "O agente armazena os dados dos editais que eu envio?", "a": "Não. As interações são efetuadas sob a política de privacidade e segurança da sua conta no Google Gemini, garantindo que os seus documentos internos e editais não fiquem expostos."},
+            {"q": "O LegalMatch PRO é atualizado com a Nova Lei de Licitações (Lei 14.133)?", "a": "Sim. O assistente foi totalmente calibrado de acordo com a Lei 14.133/2021, jurisprudência do TCU e PNCP (Portal Nacional de Contratações Públicas)."},
+            {"q": "Consigo analisar editais em formato PDF?", "a": "Sim. Você pode fazer upload do edital em PDF diretamente no Google Gemini (disponível na interface) e o assistente fará a leitura e análise completa das seções indicadas."},
+            {"q": "Ele serve também para elaboração de Termos de Referência?", "a": "Com certeza. O assistente auxilia gestores públicos a estruturarem Termos de Referência (TR) e especificações técnicas de forma clara e blindada juridicamente."},
+            {"q": "O agente emite laudos jurídicos formais?", "a": "Não. O assistente gera minutas, pareceres e orientações de apoio técnico e jurisprudencial. A decisão final de peticionar e a assinatura das peças são de responsabilidade do profissional de engenharia ou do advogado da empresa."},
+            {"q": "Como funciona o cruzamento com acórdãos do TCU?", "a": "O assistente utiliza sua base interna integrada com a pesquisa do Google Search em tempo real para encontrar as deliberações e acórdãos mais recentes do Tribunal de Contas da União sobre licitações de obras."},
+            {"q": "Ele pode ser usado para licitações municipais e estaduais?", "a": "Sim. Como a Lei 14.133/2021 é de caráter nacional, o assistente atende perfeitamente a licitações em esferas municipal, estadual e federal, além de considerar particularidades estaduais quando fornecidas."},
+            {"q": "O assistente armazena os dados dos editais que eu envio?", "a": "Não. As interações são efetuadas sob a política de privacidade e segurança da sua conta no Google Gemini, garantindo que os seus documentos internos e editais não fiquem expostos."},
             {"q": "Posso utilizá-lo para contestar multas contratuais com órgãos públicos?", "a": "Sim. Ele ajuda a estruturar a defesa fundamentada demonstrando causas excludentes de responsabilidade, como atrasos motivados pela própria administração ou chuvas atípicas."}
         ]
     },
@@ -273,8 +273,8 @@ agents_data = [
         "name": "LaudoMatch PRO",
         "category": "Engenharia Diagnóstica",
         "keyword": "ia laudo de vistoria cautelar",
-        "title": "LaudoMatch PRO | IA para Laudo de Vistoria Cautelar e Patologias",
-        "meta_desc": "Elabore laudos de vistoria cautelar de vizinhança, laudos de patologia predial e perícias técnicas em conformidade com as normas ABNT NBR utilizando IA.",
+        "title": "LaudoMatch PRO | Laudo de Vistoria Cautelar e Patologias",
+        "meta_desc": "Elabore laudos de vistoria cautelar de vizinhança, laudos de patologia predial e perícias técnicas em conformidade com as normas ABNT NBR.",
         "short_desc": "Estrutura e diagnósticos técnicos para engenharia diagnóstica, laudos de patologia predial, perícias judiciais e vistorias cautelares.",
         "gemini_link": "https://gemini.google.com/gem/1gZNu_M9sIGB59VHy_2XVWRAVxufO7kra?usp=sharing",
         "emoji": "🔍",
@@ -287,7 +287,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "A engenharia diagnóstica requer uma riqueza de detalhes minuciosa e termos precisos. Redigir laudos de vistoria cautelar de vizinhança ou classificar anomalias prediais manualmente gera dias de trabalho burocrático. Além disso, classificar erroneamente uma fissura estrutural como mera fissura de reboco ou deixar de citar as exigências da NBR 13752 e NBR 16747 abre brechas para questionamentos judiciais e prejuízos imensos.",
-        "transformation": "Com o LaudoMatch PRO, você acelera a montagem dos seus laudos. O agente ajuda a classificar anomalias (endógenas, exógenas) e falhas, sugere ensaios tecnológicos apropriados e prescreve métodos de recuperação corretos. Graças ao suporte a imagens do Gemini, você pode analisar fotos de patologias (trincas, corrosão de armadura, infiltrações) e obter pré-diagnósticos imediatos e fundamentação normativa impecável.",
+        "transformation": "Com o LaudoMatch PRO, você acelera a montagem dos seus laudos. O assistente ajuda a classificar anomalias (endógenas, exógenas) e falhas, sugere ensaios tecnológicos apropriados e prescreve métodos de recuperação corretos. Graças ao suporte a imagens do Gemini, você pode analisar fotos de patologias (trincas, corrosão de armadura, infiltrações) e obter pré-diagnósticos imediatos e fundamentação normativa impecável.",
         "features": [
             {"title": "Engenharia Diagnóstica Estruturada", "desc": "Estrutura laudos técnicos, vistorias cautelares de vizinhança e inspeções de manutenção em conformidade com as normas vigentes.", "benefit": "Laudos padronizados e aceitos pelo mercado e justiça."},
             {"title": "Inspeção Predial (NBR 16747:2020)", "desc": "Auxilia na classificação sistemática de anomalias (endógenas, exógenas) e falhas, organizando por grau de prioridade técnica.", "benefit": "Clareza operacional na definição de prioridades do condomínio."},
@@ -337,7 +337,7 @@ agents_data = [
             "Construtores e Empreiteiros: que realizam reformas e necessitam registrar as condições de imóveis vizinhos antes de iniciar a obra."
         ],
         "included": [
-            "Acesso imediato ao agente LaudoMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente LaudoMatch PRO no Google Gemini.",
             "4 prompts avançados para vistorias, diagnósticos e respostas judiciais.",
             "Guia de bolso de termos periciais e códigos de engenharia diagnóstica.",
             "Atualizações técnicas constantes integradas ao desenvolvimento de IA."
@@ -345,10 +345,10 @@ agents_data = [
         "faq": [
             {"q": "O LaudoMatch PRO consegue analisar fotos de rachaduras ou infiltrações?", "a": "Sim. Graças à capacidade multimodal do Gemini, você pode carregar imagens de patologias da construção diretamente no chat. O agente avalia as características visuais e propõe causas e soluções."},
             {"q": "O laudo gerado segue as normas da ABNT?", "a": "Sim, a redação e estrutura são orientadas pelas principais normas vigentes de engenharia diagnóstica, como a NBR 13752 (Perícias de Engenharia na Construção Civil) e NBR 16747 (Inspeção Predial)."},
-            {"q": "Ele auxilia na emissão da ART?", "a": "O agente orienta sobre a correta classificação de atividades e seleção de códigos TOS na emissão da Anotação de Responsabilidade Técnica (ART) do laudo junto ao CREA."},
+            {"q": "Ele auxilia na emissão da ART?", "a": "O assistente orienta sobre a correta classificação de atividades e seleção de códigos TOS na emissão da Anotação de Responsabilidade Técnica (ART) do laudo junto ao CREA."},
             {"q": "Como funciona o upload de fotos no Gemini?", "a": "Na interface do Google Gemini (no computador ou celular), você clica no ícone de anexo de imagem '+', seleciona a foto da patologia em alta resolução e cola o prompt correspondente para análise."},
-            {"q": "O agente substitui a vistoria presencial?", "a": "De forma alguma. A vistoria física é indispensável e obrigatória para atestar a realidade do imóvel. O agente funciona na retaguarda, ajudando a organizar e fundamentar os dados levantados em campo."},
-            {"q": "Ele classifica danos de acordo com as normas de seguro predial?", "a": "Sim. Você pode pedir para o agente estruturar a análise para verificar se a anomalia se enquadra nas coberturas de danos de sinistros ou falhas decorrentes de falta de manutenção predial."},
+            {"q": "O agente substitui a vistoria presencial?", "a": "De forma alguma. A vistoria física é indispensável e obrigatória para atestar a realidade do imóvel. O assistente funciona na retaguarda, ajudando a organizar e fundamentar os dados levantados em campo."},
+            {"q": "Ele classifica danos de acordo com as normas de seguro predial?", "a": "Sim. Você pode pedir para o assistente estruturar a análise para verificar se a anomalia se enquadra nas coberturas de danos de sinistros ou falhas decorrentes de falta de manutenção predial."},
             {"q": "Qual é a velocidade de geração de um laudo pericial?", "a": "Em menos de 2 minutos você obtém a fundamentação teórica, a estrutura e a indicação metodológica para o laudo. O preenchimento dos detalhes específicos da vistoria é feito em seguida pelo profissional."},
             {"q": "É cobrada alguma taxa mensal pelo uso do agente?", "a": "Não. O acesso aos prompts e à configuração do especialista é vitalício após o pagamento único do pacote Agentes Match."}
         ]
@@ -359,8 +359,8 @@ agents_data = [
         "name": "MatchObra PRO",
         "category": "Gestão de Obras",
         "keyword": "diario de obra automatizado ia",
-        "title": "MatchObra PRO | IA para Diário de Obra e Checklist de Qualidade",
-        "meta_desc": "Automatize o preenchimento de Diários de Obra (RDO), checklists de controle de qualidade (FVS) e monitoramento de canteiro com Inteligência Artificial.",
+        "title": "MatchObra PRO | Diário de Obra e Checklist de Qualidade",
+        "meta_desc": "Otimize o preenchimento de Diários de Obra (RDO), checklists de controle de qualidade (FVS) e monitoramento do canteiro.",
         "short_desc": "Supervisor técnico virtual: RDO automático, checklists de qualidade baseados na NBR 15575 e conformidade de segurança (NR-18).",
         "gemini_link": "https://gemini.google.com/gem/1mV7RNTqWI6eUaPf5ibK3OkXk6yw4qWc-?usp=sharing",
         "emoji": "🏢",
@@ -375,7 +375,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "Manter o Diário de Obra (RDO) atualizado e preencher Fichas de Verificação de Serviço (FVS) consome tempo que o engenheiro deveria estar usando para coordenar as frentes de trabalho. A burocracia de relatórios diários de canteiro, aliada à necessidade de fiscalizar as regras da NR-18 e NBR 12655 (concreto) gera atrasos, esquecimentos e deixa a construtora vulnerável a processos trabalhistas ou retrabalhos técnicos.",
-        "transformation": "Com o MatchObra PRO, você automatiza a gestão física do seu canteiro. Ao transcrever anotações rápidas ou áudios gravados no WhatsApp pelo celular, o agente formata um Diário de Obra completo estruturado em minutos. Ele gera checklists de FVS e auditorias de NR-18 customizadas por tipo de serviço, garantindo que o controle tecnológico e a segurança do trabalho estejam sempre documentados.",
+        "transformation": "Com o MatchObra PRO, você automatiza a gestão física do seu canteiro. Ao transcrever anotações rápidas ou áudios gravados no WhatsApp pelo celular, o assistente formata um Diário de Obra completo estruturado em minutos. Ele gera checklists de FVS e auditorias de NR-18 customizadas por tipo de serviço, garantindo que o controle tecnológico e a segurança do trabalho estejam sempre documentados.",
         "features": [
             {"title": "Diário de Obra Rápido (RDO)", "desc": "Gera relatórios diários de obra estruturados contendo clima, efetivo de pessoal, atividades executadas, ocorrências e recebimento de materiais.", "benefit": "RDO completo e organizado com gravação rápida."},
             {"title": "Fichas de Verificação de Serviço", "desc": "Checklists de qualidade (FVS) baseados nas normas brasileiras para controle tecnológico (NBR 12655 - Concreto, NBR 15575 - Desempenho).", "benefit": "Controle tecnológico rígido e facilidade de auditoria."},
@@ -425,19 +425,19 @@ agents_data = [
             "Construtores e Empreiteiros: que precisam dar report diário e transparente do progresso físico ao cliente."
         ],
         "included": [
-            "Acesso imediato ao agente MatchObra PRO no Google Gemini.",
+            "Acesso imediato ao assistente MatchObra PRO no Google Gemini.",
             "4 prompts calibrados para diários de obra, FVS, DDS e NR-18.",
             "Guia digital para documentação ágil de canteiros de obras.",
             "Atualizações tecnológicas integradas de IA no gerenciamento de obras."
         ],
         "faq": [
-            {"q": "Como o MatchObra PRO agiliza o preenchimento do RDO?", "a": "Você pode enviar anotações rápidas por texto, ou mesmo transcrição de áudios feitos no canteiro pelo celular, e o agente organiza tudo em um documento técnico e limpo pronto para arquivar."},
+            {"q": "Como o MatchObra PRO agiliza o preenchimento do RDO?", "a": "Você pode enviar anotações rápidas por texto, ou mesmo transcrição de áudios feitos no canteiro pelo celular, e o assistente organiza tudo em um documento técnico e limpo pronto para arquivar."},
             {"q": "Ele ajuda no controle tecnológico do concreto?", "a": "Sim, auxiliando na conferência de dados de ensaios de corpos de prova (fck), prazos de desforma e cuidados durante o processo de cura úmida conforme a NBR 14931."},
-            {"q": "O agente funciona offline?", "a": "O agente roda através do Google Gemini e requer acesso à internet. No entanto, você pode estruturar modelos de planilhas e checklists pelo agente para usar offline em campo no celular."},
-            {"q": "Posso transcrever áudio do WhatsApp direto no agente?", "a": "Sim. Você pode utilizar a ferramenta de digitação por voz do teclado do seu smartphone ou transcrever o áudio gravado no canteiro e colar no chat do Gemini para o agente estruturar."},
+            {"q": "O agente funciona offline?", "a": "O assistente roda através do Google Gemini e requer acesso à internet. No entanto, você pode estruturar modelos de planilhas e checklists pelo assistente para usar offline em campo no celular."},
+            {"q": "Posso transcrever áudio do WhatsApp direto no agente?", "a": "Sim. Você pode utilizar a ferramenta de digitação por voz do teclado do seu smartphone ou transcrever o áudio gravado no canteiro e colar no chat do Gemini para o assistente estruturar."},
             {"q": "O agente emite o RDO em PDF diretamente?", "a": "Ele gera o texto do RDO perfeitamente formatado. Você pode copiá-lo e colá-lo em um arquivo do Word ou Google Docs e salvar em PDF com apenas dois cliques."},
             {"q": "A FVS gerada atende à certificação PBQP-H?", "a": "Sim. Como a estrutura da FVS mapeia as verificações normativas por etapas (antes, durante e após), ela é perfeitamente adequada para compor a documentação de qualidade exigida pelo PBQP-H e ISO 9001."},
-            {"q": "Ele identifica riscos de segurança por foto do canteiro?", "a": "Se você utilizar a version multimodal do Gemini e fizer o upload da foto do canteiro, o agente fará uma leitura visual apontando possíveis riscos de não conformidade com a NR-18."},
+            {"q": "Ele identifica riscos de segurança por foto do canteiro?", "a": "Se você utilizar a version multimodal do Gemini e fizer o upload da foto do canteiro, o assistente fará uma leitura visual apontando possíveis riscos de não conformidade com a NR-18."},
             {"q": "Como faço para comprar a suíte completa de agentes?", "a": "Basta clicar em qualquer botão de compra nesta página para ser direcionado ao checkout seguro e garantir o acesso vitalício a todos os 9 agentes."}
         ]
     },
@@ -447,8 +447,8 @@ agents_data = [
         "name": "EstruturaMatch PRO",
         "category": "Cálculo Estrutural",
         "keyword": "ia calculo estrutural",
-        "title": "EstruturaMatch PRO | IA para Dimensionamento e Cálculo Estrutural",
-        "meta_desc": "Realize pré-dimensionamentos estruturais de concreto armado, vigas, pilares e sapatas em conformidade com as normas ABNT NBR utilizando IA.",
+        "title": "EstruturaMatch PRO | Dimensionamento e Cálculo Estrutural",
+        "meta_desc": "Realize pré-dimensionamentos estruturais de concreto armado, vigas, pilares e sapatas em conformidade com as normas ABNT NBR.",
         "short_desc": "Dimensionamento e pré-dimensionamento de elementos estruturais (concreto, aço, madeira), reforços de patologias e análise da NBR 6118.",
         "gemini_link": "https://gemini.google.com/gem/10xfRN9InbZqg2rB4qZ09bd5o_5urYRST?usp=sharing",
         "emoji": "🏗️",
@@ -462,7 +462,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "Realizar pré-dimensionamentos estruturais no início do projeto arquitetônico manualmente é trabalhoso. Os arquitetos precisam de respostas rápidas sobre a altura das vigas ou dimensões de pilares, e o engenheiro calculista gasta horas modelando no software estrutural apenas para fazer estimativas geométricas básicas ou calcular taxas mínimas de armaduras e sapatas.",
-        "transformation": "Com o EstruturaMatch PRO, você resolve pré-dimensionamentos estruturais instantaneamente. O agente calcula a seção aproximada de vigas, pilares e sapatas de forma paramétrica seguindo a NBR 6118 (Concreto) e NBR 8800 (Metálicas). Ele gera memoriais de cálculo preliminares, auxilia a calcular comprimentos de ancoragem e propõe sistemas de reforço estrutural estruturados.",
+        "transformation": "Com o EstruturaMatch PRO, você resolve pré-dimensionamentos estruturais instantaneamente. O assistente calcula a seção aproximada de vigas, pilares e sapatas de forma paramétrica seguindo a NBR 6118 (Concreto) e NBR 8800 (Metálicas). Ele gera memoriais de cálculo preliminares, auxilia a calcular comprimentos de ancoragem e propõe sistemas de reforço estrutural estruturados.",
         "features": [
             {"title": "Pré-Dimensionamento Rápido", "desc": "Calcula de forma rápida seções estimadas para vigas, pilares, lajes e sapatas em função das cargas e vãos de projeto.", "benefit": "Esboço e lançamento estrutural coerente em minutos."},
             {"title": "NBR 6118 de Concreto Armado", "desc": "Verificação de conformidade de cobrimentos, domínios de deformação, taxa mínima de armaduras e cálculo de flexão simples.", "benefit": "Segurança contra erros conceituais de dimensionamento."},
@@ -512,19 +512,19 @@ agents_data = [
             "Estudantes de Engenharia Civil: que necessitam de auxílio no aprendizado analítico das matérias de estruturas."
         ],
         "included": [
-            "Acesso imediato ao agente EstruturaMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente EstruturaMatch PRO no Google Gemini.",
             "4 prompts estruturados para concreto armado, fundações e estruturas metálicas.",
             "Guia digital de fórmulas estruturais analíticas básicas.",
             "Atualizações futuras para novos elementos (madeira e alvenaria estrutural)."
         ],
         "faq": [
-            {"q": "O EstruturaMatch PRO calcula estruturas inteiras de prédios?", "a": "Não. O agente serve para pré-dimensionamento de elementos isolados, auditoria de cálculos e auxílio de tomada de decisão técnica. Projetos estruturais completos devem ser modelados em softwares dedicados (TQS, Eberick) e detalhados por engenheiro especialista."},
+            {"q": "O EstruturaMatch PRO calcula estruturas inteiras de prédios?", "a": "Não. O assistente serve para pré-dimensionamento de elementos isolados, auditoria de cálculos e auxílio de tomada de decisão técnica. Projetos estruturais completos devem ser modelados em softwares dedicados (TQS, Eberick) e detalhados por engenheiro especialista."},
             {"q": "Ele faz cálculo de estruturas de aço e madeira?", "a": "Sim, fornece diretrizes de dimensionamento seguindo a NBR 8800 (Aço) e NBR 7190 (Madeira)."},
-            {"q": "Ele detalha o processo de cura do concreto?", "a": "Sim. O agente fornece todas as recomendações de desforma e cura úmida normatizadas pela NBR 14931."},
-            {"q": "Como a IA consegue realizar contas matemáticas complexas?", "a": "Através dos algoritmos avançados do Google Gemini integrados com recursos de execução de códigos (code execution) no background, o agente resolve as equações com precisão decimal matemática."},
-            {"q": "O agente emite desenhos de detalhamento técnico de ferragens?", "a": "Não. O agente gera as especificações de área de aço e seções de concreto textuais. O detalhamento gráfico de armaduras em prancha deve ser executado no CAD/BIM."},
-            {"q": "Como posso integrar os resultados do agente no meu memorial estrutural?", "a": "Você pode copiar a memória de cálculo gerada pelo agente no Gemini e colá-la no seu editor de texto como memorial de pré-dimensionamento preliminar do projeto."},
-            {"q": "Ele suporta verificação de vento e sismo conforme a NBR 6123?", "a": "O agente fornece os conceitos e roteiro de cálculo para cargas de vento, mas análises de pórticos espaciais complexos sob ação dinâmica devem ser efetuados em softwares dedicados."},
+            {"q": "Ele detalha o processo de cura do concreto?", "a": "Sim. O assistente fornece todas as recomendações de desforma e cura úmida normatizadas pela NBR 14931."},
+            {"q": "Como o assistente consegue realizar contas matemáticas complexas?", "a": "Através dos algoritmos avançados do Google Gemini integrados com recursos de execução de códigos (code execution) no background, o assistente resolve as equações com precisão decimal matemática."},
+            {"q": "O agente emite desenhos de detalhamento técnico de ferragens?", "a": "Não. O assistente gera as especificações de área de aço e seções de concreto textuais. O detalhamento gráfico de armaduras em prancha deve ser executado no CAD/BIM."},
+            {"q": "Como posso integrar os resultados do assistente no meu memorial estrutural?", "a": "Você pode copiar a memória de cálculo gerada pelo assistente no Gemini e colá-la no seu editor de texto como memorial de pré-dimensionamento preliminar do projeto."},
+            {"q": "Ele suporta verificação de vento e sismo conforme a NBR 6123?", "a": "O assistente fornece os conceitos e roteiro de cálculo para cargas de vento, mas análises de pórticos espaciais complexos sob ação dinâmica devem ser efetuados em softwares dedicados."},
             {"q": "O pagamento é único ou recorrente?", "a": "O pagamento é único. Comprando a suíte de 9 agentes, você ganha acesso irrestrito e vitalício sem mensalidades."}
         ]
     },
@@ -534,8 +534,8 @@ agents_data = [
         "name": "AvaliaMatch PRO",
         "category": "Avaliação Imobiliária",
         "keyword": "ia avaliacao de imoveis",
-        "title": "AvaliaMatch PRO | IA para Avaliação de Imóveis (NBR 14653)",
-        "meta_desc": "Elabore laudos de avaliação de imóveis urbanos pelo Método Comparativo Direto de Dados de Mercado em conformidade com a NBR 14653 com IA.",
+        "title": "AvaliaMatch PRO | Avaliação de Imóveis (NBR 14653)",
+        "meta_desc": "Elabore laudos de avaliação de imóveis urbanos pelo Método Comparativo Direto em conformidade com a NBR 14653.",
         "short_desc": "Engenharia de avaliações: método comparativo direto, tratamento estatístico de dados de mercado, laudos bancários e perícias.",
         "gemini_link": "https://gemini.google.com/gem/1V6d6n_LtnrlgD847HtWmjmC-baKKIc3V?usp=sharing",
         "emoji": "🏠",
@@ -548,7 +548,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "A engenharia de avaliações de imóveis urbanos exige muito rigor estatístico. Pesquisar comparativos de mercado corretos, aplicar fatores de homogeneização de padrão, área, testada e localização manualmente, além de enquadrar o Grau de Precisão e Fundamentação da NBR 14653-2 toma dias inteiros de trabalho de planilhamento e abre espaço para descarte incorreto de comparativos e contestações periciais judiciais.",
-        "transformation": "Com o AvaliaMatch PRO, você simplifica o tratamento estatístico. O agente ajuda a planejar a vistoria de mercado, estruturar a planilha de homogeneização por fatores (Fator de Área, Padrão Construtivo, Localização), orienta sobre a exclusão de outliers por critérios matemáticos (como o teste de Chauvenet) e auxilia no cálculo da depreciação pelo método Ross-Heidecke de edificações antigas.",
+        "transformation": "Com o AvaliaMatch PRO, você simplifica o tratamento estatístico. O assistente ajuda a planejar a vistoria de mercado, estruturar a planilha de homogeneização por fatores (Fator de Área, Padrão Construtivo, Localização), orienta sobre a exclusão de outliers por critérios matemáticos (como o teste de Chauvenet) e auxilia no cálculo da depreciação pelo método Ross-Heidecke de edificações antigas.",
         "features": [
             {"title": "Método Comparativo de Mercado", "desc": "Estrutura avaliações com base na coleta de dados, fatores de homogeneização e regressões lineares conforme NBR 14653.", "benefit": "Tratamento de dados científicos e padronizados."},
             {"title": "Laudos de Garantia Bancária", "desc": "Agiliza a elaboração de laudos técnicos exigidos por bancos para financiamentos habitacionais e garantias reais.", "benefit": "Aprovação de processos de crédito ágeis e corretos."},
@@ -598,19 +598,19 @@ agents_data = [
             "Escritórios Técnicos e Incorporadoras: que realizam pesquisas rápidas de terrenos e valores de venda de empreendimentos."
         ],
         "included": [
-            "Acesso imediato ao agente AvaliaMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente AvaliaMatch PRO no Google Gemini.",
             "4 prompts de homogeneização, depreciação, método da renda e enquadramento.",
             "Guia prático em PDF de fatores de homogeneização da NBR 14653.",
             "Atualizações automáticas alinhadas à evolução de IA na engenharia."
         ],
         "faq": [
-            {"q": "O AvaliaMatch PRO realiza cálculos de regressão linear sozinho?", "a": "O agente orienta sobre a montagem da planilha, tratamento dos dados, cálculo dos fatores (fator de área, localização) e interpretação estatística. Para rodar a estatística inferencial complexa, recomenda-se usar softwares de apoio (como SISDEA ou TS-Sisvel) sob a orientação técnica estruturada pelo agente."},
-            {"q": "Ele é válido para avaliações periciais judiciais?", "a": "Sim. A metodologia empregada nas respostas do agente baseia-se estritamente na NBR 14653 (partes 1 e 2), fornecendo embasamento técnico que resiste a impugnações judiciais."},
+            {"q": "O AvaliaMatch PRO realiza cálculos de regressão linear sozinho?", "a": "O assistente orienta sobre a montagem da planilha, tratamento dos dados, cálculo dos fatores (fator de área, localização) e interpretação estatística. Para rodar a estatística inferencial complexa, recomenda-se usar softwares de apoio (como SISDEA ou TS-Sisvel) sob a orientação técnica estruturada pelo assistente."},
+            {"q": "Ele é válido para avaliações periciais judiciais?", "a": "Sim. A metodologia empregada nas respostas do assistente baseia-se estritamente na NBR 14653 (partes 1 e 2), fornecendo embasamento técnico que resiste a impugnações judiciais."},
             {"q": "O agente ajuda a identificar o Grau de Precisão do laudo?", "a": "Sim, auxiliando na conferência dos critérios normativos exigidos para enquadramento de Grau I, II ou III de Fundamentação e Precisão."},
-            {"q": "Como funciona a homogeneização por fatores no agente?", "a": "Você insere os dados do imóvel de referência e dos comparativos, e o agente calcula as proporções analíticas básicas aplicando as fórmulas recomendadas pela metodologia científica de avaliações."},
-            {"q": "O agente tem integração direta com portais imobiliários?", "a": "O agente pode realizar buscas na web em tempo real (via Google Search integrado no Gemini) para identificar imóveis semelhantes ofertados na região desejada, auxiliando na formação inicial da amostra."},
-            {"q": "Ele calcula o Método Evolutivo e Involutivo?", "a": "Sim. O agente fornece a roteirização do cálculo de viabilidade econômica do empreendimento (Método Involutivo) e o somatório depreciado de benfeitorias + terreno (Método Evolutivo)."},
-            {"q": "Corretores de imóveis com CNAI podem utilizar o agente?", "a": "Perfeitamente. O agente auxilia na redação técnica de PTAMs (Parecer Técnico de Avaliação Mercadológica) em conformidade com as exigências metodológicas."},
+            {"q": "Como funciona a homogeneização por fatores no agente?", "a": "Você insere os dados do imóvel de referência e dos comparativos, e o assistente calcula as proporções analíticas básicas aplicando as fórmulas recomendadas pela metodologia científica de avaliações."},
+            {"q": "O agente tem integração direta com portais imobiliários?", "a": "O assistente pode realizar buscas na web em tempo real (via Google Search integrado no Gemini) para identificar imóveis semelhantes ofertados na região desejada, auxiliando na formação inicial da amostra."},
+            {"q": "Ele calcula o Método Evolutivo e Involutivo?", "a": "Sim. O assistente fornece a roteirização do cálculo de viabilidade econômica do empreendimento (Método Involutivo) e o somatório depreciado de benfeitorias + terreno (Método Evolutivo)."},
+            {"q": "Corretores de imóveis com CNAI podem utilizar o agente?", "a": "Perfeitamente. O assistente auxilia na redação técnica de PTAMs (Parecer Técnico de Avaliação Mercadológica) em conformidade com as exigências metodológicas."},
             {"q": "Onde recebo os acessos da suíte Agentes Match?", "a": "Os links de acesso e o guia técnico de prompts são disponibilizados de forma automática por e-mail e na área de membros de imediato após a aprovação do seu pagamento."}
         ]
     },
@@ -620,8 +620,8 @@ agents_data = [
         "name": "ArquiMatch PRO",
         "category": "Visualização e Conceito",
         "keyword": "ia maquete 3d arquitetura",
-        "title": "ArquiMatch PRO | IA para Renders e Design de Interiores",
-        "meta_desc": "Gere prompts fotorrealistas para maquetes 3D, renders de fachada e designs de interiores utilizando IA. Otimizado para Imagen 3 e Veo 3.1.",
+        "title": "ArquiMatch PRO | Renders e Design de Interiores",
+        "meta_desc": "Gere comandos de alta fidelidade para renders de fachada e designs de interiores. Otimizado para Imagen 3 e Veo 3.1.",
         "short_desc": "Consultoria em visualização arquitetônica, prompts fotorrealistas de render, memoriais conceituais e tours virtuais imersivos.",
         "gemini_link": "https://gemini.google.com/gem/1V5h5K0Q4voH1Pi0H-7WsfOI28fIMvBfC?usp=sharing",
         "emoji": "🎨",
@@ -634,7 +634,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "Apresentar ideias de projetos arquitetônicos e designs de interiores para clientes na fase de concepção inicial requer um tempo imenso de modelagem 3D e renderização em softwares como V-Ray ou Lumion. Muitas vezes, o cliente deseja testar diferentes paletas de cores, fachadas ou disposições de mobiliário, e re-renderizar essas opções manualmente atrasa o fechamento de novos contratos.",
-        "transformation": "Com o ArquiMatch PRO, você revoluciona o seu processo criativo. O agente gera prompts extremamente detalhados de fotografia arquitetônica (regras de lentes, iluminação realista, texturas PBR, etc.) calibrados para ferramentas de geração de imagem de alta performance como o Imagen 3. Ele também auxilia na redação de memoriais conceituais elegantes e roteiros para vídeos dinâmicos de tours virtuais imersivos no Veo 3.1.",
+        "transformation": "Com o ArquiMatch PRO, você revoluciona o seu processo criativo. O assistente gera prompts extremamente detalhados de fotografia arquitetônica (regras de lentes, iluminação realista, texturas PBR, etc.) calibrados para ferramentas de geração de imagem de alta performance como o Imagen 3. Ele também auxilia na redação de memoriais conceituais elegantes e roteiros para vídeos dinâmicos de tours virtuais imersivos no Veo 3.1.",
         "features": [
             {"title": "Prompts Fotorrealistas de Render", "desc": "Cria comandos super-detalhados de fotografia arquitetônica (regras de lente, iluminação global, materiais PBR) para ferramentas de geração de imagem como Imagen 3.", "benefit": "Imagens conceituais ultra-realistas em segundos."},
             {"title": "Memoriais Conceituais de Elite", "desc": "Redige memoriais descritivos conceituais e narrativas de projeto que encantam clientes e defendem as escolhas de design.", "benefit": "Defesa de partido arquitetônico eloquente e profissional."},
@@ -645,7 +645,7 @@ agents_data = [
             {"step": "1", "title": "Defina o Partido Arquitetônico", "desc": "Forneça as diretrizes básicas do design (moderno, industrial, biofílico), materiais de acabamento e a iluminação alvo."},
             {"step": "2", "title": "Gere o Prompt de Render", "desc": "O ArquiMatch PRO estrutura um comando fotorrealista com linguagem de câmera (lente, ISO, luz) específica para IA."},
             {"step": "3", "title": "Renderização Instantânea", "desc": "Cole o prompt no Imagen 3 (ou ferramenta de imagem/vídeo) para obter o mockup visual instantaneamente."},
-            {"step": "4", "title": "Apresentação ao Cliente", "desc": "Utilize os mockups visuais e a narrativa conceitual gerada pelo agente para fechar a aprovação preliminar do cliente."}
+            {"step": "4", "title": "Apresentação ao Cliente", "desc": "Utilize os mockups visuais e a narrativa conceitual gerada pelo assistente para fechar a aprovação preliminar do cliente."}
         ],
         "prompts": [
             {
@@ -684,13 +684,13 @@ agents_data = [
             "Incorporadoras e Setores de Vendas Imobiliárias: que precisam gerar mockups rápidos para campanhas de marketing."
         ],
         "included": [
-            "Acesso imediato ao agente ArquiMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente ArquiMatch PRO no Google Gemini.",
             "4 prompts fotorrealistas de renderização de arquitetura e redação de memoriais.",
             "Guia rápido digital com os principais códigos de iluminação e lentes para IA.",
-            "Acesso a atualizações do agente conforme novos updates do Imagen e Veo."
+            "Acesso a atualizações do assistente conforme novos updates do Imagen e Veo."
         ],
         "faq": [
-            {"q": "O ArquiMatch PRO gera modelos 3D editáveis (BIM/CAD)?", "a": "Não. O agente cria mockups conceituais de imagem/vídeo e orientações de visualização e design, servindo para aprovação de conceito rápido. A modelagem 3D técnica continua exigindo softwares como Revit, SketchUp ou Archicad."},
+            {"q": "O ArquiMatch PRO gera modelos 3D editáveis (BIM/CAD)?", "a": "Não. O assistente cria mockups conceituais de imagem/vídeo e orientações de visualização e design, servindo para aprovação de conceito rápido. A modelagem 3D técnica continua exigindo softwares como Revit, SketchUp ou Archicad."},
             {"q": "Como funciona a geração de vídeo com o Veo 3.1?", "a": "O agente ajuda a estruturar a narrativa técnica e a descrever a trajetória da câmera, os elementos em movimento e a luz para que você use na ferramenta de geração de vídeos (Veo) do ecossistema Google."},
             {"q": "Posso usar os memoriais gerados para fins comerciais?", "a": "Sim, os memoriais descritivos e textos conceituais são de sua propriedade intelectual e podem ser usados comercialmente para apresentação de projetos a clientes."},
             {"q": "Quais são os prompts mais eficientes para renders internos?", "a": "O agente fornece prompts com tags específicas como iluminação volumétrica, materiais PBR (wood grain, brushed steel), especificações de lente (35mm f/1.8) e estilo de composição visual."},
@@ -706,8 +706,8 @@ agents_data = [
         "name": "PubliMatch PRO",
         "category": "Marketing e Vendas",
         "keyword": "marketing para engenheiros ia",
-        "title": "PubliMatch PRO | IA para Marketing e Clientes na Engenharia",
-        "meta_desc": "Descubra estratégias de marketing digital para engenheiros, copywriting para postagens de obras no Instagram e prospecção de clientes com IA.",
+        "title": "PubliMatch PRO | Marketing e Clientes na Engenharia",
+        "meta_desc": "Descubra estratégias de marketing digital para engenheiros, copywriting para postagens de obras no Instagram e prospecção de clientes.",
         "short_desc": "Marketing digital ético e estratégico (CREA/CONFEA), scripts de WhatsApp, SEO local e copy de alta conversão para engenheiros.",
         "gemini_link": "https://gemini.google.com/gem/1seZSo0D2p9CIE6T4S2QY__9xwVqhZnEE?usp=sharing",
         "emoji": "📢",
@@ -720,7 +720,7 @@ agents_data = [
             </svg>
         """,
         "problem_now": "Conseguir novos clientes e fechar contratos de engenharia de alto valor (como obras de reforma ou projetos estruturais) é o maior desafio do profissional autônomo. Fazer postagens sem relevância no Instagram que não atraem leads qualificados, não saber prospectar síndicos e incorporadores por canais como WhatsApp, ou estar invisível no Google Maps local faz seu escritório ficar à mercê de indicações esporádicas.",
-        "transformation": "Com o PubliMatch PRO, você constrói uma máquina de atração de clientes. O agente cria planejamentos editoriais de conteúdo altamente técnicos que demonstram sua autoridade sem ferir a ética do CREA/CONFEA. Ele redige scripts de abordagem pelo WhatsApp, otimiza seu perfil no Google Meu Negócio para buscas locais e cria propostas comerciais com gatilhos de conversão que aumentam a taxa de fechamento.",
+        "transformation": "Com o PubliMatch PRO, você constrói uma máquina de atração de clientes. O assistente cria planejamentos editoriais de conteúdo altamente técnicos que demonstram sua autoridade sem ferir a ética do CREA/CONFEA. Ele redige scripts de abordagem pelo WhatsApp, otimiza seu perfil no Google Meu Negócio para buscas locais e cria propostas comerciais com gatilhos de conversão que aumentam a taxa de fechamento.",
         "features": [
             {"title": "Copywriting Técnico e Ético", "desc": "Cria roteiros, artigos e legendas altamente persuasivas respeitando as regras éticas de propaganda do CREA/CONFEA.", "benefit": "Divulgação de alto impacto sem risco de infrações éticas."},
             {"title": "Otimização de SEO Local", "desc": "Estratégias completas para posicionar seu escritório de engenharia no topo das buscas no Google Maps e Google Meu Negócio.", "benefit": "Clientes locais ligando e solicitando orçamentos diariamente."},
@@ -731,7 +731,7 @@ agents_data = [
             {"step": "1", "title": "Escolha o Canal e Público", "desc": "Defina o canal de marketing (Instagram, LinkedIn, Google Meu Negócio ou WhatsApp) e o seu cliente ideal (síndico, proprietário, construtora)."},
             {"step": "2", "title": "Gere a Estratégia de Copy", "desc": "O PubliMatch PRO formula a abordagem de conteúdo, as headlines magnéticas e a estruturação de dor e solução técnica."},
             {"step": "3", "title": "Aplique nos Canais", "desc": "Copie e programe as postagens nas suas mídias sociais ou envie as mensagens de abordagem comercial direta."},
-            {"step": "4", "title": "Conversão e Contrato", "desc": "Converta os contatos recebidos em reuniões qualificadas e utilize os scripts de fechamento e propostas comerciais geradas pelo agente."}
+            {"step": "4", "title": "Conversão e Contrato", "desc": "Converta os contatos recebidos em reuniões qualificadas e utilize os scripts de fechamento e propostas comerciais geradas pelo assistente."}
         ],
         "prompts": [
             {
@@ -770,18 +770,18 @@ agents_data = [
             "Profissionais de Consultoria e Perícia: que buscam contatar síndicos e administradoras de condomínio de forma profissional."
         ],
         "included": [
-            "Acesso imediato ao agente PubliMatch PRO no Google Gemini.",
+            "Acesso imediato ao assistente PubliMatch PRO no Google Gemini.",
             "4 prompts de marketing estratégico para WhatsApp, Instagram, LinkedIn e SEO local.",
             "Guia de bolso de marketing ético para engenheiros de acordo com o CREA.",
             "Atualizações e dicas periódicas integradas de copy de vendas e atração de leads."
         ],
         "faq": [
             {"q": "As estratégias geradas respeitam o código de ética do CREA?", "a": "Sim, todas as abordagens comerciais, copys e roteiros são planejados para valorizar o conhecimento do engenheiro sem infringir os limites de ética profissional definidos pelo CONFEA."},
-            {"q": "O PubliMatch PRO cria imagens prontas para posts?", "a": "O agente auxilia na redação, nos roteiros e na descrição detalhada de imagens que você pode gerar utilizando o Imagen 3 ou criar em ferramentas como o Canva."},
-            {"q": "Ele serve para quem atua em nichos muito específicos de engenharia?", "a": "Sim. Você pode definir seu nicho exato (saneamento, terraplenagem, pontes, patologia) e o agente calibrará a linguagem técnica para atrair o público ideal."},
+            {"q": "O PubliMatch PRO cria imagens prontas para posts?", "a": "O assistente auxilia na redação, nos roteiros e na descrição detalhada de imagens que você pode gerar utilizando o Imagen 3 ou criar em ferramentas como o Canva."},
+            {"q": "Ele serve para quem atua em nichos muito específicos de engenharia?", "a": "Sim. Você pode definir seu nicho exato (saneamento, terraplenagem, pontes, patologia) e o assistente calibrará a linguagem técnica para atrair o público ideal."},
             {"q": "Consigo prospectar construtoras para vender projetos terceirizados?", "a": "Perfeitamente. O agente ajuda a escrever propostas comerciais de valor e e-mails de abordagem focados nos problemas de construtoras (atrasos, custos) para oferecer serviços de cálculo ou compatibilização."},
             {"q": "O Google Meu Negócio realmente atrai clientes sem anúncios pagos?", "a": "Sim. O SEO local estruturado posiciona seu perfil no topo das buscas geolocalizadas orgânicas da sua região quando as pessoas digitam 'engenheiro civil' ou 'laudo técnico', gerando contatos qualificados."},
-            {"q": "Ele gera ideias de conteúdo para o ano todo?", "a": "O agente pode estruturar calendários editoriais de 30 dias de forma recorrente, variando os temas de posts de atração, conexão e venda direta de acordo com seu portfólio."},
+            {"q": "Ele gera ideias de conteúdo para o ano todo?", "a": "O assistente pode estruturar calendários editoriais de 30 dias de forma recorrente, variando os temas de posts de atração, conexão e venda direta de acordo com seu portfólio."},
             {"q": "Como utilizar os scripts de WhatsApp?", "a": "Basta copiar a mensagem elaborada pelo agente, adaptar os campos entre colchetes com os seus dados de contato e do cliente, e iniciar o contato pelo WhatsApp de forma humana e profissional."},
             {"q": "Quais são as formas de pagamento para ter acesso à suíte?", "a": "O pagamento é efetuado através da plataforma segura da Cakto via Pix ou cartão de crédito em até 12 parcelas, com liberação de acesso imediata."}
         ]
@@ -1033,12 +1033,12 @@ html_template = """<!DOCTYPE html>
           </h1>
 
           <p class="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed font-light font-sans">
-            {{short_desc}} Tenha um copiloto de inteligência artificial de alta performance integrado ao seu Google Gemini.
+            {{short_desc}} Tenha um assistente sênior de alta performance estruturado e pronto para uso no seu Google Gemini.
           </p>
 
           <div class="flex gap-4 mb-8">
             <a href="#inicio" class="btn-premium px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
-              Abrir Agente no Gemini ↗
+              Acessar assistente no Gemini ↗
             </a>
             <a href="#prompts" class="btn-outline px-6 py-3.5 rounded-lg text-xs font-bold uppercase tracking-wider">
               Visualizar Prompts
@@ -1051,8 +1051,8 @@ html_template = """<!DOCTYPE html>
           <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 to-transparent rounded-2xl blur-lg opacity-40"></div>
           <div class="glass-card rounded-2xl p-6 lg:p-8 relative z-10 border border-white/10">
             <div id="leadFormContainer">
-              <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao {{name}} no Gemini</h3>
-              <p class="text-xs text-gray-400 mb-6">Preencha os dados e abra o agente gratuitamente de imediato.</p>
+              <h3 class="text-lg font-bold text-white mb-2">Libere o acesso ao {{name}}</h3>
+              <p class="text-xs text-gray-400 mb-6">Preencha os dados e comece a acelerar seu trabalho grátis.</p>
               
               <form id="agentForm" class="space-y-4">
                 <div class="grid sm:grid-cols-2 gap-4">
@@ -1071,7 +1071,7 @@ html_template = """<!DOCTYPE html>
                 </div>
 
                 <button type="submit" class="btn-premium w-full py-3.5 rounded-lg mt-4 text-xs font-bold uppercase tracking-wider flex justify-center items-center">
-                  <span>Abrir Agente no Gemini ↗</span>
+                  <span>Quero ganhar tempo nos meus projetos</span>
                 </button>
               </form>
             </div>
@@ -1083,8 +1083,8 @@ html_template = """<!DOCTYPE html>
                 </svg>
               </div>
               <h3 class="text-lg font-bold text-white mb-2">Acesso Concedido!</h3>
-              <p class="text-xs text-gray-400 mb-6">Abrimos o agente {{name}} no seu Gemini em uma nova janela.</p>
-              <a href="{{gemini_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-3 rounded text-xs inline-block">Abrir no Gemini</a>
+              <p class="text-xs text-gray-400 mb-6">Abrimos o assistente {{name}} no seu Gemini em uma nova janela.</p>
+              <a href="{{gemini_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-3 rounded text-xs inline-block">Acessar no Gemini</a>
             </div>
           </div>
         </div>
@@ -1122,7 +1122,7 @@ html_template = """<!DOCTYPE html>
         <div class="text-center mb-16 reveal">
           <span class="font-mono text-gold text-xs uppercase tracking-widest font-bold">Recursos e Funcionalidades</span>
           <h2 class="font-display text-3xl lg:text-5xl font-bold mt-3 mb-4 text-white">Como o {{name}} funciona na prática</h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">Desenvolvido por especialistas da construção, integrando conhecimentos reais a fluxos ágeis de IA.</p>
+          <p class="text-gray-400 max-w-2xl mx-auto">Desenvolvido por especialistas da construção, integrando conhecimentos reais a roteiros técnicos e prompts de alta precisão.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8 reveal">
@@ -1198,8 +1198,8 @@ html_template = """<!DOCTYPE html>
             {{included_elements}}
           </ul>
           <div class="text-center">
-            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 agentes de IA por preço promocional e impulsione seus resultados de engenharia civil.</p>
-            <a href="{{checkout_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Adquirir Acesso Completo (9 Agentes)</a>
+            <p class="text-xs text-gray-500 mb-6">Adquira agora a suíte completa com 9 assistentes especializados por preço promocional e impulsione sua rotina profissional na engenharia civil.</p>
+            <a href="{{checkout_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center inline-block">Quero destravar minha produtividade (9 Assistentes)</a>
           </div>
         </div>
       </div>
@@ -1210,11 +1210,11 @@ html_template = """<!DOCTYPE html>
       <div class="absolute inset-0 bg-gold/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-6 text-center reveal relative z-10">
         <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mb-6">Eleve o nível do seu escritório técnico</h2>
-        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">O {{name}} faz parte da suíte premium de 9 agentes do Agentes Match. Garanta o acesso a todos os agentes e economize mais de 50%!</p>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">O {{name}} faz parte da suíte de 9 assistentes técnicos de alta performance. Garanta o pack completo e multiplique sua velocidade de entrega!</p>
         
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="{{checkout_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center">Adquirir Pacote Completo (9 Agentes)</a>
-          <a href="#inicio" class="btn-outline px-8 py-4 rounded-lg text-sm text-center">Testar Este Agente Grátis</a>
+          <a href="{{checkout_link}}" target="_blank" rel="noopener" class="btn-premium px-8 py-4 rounded-lg text-sm text-center">Quero o pack completo de produtividade</a>
+          <a href="#inicio" class="btn-outline px-8 py-4 rounded-lg text-sm text-center">Testar este assistente grátis</a>
         </div>
       </div>
     </section>
@@ -1275,7 +1275,7 @@ html_template = """<!DOCTYPE html>
 
       <div class="py-8 border-b border-white/5 text-[11px] text-gray-500 leading-relaxed max-w-4xl font-light">
         <p class="font-medium text-gray-400 mb-1">Aviso de Responsabilidade Técnica e Regulamentação:</p>
-        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos agentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
+        <p>Os conteúdos gerados pela inteligência artificial devem ser revisados por um profissional qualificado antes de sua aplicação em projetos, obras, documentos técnicos ou decisões regulatórias. A utilização das sugestões fornecidas pelos assistentes de inteligência artificial não exime o profissional habilitado (Engenheiro, Arquiteto, Orçamentista, etc.) da emissão da devida Anotação de Responsabilidade Técnica (ART) ou Registro de Responsabilidade Técnica (RRT) perante os órgãos de classe competentes (CREA / CAU).</p>
       </div>
 
       <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-xs text-gray-500 font-mono">
